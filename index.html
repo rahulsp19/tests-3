@@ -1,0 +1,3669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CBT Examination Portal - Online Practice Assessment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Phosphor Icons Official CDN -->
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  
+  <style>
+    .ph {
+      vertical-align: -0.15em;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* ==========================================================================
+       1. CSS RESET & DESIGN SYSTEM TOKENS
+       ========================================================================== */
+    :root {
+      --bg-body: #F8FAFC;
+      --bg-surface: #FFFFFF;
+      --text-main: #0F172A;
+      --text-muted: #64748B;
+      --text-light: #94A3B8;
+      --border-color: #E2E8F0;
+      --border-focus: #3B82F6;
+      --primary: #2563EB;
+      --primary-hover: #1D4ED8;
+      --primary-light: #EFF6FF;
+      --accent: #4F46E5;
+      
+      /* Status Palette Colors */
+      --status-answered: #10B981;
+      --status-answered-bg: #ECFDF5;
+      --status-not-answered: #EF4444;
+      --status-not-answered-bg: #FEF2F2;
+      --status-marked: #8B5CF6;
+      --status-marked-bg: #F5F3FF;
+      --status-marked-answered: #7C3AED;
+      --status-not-visited: #94A3B8;
+      --status-not-visited-bg: #F1F5F9;
+      --warning: #F59E0B;
+      --warning-bg: #FFFBEB;
+      
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 14px;
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+      --transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      user-select: auto;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .tabular-nums {
+      font-variant-numeric: tabular-nums;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    /* ==========================================================================
+       2. REUSABLE COMPONENTS & UTILITIES
+       ========================================================================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: 0.625rem 1.25rem;
+      border-radius: var(--radius-md);
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+      line-height: 1.25rem;
+      outline: none;
+      white-space: nowrap;
+    }
+
+    .btn:focus-visible {
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.35);
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: #FFFFFF;
+    }
+    .btn-primary:hover {
+      background-color: var(--primary-hover);
+    }
+
+    .btn-outline {
+      background-color: var(--bg-surface);
+      border-color: var(--border-color);
+      color: var(--text-main);
+    }
+    .btn-outline:hover {
+      background-color: #F1F5F9;
+      border-color: #CBD5E1;
+    }
+
+    .btn-warning {
+      background-color: #FEF3C7;
+      color: #92400E;
+      border-color: #FDE68A;
+    }
+    .btn-warning:hover {
+      background-color: #FDE68A;
+    }
+
+    .btn-purple {
+      background-color: var(--status-marked-bg);
+      color: var(--status-marked);
+      border-color: #DDD6FE;
+    }
+    .btn-purple:hover {
+      background-color: #EDE9FE;
+    }
+
+    .btn-danger {
+      background-color: #FEE2E2;
+      color: #B91C1C;
+      border-color: #FECACA;
+    }
+    .btn-danger:hover {
+      background-color: #FCA5A5;
+    }
+
+    .btn-sm {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+      border-radius: var(--radius-sm);
+    }
+
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      line-height: 1rem;
+    }
+
+    /* Offline Toast & Alerts */
+    #offline-banner {
+      display: none;
+      background: #FEF2F2;
+      color: #991B1B;
+      border-bottom: 1px solid #F87171;
+      padding: 8px 16px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-align: center;
+      z-index: 9999;
+    }
+
+    #toast-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 10000;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      pointer-events: none;
+    }
+
+    .toast {
+      pointer-events: auto;
+      background: #1E293B;
+      color: #FFFFFF;
+      padding: 12px 18px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      font-size: 0.875rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      animation: toastIn 0.25s ease-out forwards;
+      max-width: 400px;
+      border-left: 4px solid var(--primary);
+    }
+
+    .toast.toast-warning { border-left-color: var(--warning); }
+    .toast.toast-danger { border-left-color: var(--status-not-answered); }
+    .toast.toast-success { border-left-color: var(--status-answered); }
+
+    @keyframes toastIn {
+      from { opacity: 0; transform: translateY(-12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ==========================================================================
+       3. PRE-EXAM FLOW (WELCOME, INSTRUCTIONS, SYSTEM CHECK)
+       ========================================================================== */
+    .pre-exam-container {
+      max-width: 860px;
+      margin: 40px auto;
+      padding: 0 20px;
+      width: 100%;
+    }
+
+    .pre-exam-container-wide {
+      max-width: 1160px;
+      margin: 32px auto;
+      padding: 0 20px;
+      width: 100%;
+    }
+
+    .welcome-layout {
+      display: grid;
+      grid-template-columns: 350px 1fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    @media (max-width: 960px) {
+      .welcome-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .set-selection-sidebar {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .sidebar-header {
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .sidebar-title {
+      font-size: 1.0625rem;
+      font-weight: 800;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sidebar-subtitle {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+      display: block;
+    }
+
+    .set-cards-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .set-picker-card {
+      padding: 16px 16px;
+      border-radius: var(--radius-md);
+      border: 2px solid var(--border-color);
+      background: var(--bg-surface);
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      text-align: left;
+      user-select: none;
+    }
+
+    .set-picker-card:hover {
+      border-color: #93C5FD;
+      background: #F8FAFC;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+    }
+
+    .set-picker-card.active {
+      border-color: var(--primary);
+      background: #EFF6FF;
+      box-shadow: 0 0 0 1px var(--primary), 0 4px 14px rgba(37, 99, 235, 0.12);
+    }
+
+    .set-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+
+    .set-tag {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 3px 8px;
+      border-radius: 9999px;
+    }
+
+    .set-tag-recommended {
+      background: #DCFCE7;
+      color: #166534;
+      border: 1px solid #BBF7D0;
+    }
+
+    .set-tag-standard {
+      background: #E0E7FF;
+      color: #3730A3;
+      border: 1px solid #C7D2FE;
+    }
+
+    .set-tag-set3 {
+      background: #FEF3C7;
+      color: #92400E;
+      border: 1px solid #FDE68A;
+    }
+
+    .set-check-icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #E2E8F0;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 800;
+      transition: all 0.2s;
+    }
+
+    .set-picker-card.active .set-check-icon {
+      background: var(--primary);
+      color: #FFFFFF;
+    }
+
+    .set-card-name {
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+
+    .set-card-desc {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+
+    .set-card-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .header-branding {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+
+    .logo-badge {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.25rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .branding-text h1 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .branding-text p {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+    }
+
+    .exam-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .meta-box {
+      background: var(--bg-body);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 16px;
+    }
+
+    .meta-box span {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .meta-box strong {
+      font-size: 1.125rem;
+      color: var(--text-main);
+    }
+
+    /* Legend Display */
+    .legend-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      background: var(--bg-body);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      font-size: 0.8125rem;
+    }
+
+    .legend-badge {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.8125rem;
+      flex-shrink: 0;
+    }
+
+    .badge-not-visited { background: #E2E8F0; color: #475569; border: 1px solid #CBD5E1; }
+    .badge-not-answered { background: #EF4444; color: #FFFFFF; }
+    .badge-answered { background: #10B981; color: #FFFFFF; }
+    .badge-marked { background: #8B5CF6; color: #FFFFFF; border-radius: 50%; }
+    .badge-marked-answered { background: #8B5CF6; color: #FFFFFF; border-radius: 50%; position: relative; }
+    .badge-marked-answered::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      right: -2px;
+      width: 12px;
+      height: 12px;
+      background: #10B981;
+      border: 2px solid #FFFFFF;
+      border-radius: 50%;
+    }
+
+    /* System Diagnostics */
+    .system-check-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 24px 0;
+    }
+
+    .check-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      background: var(--bg-surface);
+    }
+
+    .check-info {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .check-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 9999px;
+    }
+
+    .status-pass { background: #DCFCE7; color: #15803D; }
+    .status-fail { background: #FEE2E2; color: #B91C1C; }
+    .status-checking { background: #FEF3C7; color: #B45309; }
+
+    /* ==========================================================================
+       4. TEST RUNNER & REVIEW INTERFACE
+       ========================================================================== */
+    #test-interface {
+      display: none;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+      user-select: none;
+    }
+
+    .test-header {
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-color);
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      flex-shrink: 0;
+      z-index: 100;
+    }
+
+    .test-title-area {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .test-title-area h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .candidate-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      background: var(--bg-body);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .timer-container {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #F8FAFC;
+      border: 1px solid var(--border-color);
+      padding: 6px 14px;
+      border-radius: var(--radius-md);
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--text-main);
+      transition: var(--transition);
+    }
+
+    .timer-container.timer-warning {
+      background: #FFFBEB;
+      border-color: #FCD34D;
+      color: #D97706;
+      animation: pulseWarning 1.5s infinite ease-in-out;
+    }
+
+    .timer-container.timer-danger {
+      background: #FEF2F2;
+      border-color: #FCA5A5;
+      color: #DC2626;
+      animation: pulseDanger 1s infinite ease-in-out;
+    }
+
+    @keyframes pulseWarning {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+    }
+
+    @keyframes pulseDanger {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+
+    .progress-bar-container {
+      width: 130px;
+      height: 8px;
+      background: #E2E8F0;
+      border-radius: 9999px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: var(--primary);
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    .test-main-area {
+      display: flex;
+      flex: 1;
+      height: calc(100vh - 64px);
+      overflow: hidden;
+    }
+
+    .question-pane {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      padding: 24px 36px;
+      background: var(--bg-body);
+    }
+
+    .question-wrapper {
+      max-width: 900px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .question-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 12px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .q-number {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .q-badges {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .q-type-badge {
+      background: var(--primary-light);
+      color: var(--primary);
+      border: 1px solid #BFDBFE;
+    }
+
+    .q-marks-badge {
+      background: #F1F5F9;
+      color: #475569;
+    }
+
+    .question-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+      animation: questionSlideIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes questionSlideIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .question-text {
+      font-size: 1.0625rem;
+      font-weight: 600;
+      color: var(--text-main);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    /* ==========================================================================
+       5. MATCH-THE-FOLLOWING COMPONENT STYLES (NEW QUESTION TYPE)
+       ========================================================================== */
+    .match-table-wrapper {
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      margin-bottom: 20px;
+      background: #FFFFFF;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .match-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    .match-table caption {
+      text-align: left;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      padding: 6px 12px;
+      background: #F8FAFC;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .match-table th {
+      background: #F1F5F9;
+      color: var(--text-main);
+      font-weight: 700;
+      font-size: 0.8125rem;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border-color);
+      width: 50%;
+    }
+
+    .match-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 0.875rem;
+      vertical-align: top;
+      width: 50%;
+      line-height: 1.5;
+    }
+
+    .match-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .match-table tr:nth-child(even) td {
+      background: #FAFAFC;
+    }
+
+    .match-item-cell {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .match-badge {
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      font-weight: 800;
+      font-size: 0.8125rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .match-badge.badge-col-a {
+      background: #EFF6FF;
+      color: #1D4ED8;
+      border: 1px solid #BFDBFE;
+    }
+
+    .match-badge.badge-col-b {
+      background: #F3E8FF;
+      color: #7C3AED;
+      border: 1px solid #DDD6FE;
+    }
+
+    @media (max-width: 640px) {
+      .match-table, .match-table thead, .match-table tbody, .match-table tr, .match-table th, .match-table td {
+        display: block;
+        width: 100% !important;
+      }
+      .match-table th {
+        border-top: 1px solid var(--border-color);
+      }
+    }
+
+    /* Option controls */
+    .option-instruction-label {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .options-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .option-label {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 18px;
+      background: var(--bg-surface);
+      border: 1.5px solid var(--border-color);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .option-label:hover {
+      background: #F8FAFC;
+      border-color: #CBD5E1;
+      transform: translateY(-1px);
+    }
+
+    .option-label.selected {
+      border-color: var(--primary);
+      background-color: var(--primary-light);
+    }
+
+    .option-label:focus-within {
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
+    }
+
+    .option-id-badge {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      width: 22px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .option-text {
+      font-size: 0.9375rem;
+      color: var(--text-main);
+      flex: 1;
+      line-height: 1.45;
+    }
+
+    .option-text strong {
+      color: #1E293B;
+      font-weight: 700;
+    }
+
+    /* Circle (Single / TrueFalse / Match) */
+    .custom-control-circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid #94A3B8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: var(--transition);
+      background: #FFFFFF;
+    }
+
+    .custom-control-circle .inner-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: var(--primary);
+      transform: scale(0);
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    input[type="radio"]:checked + .custom-control-circle {
+      border-color: var(--primary);
+    }
+
+    input[type="radio"]:checked + .custom-control-circle .inner-dot {
+      transform: scale(1);
+    }
+
+    /* Square (Multiple) */
+    .custom-control-square {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      border: 2px solid #94A3B8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: var(--transition);
+      background: #FFFFFF;
+    }
+
+    .custom-control-square svg {
+      width: 14px;
+      height: 14px;
+      stroke: #FFFFFF;
+      stroke-width: 2.5;
+      fill: none;
+      stroke-dasharray: 20;
+      stroke-dashoffset: 20;
+      transition: stroke-dashoffset 0.25s ease-out;
+    }
+
+    input[type="checkbox"]:checked + .custom-control-square {
+      border-color: var(--primary);
+      background-color: var(--primary);
+    }
+
+    input[type="checkbox"]:checked + .custom-control-square svg {
+      stroke-dashoffset: 0;
+    }
+
+    /* Review Mode Answer Highlighting */
+    .option-label.is-correct-answer {
+      border-color: #10B981 !important;
+      background-color: #F0FDF4 !important;
+    }
+    .option-label.is-correct-answer .custom-control-circle {
+      border-color: #10B981 !important;
+      background-color: #10B981 !important;
+    }
+    .option-label.is-correct-answer .custom-control-circle .inner-dot {
+      background-color: #FFFFFF !important;
+      transform: scale(1) !important;
+    }
+
+    .option-label.is-wrong-selection {
+      border-color: #EF4444 !important;
+      background-color: #FEF2F2 !important;
+    }
+    .option-label.is-wrong-selection .custom-control-circle {
+      border-color: #EF4444 !important;
+      background-color: #EF4444 !important;
+    }
+    .option-label.is-wrong-selection .custom-control-circle .inner-dot {
+      background-color: #FFFFFF !important;
+      transform: scale(1) !important;
+    }
+
+    .review-explanation-card {
+      background: #F8FAFC;
+      border: 1.5px solid #E2E8F0;
+      border-left: 4px solid var(--primary);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      margin-top: 20px;
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: #334155;
+    }
+
+    .review-explanation-card strong {
+      color: var(--text-main);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    /* Action Toolbar at Bottom of Question Area */
+    .action-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-color);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .action-group-left, .action-group-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .shortcut-hints {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 18px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .kbd {
+      background: #E2E8F0;
+      border: 1px solid #CBD5E1;
+      border-radius: 4px;
+      padding: 1px 6px;
+      font-weight: 700;
+      font-size: 0.7rem;
+      color: #334155;
+    }
+
+    /* ==========================================================================
+       6. QUESTION PALETTE (SIDE PANEL)
+       ========================================================================== */
+    .palette-pane {
+      width: 340px;
+      background: var(--bg-surface);
+      border-left: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      transition: width 0.25s ease;
+      z-index: 50;
+    }
+
+    .palette-header {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .palette-header h3 {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .palette-summary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border-color);
+      background: #FAFBFD;
+    }
+
+    .summary-card {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .summary-card strong {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-left: auto;
+    }
+
+    .palette-filter-bar {
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .select-dropdown {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      font-size: 0.8125rem;
+      background: var(--bg-surface);
+      color: var(--text-main);
+      outline: none;
+    }
+    .select-dropdown:focus {
+      border-color: var(--border-focus);
+    }
+
+    .palette-grid-container {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px 18px;
+    }
+
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+    }
+
+    .palette-btn {
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      background: var(--status-not-visited-bg);
+      color: #475569;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .palette-btn:hover {
+      filter: brightness(0.95);
+      transform: translateY(-1px);
+    }
+
+    .palette-btn.current {
+      box-shadow: 0 0 0 2px #1E293B;
+      font-weight: 800;
+    }
+
+    /* Palette Button States (Live Test) */
+    .palette-btn.not-visited { background: #E2E8F0; color: #475569; }
+    .palette-btn.not-answered { background: #EF4444; color: #FFFFFF; border-color: #DC2626; }
+    .palette-btn.answered { background: #10B981; color: #FFFFFF; border-color: #059669; }
+    .palette-btn.marked { background: #8B5CF6; color: #FFFFFF; border-color: #7C3AED; border-radius: 50%; }
+    .palette-btn.marked-answered { background: #8B5CF6; color: #FFFFFF; border-color: #7C3AED; border-radius: 50%; position: relative; }
+    .palette-btn.marked-answered::after {
+      content: '';
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      width: 9px;
+      height: 9px;
+      background: #10B981;
+      border: 1.5px solid #FFFFFF;
+      border-radius: 50%;
+    }
+
+    /* Palette Button States (Review Mode) */
+    .palette-btn.rev-correct { background: #10B981 !important; color: #FFFFFF !important; border-color: #059669 !important; }
+    .palette-btn.rev-wrong { background: #EF4444 !important; color: #FFFFFF !important; border-color: #DC2626 !important; }
+    .palette-btn.rev-unattempted { background: #CBD5E1 !important; color: #334155 !important; border-color: #94A3B8 !important; }
+
+    /* ==========================================================================
+       7. INTEGRITY OVERLAYS & MODALS
+       ========================================================================== */
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(4px);
+      z-index: 99999;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-dialog {
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      max-width: 520px;
+      width: 100%;
+      box-shadow: var(--shadow-lg);
+      animation: modalPop 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes modalPop {
+      from { transform: scale(0.95); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .modal-dialog h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 12px;
+    }
+
+    .modal-dialog p {
+      font-size: 0.9375rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .summary-stats-box {
+      background: var(--bg-body);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      margin-bottom: 24px;
+    }
+
+    .summary-stat-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 6px 0;
+      font-size: 0.875rem;
+      border-bottom: 1px dashed #E2E8F0;
+    }
+    .summary-stat-row:last-child {
+      border-bottom: none;
+    }
+
+    #violation-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.95);
+      z-index: 100000;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 24px;
+    }
+
+    .violation-card {
+      max-width: 480px;
+      background: #1E293B;
+      padding: 36px 32px;
+      border-radius: var(--radius-lg);
+      border: 1px solid #334155;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .violation-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #FEF2F2;
+      color: #EF4444;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 1.75rem;
+      font-weight: 700;
+    }
+
+    #duplicate-tab-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: #0F172A;
+      z-index: 100001;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 24px;
+    }
+
+    /* ==========================================================================
+       8. COMPACT & CLEAN POST-SUBMISSION ANALYSIS PAGE
+       ========================================================================== */
+    #analysis-page {
+      display: none;
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 20px 60px 20px;
+      width: 100%;
+    }
+
+    .clean-analysis-hero {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+
+    .hero-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+
+    .hero-score-badge {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+    }
+
+    .big-score-num {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1;
+    }
+
+    .big-score-total {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .metric-chips-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .metric-chip {
+      background: var(--bg-body);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .metric-chip .chip-icon {
+      font-size: 1.5rem;
+    }
+
+    .metric-chip .chip-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      display: block;
+    }
+
+    .metric-chip .chip-value {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .review-action-banner {
+      background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
+      border-radius: var(--radius-lg);
+      padding: 24px 28px;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 18px;
+      box-shadow: var(--shadow-md);
+      margin-bottom: 24px;
+    }
+
+    .review-action-banner h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .review-action-banner p {
+      font-size: 0.875rem;
+      color: #DBEAFE;
+    }
+
+    .compact-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+      margin-top: 12px;
+    }
+
+    .compact-table th {
+      text-align: left;
+      padding: 10px 14px;
+      background: #F8FAFC;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .compact-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border-color);
+      color: var(--text-main);
+    }
+
+    .compact-table tr:hover td {
+      background: #F8FAFC;
+    }
+
+    @media print {
+      body { background: #FFFFFF !important; }
+      .test-header, .action-toolbar, .palette-pane, .btn, #toast-container, .review-action-banner {
+        display: none !important;
+      }
+      #analysis-page { margin: 0 !important; padding: 0 !important; max-width: 100% !important; }
+      .card, .clean-analysis-hero { box-shadow: none !important; border: 1px solid #94A3B8 !important; }
+    }
+
+    @media (max-width: 900px) {
+      .palette-pane {
+        position: fixed;
+        right: 0;
+        top: 64px;
+        bottom: 0;
+        box-shadow: -4px 0 15px rgba(0,0,0,0.1);
+        transform: translateX(100%);
+      }
+      .palette-pane.open { transform: translateX(0); }
+      .question-pane { padding: 18px; }
+      .palette-toggle-btn { display: inline-flex !important; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Offline Warning Banner -->
+  <div id="offline-banner" role="alert">
+    <i class="ph ph-wifi-slash" style="color: #DC2626; font-size: 1.1rem; margin-right: 4px;"></i> <strong>Connection Lost:</strong> You are currently offline. Your test answers are saved locally and the test will continue seamlessly.
+  </div>
+
+  <!-- Toast Notification System -->
+  <div id="toast-container" aria-live="polite"></div>
+
+  <!-- Duplicate Session Overlay -->
+  <div id="duplicate-tab-overlay" role="alertdialog">
+    <div class="card" style="max-width: 440px; text-align: center;">
+      <h3 style="font-size: 1.25rem; margin-bottom: 12px; color: #DC2626;">Session Active in Another Tab</h3>
+      <p style="font-size: 0.875rem; color: #475569; margin-bottom: 20px;">
+        This examination is already running in another browser tab or window. Multiple simultaneous exam instances are prevented.
+      </p>
+      <button class="btn btn-primary" onclick="location.reload()">Refresh This Tab</button>
+    </div>
+  </div>
+
+  <!-- Submit Confirmation Modal -->
+  <div class="modal-backdrop" id="submit-confirm-modal" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <h3>Submit Examination?</h3>
+      <p>Are you sure you want to finish your test? Review your status summary below:</p>
+      
+      <div class="summary-stats-box">
+        <div class="summary-stat-row">
+          <span>Total Questions:</span>
+          <strong id="modal-stat-total">100</strong>
+        </div>
+        <div class="summary-stat-row">
+          <span style="color: var(--status-answered);">Answered:</span>
+          <strong id="modal-stat-answered">0</strong>
+        </div>
+        <div class="summary-stat-row">
+          <span style="color: var(--status-not-answered);">Not Answered:</span>
+          <strong id="modal-stat-unanswered">100</strong>
+        </div>
+        <div class="summary-stat-row">
+          <span style="color: var(--status-marked);">Marked for Review:</span>
+          <strong id="modal-stat-marked">0</strong>
+        </div>
+        <div class="summary-stat-row">
+          <span>Time Remaining:</span>
+          <strong id="modal-stat-time">02:59:59</strong>
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px;">
+        <button class="btn btn-outline" onclick="closeSubmitModal()">Go Back to Test</button>
+        <button class="btn btn-primary" id="btn-final-submit" onclick="executeFinalSubmission()">Confirm & Submit</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SECTION 1: WELCOME SCREEN (QUESTION SET PICKER)
+       ========================================================================== */
+  -->
+  <div class="pre-exam-container-wide" id="screen-welcome">
+    <div class="welcome-layout">
+      <!-- LEFT SIDEBAR: PROMINENT QUESTION SET SELECTION -->
+      <aside class="set-selection-sidebar" aria-label="Question Bank Selection">
+        <div class="sidebar-header">
+          <div class="sidebar-title">
+            <span><i class="ph ph-books" style="font-size: 1.2rem; color: var(--primary); margin-right: 6px;"></i>Question Banks</span>
+          </div>
+          <span class="sidebar-subtitle">Click any set on this sidebar to switch instantly</span>
+        </div>
+
+        <div class="set-cards-list">
+          <!-- PRACTICE SET 2 CARD (RECOMMENDED / MATCH) -->
+          <div class="set-picker-card active" id="set-card-set2" onclick="selectQuestionSetViaSidebar('set2')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')selectQuestionSetViaSidebar('set2')">
+            <div class="set-card-top">
+              <span class="set-tag set-tag-recommended"><i class="ph ph-star" style="margin-right: 3px;"></i>Recommended</span>
+              <span class="set-check-icon" id="set-check-set2"><i class="ph ph-check" style="font-weight: 800;"></i></span>
+            </div>
+            <div class="set-card-name">Practice Set 2</div>
+            <div class="set-card-desc">100 Questions with standard <strong>Match-the-Following</strong> tables, Single/Multiple Choice, and True/False.</div>
+            <div class="set-card-meta">
+              <span>100 Questions</span>
+              <span>•</span>
+              <span>15 Match Questions</span>
+            </div>
+          </div>
+
+          <!-- PRACTICE SET 1 CARD (STANDARD CORE) -->
+          <div class="set-picker-card" id="set-card-set1" onclick="selectQuestionSetViaSidebar('set1')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')selectQuestionSetViaSidebar('set1')">
+            <div class="set-card-top">
+              <span class="set-tag set-tag-standard"><i class="ph ph-certificate" style="margin-right: 3px;"></i>Core Exam</span>
+              <span class="set-check-icon" id="set-check-set1"><i class="ph ph-check" style="font-weight: 800;"></i></span>
+            </div>
+            <div class="set-card-name">Practice Set 1</div>
+            <div class="set-card-desc">Foundational 100 high-probability exam questions across Weeks 1 to 12.</div>
+            <div class="set-card-meta">
+              <span>100 Questions</span>
+              <span>•</span>
+              <span>High Probability</span>
+            </div>
+          </div>
+
+          <!-- PRACTICE SET 3 CARD (COMPREHENSIVE PRACTICE) -->
+          <div class="set-picker-card" id="set-card-set3" onclick="selectQuestionSetViaSidebar('set3')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')selectQuestionSetViaSidebar('set3')">
+            <div class="set-card-top">
+              <span class="set-tag set-tag-set3"><i class="ph ph-lightning" style="margin-right: 3px;"></i>Practice Set 3</span>
+              <span class="set-check-icon" id="set-check-set3"><i class="ph ph-check" style="font-weight: 800;"></i></span>
+            </div>
+            <div class="set-card-name">Practice Set 3</div>
+            <div class="set-card-desc">100 Comprehensive questions across Weeks 1 to 12 with 18 Match-the-Following questions.</div>
+            <div class="set-card-meta">
+              <span>100 Questions</span>
+              <span>•</span>
+              <span>18 Match Questions</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: #F8FAFC; border: 1px dashed var(--border-color); border-radius: var(--radius-md); padding: 12px; font-size: 0.75rem; color: var(--text-muted); line-height: 1.45;">
+          <i class="ph ph-lightbulb" style="color: #F59E0B; margin-right: 4px;"></i><strong>Tip:</strong> Switching sets loads different question banks instantly. The marking scheme, duration, and palette are fully synchronized.
+        </div>
+      </aside>
+
+      <!-- RIGHT MAIN PANEL: EXAM OVERVIEW & CONTROLS -->
+      <main class="card" style="margin: 0;">
+        <div class="header-branding">
+          <div class="logo-badge">
+            <div class="logo-icon"><i class="ph ph-graduation-cap" style="font-size: 1.6rem;"></i></div>
+            <div class="branding-text">
+              <h1>Online Certification Examination</h1>
+              <p>Computer Based Test (CBT) Assessment Portal</p>
+            </div>
+          </div>
+          <span class="badge" id="welcome-set-badge" style="background: #EFF6FF; color: #1E40AF; border: 1px solid #BFDBFE;">
+            Practice Set 2 Selected
+          </span>
+        </div>
+
+        <h2 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 8px;" id="welcome-exam-title">
+          Soft Skills — Practice Set 2 (100 Questions with Match-the-Following)
+        </h2>
+        <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.6; margin-bottom: 24px;" id="welcome-exam-desc">
+          Comprehensive practice set featuring Single Choice, Multiple Choice, True/False, and standard 
+          <strong>Match-the-Following</strong> questions with two-column tables.
+        </p>
+
+        <div class="exam-meta-grid">
+          <div class="meta-box">
+            <span>Exam Duration</span>
+            <strong id="display-duration">180 Mins</strong>
+          </div>
+          <div class="meta-box">
+            <span>Total Questions</span>
+            <strong id="display-total-q">100 Questions</strong>
+          </div>
+          <div class="meta-box">
+            <span>Marking Scheme</span>
+            <strong>+1 Mark / 0 Negative</strong>
+          </div>
+          <div class="meta-box">
+            <span>Question Types</span>
+            <strong id="display-q-types">Single, Multi, T/F & Match</strong>
+          </div>
+        </div>
+
+        <!-- Quick Customization Controls -->
+        <div style="background: #F1F5F9; border-radius: var(--radius-md); padding: 18px; margin-bottom: 24px;">
+          <h4 style="font-size: 0.875rem; font-weight: 700; margin-bottom: 12px; color: var(--text-main);">Session Parameters</h4>
+          
+          <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 14px;">
+            <!-- Question Count Preset -->
+            <div style="flex: 1; min-width: 180px;">
+              <label style="font-size: 0.75rem; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 4px;">Practice Question Count</label>
+              <select class="select-dropdown" id="config-questions-select" onchange="updateQuestionSetPreset(this.value)">
+                <option value="all">Full 100 Questions</option>
+                <option value="50">First 50 Questions</option>
+                <option value="25">First 25 Questions</option>
+              </select>
+            </div>
+
+            <!-- Duration Preset -->
+            <div style="flex: 1; min-width: 180px;">
+              <label style="font-size: 0.75rem; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 4px;">Timer Duration</label>
+              <select class="select-dropdown" id="config-duration-select" onchange="updateDurationConfig(this.value)">
+                <option value="180">180 Mins (Standard)</option>
+                <option value="90">90 Mins</option>
+                <option value="60">60 Mins</option>
+                <option value="30">30 Mins (Speed Run)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end;">
+          <button class="btn btn-primary" onclick="goToInstructions()" style="padding: 12px 28px; font-size: 0.9375rem;">
+            Proceed to Instructions <i class="ph ph-arrow-right" style="margin-left: 6px;"></i>
+          </button>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SECTION 2: INSTRUCTIONS SCREEN
+       ========================================================================== -->
+  <div class="pre-exam-container" id="screen-instructions" style="display: none;">
+    <div class="card">
+      <div class="header-branding">
+        <div class="logo-badge">
+          <div class="logo-icon"><i class="ph ph-info" style="font-size: 1.5rem;"></i></div>
+          <div class="branding-text">
+            <h1>General Instructions</h1>
+            <p>Please read each point carefully before launching the test</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Active Question Set Banner with Quick Change Action -->
+      <div style="display: flex; justify-content: space-between; align-items: center; background: #EFF6FF; border: 1px solid #BFDBFE; border-radius: var(--radius-md); padding: 12px 16px; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <i class="ph ph-books" style="font-size: 1.35rem; color: #1E40AF;"></i>
+          <div>
+            <div style="font-size: 0.6875rem; font-weight: 700; color: #1E40AF; text-transform: uppercase; letter-spacing: 0.04em;">Selected Question Set</div>
+            <strong id="banner-set-title-instructions" style="font-size: 0.875rem; color: #1E3A8A;">Soft Skills — Practice Set 2 (100 Questions with Match-the-Following)</strong>
+          </div>
+        </div>
+        <button class="btn btn-outline btn-sm" onclick="goToWelcome()" style="background: white; border-color: #93C5FD; color: #1E40AF;">
+          <i class="ph ph-arrow-left" style="margin-right: 4px;"></i>Change Set on Sidebar
+        </button>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 18px; font-size: 0.875rem; color: #334155; line-height: 1.6;">
+        <div>
+          <h4 style="font-size: 0.9375rem; font-weight: 700; color: var(--text-main); margin-bottom: 4px;">1. Examination Clock & Submission</h4>
+          <p>The countdown timer on the top right displays your remaining time. You have full control over your session and can review questions and submit whenever you are ready by clicking <strong>Submit Test</strong>.</p>
+        </div>
+
+        <div>
+          <h4 style="font-size: 0.9375rem; font-weight: 700; color: var(--text-main); margin-bottom: 6px;">2. Question Types and Controls</h4>
+          <p>Option controls explicitly indicate the answer requirements:</p>
+          <ul style="margin-left: 20px; margin-top: 6px;">
+            <li><strong>Single Correct / True-False:</strong> Circular radio button. Choosing one option deselects other choices.</li>
+            <li><strong>Match-the-Following:</strong> Two-column table (Column A items P-S matched to Column B items 1-4) followed by single-choice radio options listing the full pair sets (e.g., <code>P-2, Q-1, R-3, S-4</code>).</li>
+            <li><strong>Multiple Correct:</strong> Square checkbox. Full credit (+1) is awarded <em>only</em> if every correct option and no incorrect option is selected.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-size: 0.9375rem; font-weight: 700; color: var(--text-main); margin-bottom: 8px;">3. Question Palette Color Legend</h4>
+          <div class="legend-grid">
+            <div class="legend-item">
+              <div class="legend-badge badge-not-visited">01</div>
+              <div><strong>Not Visited</strong><br><span style="color: var(--text-muted); font-size: 0.75rem;">Question not viewed yet</span></div>
+            </div>
+            <div class="legend-item">
+              <div class="legend-badge badge-not-answered">02</div>
+              <div><strong>Not Answered</strong><br><span style="color: var(--text-muted); font-size: 0.75rem;">Visited but no answer chosen</span></div>
+            </div>
+            <div class="legend-item">
+              <div class="legend-badge badge-answered">03</div>
+              <div><strong>Answered</strong><br><span style="color: var(--text-muted); font-size: 0.75rem;">Answer saved</span></div>
+            </div>
+            <div class="legend-item">
+              <div class="legend-badge badge-marked">04</div>
+              <div><strong>Marked for Review</strong><br><span style="color: var(--text-muted); font-size: 0.75rem;">Unanswered & flagged</span></div>
+            </div>
+            <div class="legend-item">
+              <div class="legend-badge badge-marked-answered">05</div>
+              <div><strong>Answered & Marked</strong><br><span style="color: var(--text-muted); font-size: 0.75rem;">Evaluated for scoring</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 style="font-size: 0.9375rem; font-weight: 700; color: var(--text-main); margin-bottom: 4px;">4. Navigation & Shortcuts</h4>
+          <p>Use buttons <strong>Save & Next</strong>, <strong>Clear Response</strong>, <strong>Mark for Review & Next</strong>, or keyboard shortcuts <span class="kbd">N</span>, <span class="kbd">P</span>, <span class="kbd">1-5</span>, <span class="kbd">M</span>.</p>
+        </div>
+      </div>
+
+      <!-- Mandatory Checkbox Declaration -->
+      <div style="margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--border-color);">
+        <label style="display: flex; align-items: flex-start; gap: 12px; cursor: pointer;">
+          <input type="checkbox" id="agree-instructions-checkbox" onchange="toggleContinueButton(this.checked)" style="margin-top: 4px; width: 18px; height: 18px; accent-color: var(--primary);">
+          <span style="font-size: 0.875rem; font-weight: 600; color: var(--text-main);">
+            I have read and understood all the instructions above and agree to abide by the examination code of conduct.
+          </span>
+        </label>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 24px;">
+        <button class="btn btn-outline" onclick="goToWelcome()"><i class="ph ph-arrow-left" style="margin-right: 4px;"></i>Back</button>
+        <button class="btn btn-primary" id="btn-to-system-check" disabled onclick="goToSystemCheck()">
+          Continue to System Check <i class="ph ph-arrow-right" style="margin-left: 4px;"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SECTION 3: SYSTEM CHECK SCREEN
+       ========================================================================== -->
+  <div class="pre-exam-container" id="screen-system-check" style="display: none;">
+    <div class="card">
+      <div class="header-branding">
+        <div class="logo-badge">
+          <div class="logo-icon"><i class="ph ph-shield-check" style="font-size: 1.5rem;"></i></div>
+          <div class="branding-text">
+            <h1>Diagnostic System Check</h1>
+            <p>Verifying browser environment and hardware capabilities</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Active Question Set Banner with Quick Change Action -->
+      <div style="display: flex; justify-content: space-between; align-items: center; background: #EFF6FF; border: 1px solid #BFDBFE; border-radius: var(--radius-md); padding: 12px 16px; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <i class="ph ph-books" style="font-size: 1.35rem; color: #1E40AF;"></i>
+          <div>
+            <div style="font-size: 0.6875rem; font-weight: 700; color: #1E40AF; text-transform: uppercase; letter-spacing: 0.04em;">Selected Question Set</div>
+            <strong id="banner-set-title-syscheck" style="font-size: 0.875rem; color: #1E3A8A;">Soft Skills — Practice Set 2 (100 Questions with Match-the-Following)</strong>
+          </div>
+        </div>
+        <button class="btn btn-outline btn-sm" onclick="goToWelcome()" style="background: white; border-color: #93C5FD; color: #1E40AF;">
+          <i class="ph ph-arrow-left" style="margin-right: 4px;"></i>Change Set on Sidebar
+        </button>
+      </div>
+
+      <div class="system-check-list">
+        <div class="check-card">
+          <div class="check-info">
+            <i class="ph ph-globe" style="font-size: 1.6rem; color: var(--primary);"></i>
+            <div>
+              <strong style="font-size: 0.9375rem; display: block;">Internet Connectivity & Latency</strong>
+              <span style="font-size: 0.8125rem; color: var(--text-muted);" id="net-latency-detail">Testing latency with ping requests...</span>
+            </div>
+          </div>
+          <span class="check-status-pill status-checking" id="net-status-pill">Testing</span>
+        </div>
+
+        <div class="check-card">
+          <div class="check-info">
+            <i class="ph ph-arrows-out" style="font-size: 1.6rem; color: var(--primary);"></i>
+            <div>
+              <strong style="font-size: 0.9375rem; display: block;">Fullscreen API Capability</strong>
+              <span style="font-size: 0.8125rem; color: var(--text-muted);" id="fs-support-detail">Checking browser fullscreen API...</span>
+            </div>
+          </div>
+          <span class="check-status-pill status-pass" id="fs-status-pill">Supported</span>
+        </div>
+
+        <div class="check-card">
+          <div class="check-info">
+            <i class="ph ph-desktop" style="font-size: 1.6rem; color: var(--primary);"></i>
+            <div>
+              <strong style="font-size: 0.9375rem; display: block;">Display Viewport Resolution</strong>
+              <span style="font-size: 0.8125rem; color: var(--text-muted);" id="screen-size-detail">Resolving window dimensions...</span>
+            </div>
+          </div>
+          <span class="check-status-pill status-pass" id="screen-status-pill">Optimal</span>
+        </div>
+      </div>
+
+      <div style="background: #F8FAFC; border: 1px dashed var(--border-color); border-radius: var(--radius-md); padding: 14px; margin-bottom: 24px;">
+        <span style="font-size: 0.8125rem; color: var(--text-muted);">
+          <i class="ph ph-lightbulb" style="color: #F59E0B; margin-right: 4px;"></i><strong>Tip:</strong> Fullscreen can be engaged automatically or toggled on the top bar at any time.
+        </span>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <button class="btn btn-outline" onclick="goToInstructions()"><i class="ph ph-arrow-left" style="margin-right: 4px;"></i>Back</button>
+        <div style="display: flex; gap: 12px;">
+          <button class="btn btn-outline" onclick="runDiagnosticChecks()"><i class="ph ph-arrows-clockwise" style="margin-right: 4px;"></i>Re-check</button>
+          <button class="btn btn-primary" id="btn-start-test" onclick="startOfficialTest()">
+            Start Examination <i class="ph ph-rocket-launch" style="margin-left: 6px;"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SECTION 4: CBT WORKSPACE (ACTIVE TEST & REVIEW MODE)
+       ========================================================================== -->
+  <div id="test-interface">
+    <header class="test-header">
+      <div class="test-title-area">
+        <h2 id="top-bar-exam-title">CBT Portal: Soft Skills Exam</h2>
+        <div class="candidate-pill" id="candidate-badge-pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span id="candidate-name-text">Candidate: Rahul SP (Roll: CBT26SS100)</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button class="btn btn-outline btn-sm" id="btn-back-to-summary" style="display: none;" onclick="exitReviewMode()">
+          <i class="ph ph-arrow-left" style="margin-right: 4px;"></i>Back to Analysis
+        </button>
+
+        <button class="btn btn-outline btn-sm" id="btn-toggle-fs" onclick="toggleFullscreen()" title="Toggle Fullscreen">
+          <i class="ph ph-arrows-out" style="margin-right: 4px;"></i>Fullscreen
+        </button>
+
+        <div id="top-progress-container" style="display: flex; align-items: center; gap: 8px;">
+          <div class="progress-bar-container" title="Overall Completion">
+            <div class="progress-bar-fill" id="top-progress-fill"></div>
+          </div>
+          <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted);" id="top-progress-text">0%</span>
+        </div>
+
+        <div class="timer-container tabular-nums" id="exam-timer-box" title="Remaining Exam Time">
+          <i class="ph ph-clock" style="font-size: 1rem;"></i>
+          <span id="exam-timer-display">03:00:00</span>
+        </div>
+
+        <button class="btn btn-outline btn-sm palette-toggle-btn" style="display: none;" onclick="toggleMobilePalette()">
+          Palette <i class="ph ph-list" style="margin-left: 4px;"></i>
+        </button>
+      </div>
+    </header>
+
+    <main class="test-main-area">
+      <section class="question-pane" aria-label="Question Content Area">
+        <div class="question-wrapper">
+          <div class="question-header">
+            <span class="q-number" id="display-q-number">Question 1</span>
+            <div class="q-badges">
+              <span class="badge q-type-badge" id="display-q-type">Single Choice</span>
+              <span class="badge q-marks-badge" id="display-q-week">Week 1</span>
+              <span class="badge" id="display-q-score-badge" style="background: #F1F5F9; color: #475569;">+1.0 / -0.0</span>
+            </div>
+          </div>
+
+          <div class="question-card" id="main-question-card">
+            <p class="question-text" id="display-q-text">Loading question text...</p>
+            
+            <!-- Two-Column Match-the-Following Table -->
+            <div id="display-match-table-container" style="display: none;"></div>
+
+            <!-- Optional Quick Match Helper -->
+            <div id="display-quick-match-helper" style="display: none;"></div>
+
+            <span class="option-instruction-label" id="display-option-instruction">Select one option</span>
+            
+            <!-- Radio / Checkbox Options -->
+            <fieldset class="options-group" id="display-options-container">
+              <!-- Dynamically Populated Options -->
+            </fieldset>
+
+            <!-- Explanation Card (Review Mode) -->
+            <div class="review-explanation-card" id="display-explanation-card" style="display: none;">
+              <strong><i class="ph ph-lightbulb" style="color: #F59E0B; margin-right: 4px;"></i>Explanation & Course Concept:</strong>
+              <div id="display-explanation-text"></div>
+            </div>
+          </div>
+
+          <!-- Bottom Action Toolbar (Live Test Mode) -->
+          <div class="action-toolbar" id="toolbar-test-mode">
+            <div class="action-group-left">
+              <button class="btn btn-outline" id="btn-previous-q" onclick="navQuestion(-1)">
+                <i class="ph ph-arrow-left" style="margin-right: 4px;"></i>Previous
+              </button>
+              <button class="btn btn-outline btn-warning" onclick="clearCurrentResponse()">
+                Clear Response
+              </button>
+              <button class="btn btn-purple" onclick="markForReviewAndNext()">
+                Mark for Review & Next
+              </button>
+            </div>
+
+            <div class="action-group-right">
+              <button class="btn btn-primary" onclick="saveAndNext()">
+                Save & Next <i class="ph ph-arrow-right" style="margin-left: 4px;"></i>
+              </button>
+              <button class="btn btn-danger" onclick="promptSubmitModal()">
+                Submit Test
+              </button>
+            </div>
+          </div>
+
+          <!-- Bottom Action Toolbar (Review Mode) -->
+          <div class="action-toolbar" id="toolbar-review-mode" style="display: none;">
+            <div class="action-group-left">
+              <button class="btn btn-outline" onclick="navQuestion(-1)">
+                <i class="ph ph-arrow-left" style="margin-right: 4px;"></i>Previous Question
+              </button>
+              <button class="btn btn-primary" onclick="navQuestion(1)">
+                Next Question <i class="ph ph-arrow-right" style="margin-left: 4px;"></i>
+              </button>
+              <button class="btn btn-warning" id="btn-next-wrong" onclick="jumpToNextWrongQuestion()">
+                Next Wrong Question <i class="ph ph-caret-right" style="margin-left: 4px;"></i>
+              </button>
+            </div>
+
+            <div class="action-group-right">
+              <button class="btn btn-outline" onclick="exitReviewMode()">
+                <i class="ph ph-arrow-left" style="margin-right: 4px;"></i>Back to Analysis Summary
+              </button>
+            </div>
+          </div>
+
+          <div class="shortcut-hints" id="shortcuts-hint-strip">
+            <span>Shortcuts:</span>
+            <span><span class="kbd">N</span> Next</span>
+            <span><span class="kbd">P</span> Previous</span>
+            <span id="shortcut-num-hint"><span class="kbd">1</span> - <span class="kbd">5</span> Select Option</span>
+            <span id="shortcut-m-hint"><span class="kbd">M</span> Mark Review</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Side Palette Panel -->
+      <aside class="palette-pane" id="palette-sidebar" aria-label="Question Navigation Palette">
+        <div class="palette-header">
+          <h3 id="palette-heading-text">Question Palette</h3>
+          <span class="badge" style="background: #F1F5F9; color: var(--text-muted);" id="palette-total-badge">100 Qs</span>
+        </div>
+
+        <div class="palette-summary-grid" id="palette-summary-box">
+          <div class="summary-card">
+            <span class="legend-badge badge-answered" style="width: 20px; height: 20px; font-size: 0.65rem;"><i class="ph ph-check"></i></span>
+            <span id="label-stat-answered">Answered</span>
+            <strong id="count-answered">0</strong>
+          </div>
+          <div class="summary-card">
+            <span class="legend-badge badge-not-answered" style="width: 20px; height: 20px; font-size: 0.65rem;"><i class="ph ph-x"></i></span>
+            <span id="label-stat-unanswered">Not Answered</span>
+            <strong id="count-not-answered">0</strong>
+          </div>
+          <div class="summary-card" id="summary-card-marked">
+            <span class="legend-badge badge-marked" style="width: 20px; height: 20px; font-size: 0.65rem;"><i class="ph ph-bookmark-simple"></i></span>
+            <span>Marked Review</span>
+            <strong id="count-marked">0</strong>
+          </div>
+          <div class="summary-card" id="summary-card-marked-ans">
+            <span class="legend-badge badge-marked-answered" style="width: 20px; height: 20px; font-size: 0.65rem;"><i class="ph ph-star"></i></span>
+            <span>Ans & Marked</span>
+            <strong id="count-marked-answered">0</strong>
+          </div>
+          <div class="summary-card" id="summary-card-not-visited" style="grid-column: span 2;">
+            <span class="legend-badge badge-not-visited" style="width: 20px; height: 20px; font-size: 0.65rem;"><i class="ph ph-minus"></i></span>
+            <span>Not Visited</span>
+            <strong id="count-not-visited">100</strong>
+          </div>
+        </div>
+
+        <div class="palette-filter-bar">
+          <select class="select-dropdown" id="palette-week-filter" onchange="renderPaletteGrid()">
+            <option value="all">All Questions (Week 1 - 12)</option>
+            <option value="match_only" style="font-weight: 700; color: #4F46E5;">Match-the-Following Only</option>
+            <option value="wrong_only" id="opt-filter-wrong" style="display: none; font-weight: 700; color: #DC2626;">Only Wrong Questions</option>
+            <option value="correct_only" id="opt-filter-correct" style="display: none; font-weight: 700; color: #166534;">Only Correct Questions</option>
+            <option value="unattempted_only" id="opt-filter-unattempted" style="display: none; font-weight: 700; color: #475569;">Only Unattempted Questions</option>
+            <option value="1">Week 1: Communication Basics</option>
+            <option value="2">Week 2: Verbal & Non-verbal</option>
+            <option value="3">Week 3: Proxemics & Haptics</option>
+            <option value="4">Week 4: Negotiation & Culture</option>
+            <option value="5">Week 5: Breakdown & Ethics</option>
+            <option value="6">Week 6: Business Correspondence</option>
+            <option value="7">Week 7: Reports & Sampling</option>
+            <option value="8">Week 8: Style & Group Roles</option>
+            <option value="9">Week 9: Leadership & GD</option>
+            <option value="10">Week 10: Speaking & Anxiety</option>
+            <option value="11">Week 11: Interviews & Resumes</option>
+            <option value="12">Week 12: EQ & Professionalism</option>
+          </select>
+        </div>
+
+        <div class="palette-grid-container">
+          <div class="palette-grid" id="palette-buttons-grid"></div>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <!-- ==========================================================================
+       SECTION 5: SIMPLE, CLEAN & QUICK POST-SUBMISSION ANALYSIS PAGE
+       ========================================================================== -->
+  <div id="analysis-page">
+    <div class="clean-analysis-hero">
+      <div class="hero-top-row">
+        <div>
+          <span class="badge" id="hero-status-pill" style="background: #DCFCE7; color: #166534; margin-bottom: 6px;">Test Completed</span>
+          <h2 style="font-size: 1.5rem; font-weight: 800; color: var(--text-main);">Examination Result Summary</h2>
+          <p style="color: var(--text-muted); font-size: 0.8125rem;" id="analysis-exam-subtitle">Soft Skills — Computer Based Test Assessment</p>
+        </div>
+        <div class="hero-score-badge">
+          <span class="big-score-num tabular-nums" id="score-hero-marks">0</span>
+          <span class="big-score-total" id="score-hero-total">/ 100</span>
+          <span class="badge" id="score-hero-pct-badge" style="background: #EEF2FF; color: var(--accent); font-size: 1rem; padding: 4px 10px;">0%</span>
+        </div>
+      </div>
+
+      <!-- Quick Metric Chips -->
+      <div class="metric-chips-row">
+        <div class="metric-chip">
+          <span class="chip-icon"><i class="ph ph-check-circle" style="color: #10B981; font-size: 1.35rem;"></i></span>
+          <div>
+            <span class="chip-label">Correct</span>
+            <span class="chip-value" id="chip-correct" style="color: #10B981;">0</span>
+          </div>
+        </div>
+        <div class="metric-chip">
+          <span class="chip-icon"><i class="ph ph-x-circle" style="color: #EF4444; font-size: 1.35rem;"></i></span>
+          <div>
+            <span class="chip-label">Incorrect</span>
+            <span class="chip-value" id="chip-wrong" style="color: #EF4444;">0</span>
+          </div>
+        </div>
+        <div class="metric-chip">
+          <span class="chip-icon"><i class="ph ph-minus-circle" style="color: #64748B; font-size: 1.35rem;"></i></span>
+          <div>
+            <span class="chip-label">Unattempted</span>
+            <span class="chip-value" id="chip-unattempted" style="color: #64748B;">0</span>
+          </div>
+        </div>
+        <div class="metric-chip">
+          <span class="chip-icon"><i class="ph ph-clock" style="color: var(--primary); font-size: 1.35rem;"></i></span>
+          <div>
+            <span class="chip-label">Time Taken</span>
+            <span class="chip-value tabular-nums" id="chip-time">00:00</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prominent Call to Action: View in Exact Test UI -->
+      <div class="review-action-banner">
+        <div>
+          <h3><i class="ph ph-magnifying-glass" style="margin-right: 6px;"></i>Review Questions & Correct Answers</h3>
+          <p>Inspect all questions and verified solutions directly in the exact exam interface with detailed explanations.</p>
+        </div>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <button class="btn btn-warning" onclick="enterReviewMode(true)">
+            <i class="ph ph-target" style="margin-right: 4px;"></i>Review Only Wrong Answers
+          </button>
+          <button class="btn btn-outline" style="background: #FFFFFF; color: #1E40AF; border-color: #FFFFFF;" onclick="enterReviewMode(false)">
+            View All Answers in Test UI <i class="ph ph-arrow-right" style="margin-left: 4px;"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Question Type Breakdown -->
+      <div style="margin-top: 20px; background: #F8FAFC; border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 18px;">
+        <h4 style="font-size: 0.9375rem; font-weight: 700; margin-bottom: 12px;">Accuracy by Question Type</h4>
+        <div id="type-breakdown-container"></div>
+      </div>
+
+      <!-- Compact Week Breakdown Table -->
+      <div style="margin-top: 24px;">
+        <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 8px;">Weekly Performance Breakdown</h4>
+        <div style="overflow-x: auto;">
+          <table class="compact-table" id="week-performance-table">
+            <thead>
+              <tr>
+                <th>Week & Topic</th>
+                <th style="width: 140px;">Accuracy</th>
+                <th style="width: 100px; text-align: right;">Score</th>
+                <th style="width: 120px; text-align: center;">Status</th>
+              </tr>
+            </thead>
+            <tbody id="week-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--border-color); flex-wrap: wrap; gap: 12px;">
+        <div style="display: flex; gap: 10px;">
+          <button class="btn btn-outline btn-sm" onclick="printAnalysisReport()"><i class="ph ph-printer" style="margin-right: 4px;"></i>Print / Save PDF</button>
+          <button class="btn btn-outline btn-sm" onclick="exportAnalysisJSON()"><i class="ph ph-floppy-disk" style="margin-right: 4px;"></i>Export JSON</button>
+        </div>
+        <div style="display: flex; gap: 10px;">
+          <button class="btn btn-outline btn-sm" onclick="retakeExam(true)"><i class="ph ph-target" style="margin-right: 4px;"></i>Retake Missed Only</button>
+          <button class="btn btn-primary btn-sm" onclick="retakeExam(false)"><i class="ph ph-arrows-clockwise" style="margin-right: 4px;"></i>Retake Full Exam</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts for offline / local file protocol compatibility -->
+  <script src="questions_set1.js"></script>
+  <script src="questions_set2.js"></script>
+  <script src="questions_set3.js"></script>
+
+  <!-- ==========================================================================
+       SECTION 6: JAVASCRIPT APPLICATION CORE LOGIC
+       ========================================================================== -->
+  <script>
+    const CONFIG = {
+      examTitle: "CBT Portal: Soft Skills Examination",
+      durationMinutes: 180,
+      marksPerCorrect: 1.0,
+      negativeMarks: 0.0,
+      exactMatchOnlyForMultiple: true,
+      enableQuickMatchHelper: true,    // Quick match dropdown helper for match questions
+      violationLimit: 3,
+      storagePrefix: "CBT_PORTAL_V2_"
+    };
+
+    const State = {
+      selectedSet: "set2",       // 'set2' (with match) | 'set1' (core) | 'set3' (comprehensive)
+      presetCount: 100,
+      questions: [],
+      currentIndex: 0,
+      userAnswers: {},
+      questionStatus: {},
+      timeSpent: {},
+      examStartTime: 0,
+      examEndTime: 0,
+      timerInterval: null,
+      secondTrackingInterval: null,
+      isSubmitting: false,
+      isReviewMode: false,
+      reviewOnlyWrong: false,
+      violations: [],
+      sessionId: null,
+      isPaletteOpenMobile: false,
+      lastComputedResult: null
+    };
+
+    // Lazy load question sets directly from JSON files, script globals
+    async function loadBank(setName) {
+      if (setName === 'set1') {
+        if (window.BANK_SET1 && Array.isArray(window.BANK_SET1) && window.BANK_SET1.length > 0) {
+          return window.BANK_SET1;
+        }
+        try {
+          const resp = await fetch('questions.json');
+          window.BANK_SET1 = await resp.json();
+          return window.BANK_SET1;
+        } catch(e) {
+          console.warn("Could not fetch questions.json; checking window.BANK_SET1", e);
+        }
+        return window.BANK_SET1 || [];
+      } else if (setName === 'set2') {
+        if (window.BANK_SET2 && Array.isArray(window.BANK_SET2) && window.BANK_SET2.length > 0) {
+          return window.BANK_SET2;
+        }
+        try {
+          const resp = await fetch('questions_set2.json');
+          window.BANK_SET2 = await resp.json();
+          return window.BANK_SET2;
+        } catch(e) {
+          console.warn("Could not fetch questions_set2.json; checking window.BANK_SET2", e);
+        }
+        return window.BANK_SET2 || [];
+      } else if (setName === 'set3') {
+        if (window.BANK_SET3 && Array.isArray(window.BANK_SET3) && window.BANK_SET3.length > 0) {
+          return window.BANK_SET3;
+        }
+        try {
+          const resp = await fetch('questions_set3.json');
+          window.BANK_SET3 = await resp.json();
+          return window.BANK_SET3;
+        } catch(e) {
+          console.warn("Could not fetch questions_set3.json; checking window.BANK_SET3", e);
+        }
+        return window.BANK_SET3 || [];
+      }
+      return window.BANK_SET2 || [];
+    }
+
+    // Cross-tab lock
+    let examChannel = null;
+    try {
+      examChannel = new BroadcastChannel("CBT_EXAM_CHANNEL");
+      examChannel.onmessage = (event) => {
+        if (event.data.type === "EXAM_ALREADY_ACTIVE" && !State.isSubmitting && !State.isReviewMode) {
+          showDuplicateTabWarning();
+        }
+      };
+    } catch(e) {}
+
+    /* ==========================================================================
+       6.4 FULLSCREEN MANAGEMENT (CROSS-BROWSER)
+       ========================================================================== */
+    function isFullscreenActive() {
+      return !!(document.fullscreenElement || 
+                document.webkitFullscreenElement || 
+                document.mozFullScreenElement || 
+                document.msFullscreenElement);
+    }
+
+    function requestExamFullscreen() {
+      const docEl = document.documentElement;
+      const req = docEl.requestFullscreen || 
+                  docEl.webkitRequestFullscreen || 
+                  docEl.mozRequestFullScreen || 
+                  docEl.msRequestFullscreen;
+      if (req) {
+        return req.call(docEl).then(() => {
+          updateFsBtnLabel();
+        }).catch(err => {
+          console.warn("Fullscreen permission not granted:", err);
+          showToast("Fullscreen couldn't be automatically engaged. You can toggle via top-bar button.", "warning");
+        });
+      }
+    }
+
+    function exitExamFullscreen() {
+      const efs = document.exitFullscreen || 
+                  document.webkitExitFullscreen || 
+                  document.mozCancelFullScreen || 
+                  document.msExitFullscreen;
+      if (efs && isFullscreenActive()) {
+        return efs.call(document).then(() => {
+          updateFsBtnLabel();
+        }).catch(() => {});
+      }
+    }
+
+    function toggleFullscreen() {
+      if (isFullscreenActive()) {
+        exitExamFullscreen();
+      } else {
+        requestExamFullscreen();
+      }
+    }
+
+    function updateFsBtnLabel() {
+      const btn = document.getElementById("btn-toggle-fs");
+      if (btn) {
+        btn.innerHTML = isFullscreenActive() ? '<i class="ph ph-arrows-in" style="margin-right: 4px;"></i>Exit Fullscreen' : '<i class="ph ph-arrows-out" style="margin-right: 4px;"></i>Fullscreen';
+      }
+    }
+
+    document.addEventListener("fullscreenchange", updateFsBtnLabel);
+    document.addEventListener("webkitfullscreenchange", updateFsBtnLabel);
+
+    /* ==========================================================================
+       6.5 CONFIGURATION & PRE-EXAM FLOW
+       ========================================================================== */
+    function updateDurationConfig(val) {
+      CONFIG.durationMinutes = parseInt(val, 10);
+      document.getElementById("display-duration").innerText = `${CONFIG.durationMinutes} Mins`;
+    }
+
+    function selectQuestionSetViaSidebar(setName) {
+      State.selectedSet = setName;
+
+      // Update sidebar visual active state
+      document.querySelectorAll('.set-picker-card').forEach(el => el.classList.remove('active'));
+      const activeCard = document.getElementById(`set-card-${setName}`);
+      if (activeCard) activeCard.classList.add('active');
+
+      const titleEl = document.getElementById("welcome-exam-title");
+      const descEl = document.getElementById("welcome-exam-desc");
+      const badgeEl = document.getElementById("welcome-set-badge");
+      const typesEl = document.getElementById("display-q-types");
+      const bannerInstEl = document.getElementById("banner-set-title-instructions");
+      const bannerSysEl = document.getElementById("banner-set-title-syscheck");
+
+      if (setName === 'set2') {
+        const title = "Soft Skills — Practice Set 2 (100 Questions with Match-the-Following)";
+        if (titleEl) titleEl.innerText = title;
+        if (descEl) descEl.innerHTML = "Comprehensive practice set featuring Single Choice, Multiple Choice, True/False, and standard <strong>Match-the-Following</strong> questions with two-column tables.";
+        document.getElementById("display-total-q").innerText = "100 Questions";
+        if (badgeEl) badgeEl.innerText = "Practice Set 2 Selected";
+        if (typesEl) typesEl.innerText = "Single, Multi, T/F & Match";
+        if (bannerInstEl) bannerInstEl.innerText = title;
+        if (bannerSysEl) bannerSysEl.innerText = title;
+      } else if (setName === 'set1') {
+        const title = "Soft Skills — 100 High-Probability Exam Questions (Set 1)";
+        if (titleEl) titleEl.innerText = title;
+        if (descEl) descEl.innerText = "Foundational 100 high-probability questions across Weeks 1 to 12 (Single Choice, Multiple Choice, and True/False).";
+        document.getElementById("display-total-q").innerText = "100 Questions";
+        if (badgeEl) badgeEl.innerText = "Practice Set 1 Selected";
+        if (typesEl) typesEl.innerText = "Single, Multi & True/False";
+        if (bannerInstEl) bannerInstEl.innerText = title;
+        if (bannerSysEl) bannerSysEl.innerText = title;
+      } else if (setName === 'set3') {
+        const title = "Soft Skills — Practice Set 3 (100 Questions)";
+        if (titleEl) titleEl.innerText = title;
+        if (descEl) descEl.innerHTML = "Comprehensive practice set covering Weeks 1 to 12 featuring 45 Single Choice, 24 Multiple Choice, 13 True/False, and 18 <strong>Match-the-Following</strong> questions.";
+        document.getElementById("display-total-q").innerText = "100 Questions";
+        if (badgeEl) badgeEl.innerText = "Practice Set 3 Selected";
+        if (typesEl) typesEl.innerText = "Single, Multi, T/F & Match";
+        if (bannerInstEl) bannerInstEl.innerText = title;
+        if (bannerSysEl) bannerSysEl.innerText = title;
+      }
+
+      showToast(`Selected: ${setName === 'set3' ? 'Practice Set 3' : (setName === 'set2' ? 'Practice Set 2 (with Match)' : 'Practice Set 1')}`, 'info');
+    }
+
+    function updateQuestionSetChoice(setName) {
+      selectQuestionSetViaSidebar(setName);
+    }
+
+    function updateQuestionSetPreset(val) {
+      if (val === '25') State.presetCount = 25;
+      else if (val === '50') State.presetCount = 50;
+      else State.presetCount = 100;
+      document.getElementById("display-total-q").innerText = `${State.presetCount} Questions`;
+    }
+
+    function goToWelcome() {
+      document.getElementById("screen-welcome").style.display = "block";
+      document.getElementById("screen-instructions").style.display = "none";
+      document.getElementById("screen-system-check").style.display = "none";
+      document.getElementById("test-interface").style.display = "none";
+      document.getElementById("analysis-page").style.display = "none";
+    }
+
+    function goToInstructions() {
+      document.getElementById("screen-welcome").style.display = "none";
+      document.getElementById("screen-instructions").style.display = "block";
+      document.getElementById("screen-system-check").style.display = "none";
+    }
+
+    function toggleContinueButton(agreed) {
+      document.getElementById("btn-to-system-check").disabled = !agreed;
+    }
+
+    function goToSystemCheck() {
+      document.getElementById("screen-instructions").style.display = "none";
+      document.getElementById("screen-system-check").style.display = "block";
+      runDiagnosticChecks();
+    }
+
+    async function runDiagnosticChecks() {
+      const netPill = document.getElementById("net-status-pill");
+      const netDetail = document.getElementById("net-latency-detail");
+      const fsPill = document.getElementById("fs-status-pill");
+      const fsDetail = document.getElementById("fs-support-detail");
+      const screenPill = document.getElementById("screen-status-pill");
+      const screenDetail = document.getElementById("screen-size-detail");
+
+      const canFullscreen = document.fullscreenEnabled || document.documentElement.requestFullscreen;
+      fsPill.className = canFullscreen ? "check-status-pill status-pass" : "check-status-pill status-fail";
+      fsPill.innerText = canFullscreen ? "Supported" : "Restricted";
+      fsDetail.innerText = canFullscreen ? "Fullscreen API ready for secure test mode." : "Windowed testing available on your browser.";
+
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      screenDetail.innerText = `Current viewport: ${w} × ${h}px`;
+      screenPill.className = w >= 768 ? "check-status-pill status-pass" : "check-status-pill status-checking";
+      screenPill.innerText = w >= 768 ? "Optimal" : "Compact";
+
+      netPill.className = "check-status-pill status-checking";
+      netPill.innerText = "Testing Latency...";
+      netDetail.innerText = "Executing diagnostic ping sequence...";
+
+      let latencies = [];
+      for (let i = 0; i < 3; i++) {
+        const start = performance.now();
+        try {
+          await fetch(`https://fonts.googleapis.com/css2?family=Inter&v=${Date.now()}_${i}`, { mode: 'no-cors', cache: 'no-store' });
+          latencies.push(Math.round(performance.now() - start));
+        } catch (e) {
+          latencies.push(Math.round(performance.now() - start));
+        }
+      }
+
+      const avgLatency = Math.round(latencies.reduce((a, b) => a + b, 0) / latencies.length);
+      netPill.className = navigator.onLine ? "check-status-pill status-pass" : "check-status-pill status-fail";
+      netPill.innerText = navigator.onLine ? "Online" : "Offline";
+      netDetail.innerText = navigator.onLine ? `Connected (~${avgLatency}ms latency). CBT functions 100% offline.` : "Working offline smoothly via local question banks.";
+    }
+
+    /* ==========================================================================
+       6.6 SHUFFLE & QUESTION INITIALIZATION (With Match Option Relabeling)
+       ========================================================================== */
+    function shuffleArray(array) {
+      const arr = [...array];
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    function formatPairsText(pairs) {
+      if (!pairs) return "";
+      return Object.entries(pairs).map(([k, v]) => `${k}-${v}`).join(", ");
+    }
+
+    async function prepareExamPool(forceNew = false) {
+      const savedSession = localStorage.getItem(CONFIG.storagePrefix + "SESSION");
+      if (savedSession && !forceNew) {
+        try {
+          const session = JSON.parse(savedSession);
+          if (session.questions && session.questions.length > 0 && session.examEndTime > Date.now()) {
+            State.questions = session.questions;
+            State.currentIndex = session.currentIndex || 0;
+            State.userAnswers = session.userAnswers || {};
+            State.questionStatus = session.questionStatus || {};
+            State.timeSpent = session.timeSpent || {};
+            State.examStartTime = session.examStartTime;
+            State.examEndTime = session.examEndTime;
+            State.violations = session.violations || [];
+            State.sessionId = session.sessionId;
+            State.selectedSet = session.selectedSet || "set2";
+            return true;
+          }
+        } catch(e) {}
+      }
+
+      let basePool = await loadBank(State.selectedSet);
+      if (State.presetCount && State.presetCount < basePool.length) {
+        basePool = basePool.slice(0, State.presetCount);
+      }
+
+      // Deep clone questions so we don't mutate raw bank
+      const clonedPool = JSON.parse(JSON.stringify(basePool));
+      const shuffledQuestions = shuffleArray(clonedPool);
+
+      shuffledQuestions.forEach(q => {
+        if (!q.options) q.options = [];
+        if (q.type === 'truefalse') {
+          q.options = [
+            { id: "True", text: "True" },
+            { id: "False", text: "False" }
+          ];
+        } else if (q.type === 'match') {
+          // Shuffle options, and relabel them A, B, C, D (Column A & B stay FIXED)
+          const oldCorrectAnswer = q.answer && q.answer.length > 0 ? q.answer[0] : (q.options[0] ? q.options[0].id : "A");
+          const oldCorrectOption = q.options.find(o => o.id === oldCorrectAnswer);
+          
+          const shuffledOpts = shuffleArray(q.options);
+          const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
+          let newCorrectLetter = 'A';
+
+          q.options = shuffledOpts.map((opt, idx) => {
+            const newLetter = letters[idx];
+            if (opt === oldCorrectOption || opt.id === oldCorrectAnswer) {
+              newCorrectLetter = newLetter;
+            }
+            return {
+              id: newLetter,
+              text: opt.text || (typeof formatPairsText === 'function' ? formatPairsText(opt.pairs) : ''),
+              pairs: opt.pairs
+            };
+          });
+          q.answer = [newCorrectLetter];
+        } else {
+          // Regular single/multiple
+          const regularOptions = [];
+          const endOptions = [];
+          q.options.forEach(opt => {
+            const lower = (opt && opt.text ? String(opt.text) : '').toLowerCase();
+            if (lower.includes("all of the above") || lower.includes("none of the above") || lower.includes("all of these") || lower.includes("none of these")) {
+              endOptions.push(opt);
+            } else {
+              regularOptions.push(opt);
+            }
+          });
+          q.options = [...shuffleArray(regularOptions), ...endOptions];
+        }
+
+        if (!State.questionStatus[q.id]) State.questionStatus[q.id] = 'not-visited';
+        if (!State.timeSpent[q.id]) State.timeSpent[q.id] = 0;
+      });
+
+      State.questions = shuffledQuestions;
+      State.currentIndex = 0;
+      State.userAnswers = {};
+      State.violations = [];
+      State.sessionId = "SESSION_" + Date.now();
+      State.examStartTime = Date.now();
+      State.examEndTime = Date.now() + (CONFIG.durationMinutes * 60 * 1000);
+      return false;
+    }
+
+    /* ==========================================================================
+       6.7 TEST LAUNCH & TIMERS
+       ========================================================================== */
+    async function startOfficialTest() {
+      State.isReviewMode = false;
+
+      try {
+        requestExamFullscreen();
+      } catch(e) {}
+
+      await prepareExamPool(false);
+
+      if (State.questions.length > 0) {
+        const firstQId = State.questions[0].id;
+        if (State.questionStatus[firstQId] === 'not-visited') {
+          State.questionStatus[firstQId] = 'not-answered';
+        }
+      }
+
+      saveSessionToStorage();
+
+      if (examChannel) {
+        examChannel.postMessage({ type: "EXAM_ALREADY_ACTIVE", sessionId: State.sessionId });
+      }
+
+      document.getElementById("screen-system-check").style.display = "none";
+      document.getElementById("analysis-page").style.display = "none";
+      document.getElementById("test-interface").style.display = "flex";
+
+      document.getElementById("toolbar-test-mode").style.display = "flex";
+      document.getElementById("toolbar-review-mode").style.display = "none";
+      document.getElementById("btn-back-to-summary").style.display = "none";
+      document.getElementById("top-progress-container").style.display = "flex";
+      document.getElementById("exam-timer-box").style.display = "flex";
+      document.getElementById("display-explanation-card").style.display = "none";
+      document.getElementById("palette-heading-text").innerText = "Question Palette";
+      document.getElementById("top-bar-exam-title").innerText = `CBT Exam: ${State.selectedSet === 'set3' ? 'Set 3' : (State.selectedSet === 'set1' ? 'Set 1' : 'Set 2')}`;
+      document.getElementById("shortcut-num-hint").style.display = "inline";
+      document.getElementById("shortcut-m-hint").style.display = "inline";
+
+      document.getElementById("opt-filter-wrong").style.display = "none";
+      document.getElementById("opt-filter-correct").style.display = "none";
+      document.getElementById("opt-filter-unattempted").style.display = "none";
+
+      renderCurrentQuestion();
+      renderPaletteGrid();
+      startTimers();
+      attachExamIntegrityListeners();
+      showToast("Examination started.", "info");
+    }
+
+    function startTimers() {
+      clearInterval(State.timerInterval);
+      clearInterval(State.secondTrackingInterval);
+
+      State.timerInterval = setInterval(() => {
+        if (State.isReviewMode) return;
+
+        const now = Date.now();
+        const diffMs = State.examEndTime - now;
+
+        if (diffMs <= 0) {
+          clearInterval(State.timerInterval);
+          document.getElementById("exam-timer-display").innerText = "00:00:00";
+          const timerBox = document.getElementById("exam-timer-box");
+          if (timerBox) timerBox.className = "timer-container timer-danger tabular-nums";
+          showToast("Time has expired! You can review your questions and submit when ready.", "warning");
+          return;
+        }
+
+        const totalSecs = Math.floor(diffMs / 1000);
+        const hrs = Math.floor(totalSecs / 3600);
+        const mins = Math.floor((totalSecs % 3600) / 60);
+        const secs = totalSecs % 60;
+
+        const timeStr = `${String(hrs).padStart(2, '0')}:${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+        document.getElementById("exam-timer-display").innerText = timeStr;
+
+        const timerBox = document.getElementById("exam-timer-box");
+        if (totalSecs <= 600) {
+          timerBox.className = "timer-container timer-danger tabular-nums";
+        } else if (totalSecs <= 1800) {
+          timerBox.className = "timer-container timer-warning tabular-nums";
+        }
+
+        if (totalSecs === 1800) showToast("30 minutes remaining in the exam.", "warning");
+        else if (totalSecs === 600) showToast("10 minutes remaining! Check your answers.", "danger");
+        else if (totalSecs === 300) showToast("5 minutes remaining!", "danger");
+      }, 1000);
+
+      State.secondTrackingInterval = setInterval(() => {
+        if (!State.isReviewMode && State.questions[State.currentIndex]) {
+          const qId = State.questions[State.currentIndex].id;
+          State.timeSpent[qId] = (State.timeSpent[qId] || 0) + 1;
+        }
+      }, 1000);
+    }
+
+    /* ==========================================================================
+       6.8 RENDERING QUESTIONS (MATCH-THE-FOLLOWING, SINGLE, MULTI, TRUEFALSE)
+       ========================================================================== */
+    function renderCurrentQuestion() {
+      const q = State.questions[State.currentIndex];
+      if (!q) return;
+
+      document.getElementById("display-q-number").innerText = `Question ${State.currentIndex + 1} of ${State.questions.length}`;
+      document.getElementById("display-q-text").innerText = q.text;
+      document.getElementById("display-q-week").innerText = `Week ${q.week}`;
+
+      const typeBadge = document.getElementById("display-q-type");
+      const instructionLabel = document.getElementById("display-option-instruction");
+      const scoreBadge = document.getElementById("display-q-score-badge");
+      const matchContainer = document.getElementById("display-match-table-container");
+      const quickMatchHelper = document.getElementById("display-quick-match-helper");
+
+      // Badge and Labels
+      if (q.type === 'match') {
+        typeBadge.innerText = "Match the Following";
+        typeBadge.style.background = "#EEF2FF";
+        typeBadge.style.color = "#4F46E5";
+        typeBadge.style.borderColor = "#C7D2FE";
+        instructionLabel.innerText = "Select one option (Circle)";
+      } else if (q.type === 'multiple') {
+        typeBadge.innerText = "Multiple Choice";
+        typeBadge.style.background = "#F3E8FF";
+        typeBadge.style.color = "#7C3AED";
+        typeBadge.style.borderColor = "#DDD6FE";
+        instructionLabel.innerText = State.isReviewMode ? "Multiple Correct Question" : "Select all that apply (Square Box)";
+      } else if (q.type === 'truefalse') {
+        typeBadge.innerText = "True / False";
+        typeBadge.style.background = "#EFF6FF";
+        typeBadge.style.color = "#2563EB";
+        typeBadge.style.borderColor = "#BFDBFE";
+        instructionLabel.innerText = State.isReviewMode ? "True / False Question" : "True or False (Circle)";
+      } else {
+        typeBadge.innerText = "Single Choice";
+        typeBadge.style.background = "#EFF6FF";
+        typeBadge.style.color = "#2563EB";
+        typeBadge.style.borderColor = "#BFDBFE";
+        instructionLabel.innerText = State.isReviewMode ? "Single Correct Question" : "Select one answer (Circle)";
+      }
+
+      // Render Two-Column Table for Match Questions
+      if (q.type === 'match' && q.columnA && q.columnB) {
+        matchContainer.style.display = "block";
+        const maxRows = Math.max(q.columnA.length, q.columnB.length);
+        let rowsHtml = "";
+
+        for (let i = 0; i < maxRows; i++) {
+          const itemA = q.columnA[i];
+          const itemB = q.columnB[i];
+
+          const colAHtml = itemA ? `
+            <div class="match-item-cell">
+              <span class="match-badge badge-col-a">${itemA.id}</span>
+              <span>${itemA.text}</span>
+            </div>
+          ` : '';
+
+          const colBHtml = itemB ? `
+            <div class="match-item-cell">
+              <span class="match-badge badge-col-b">${itemB.id}</span>
+              <span>${itemB.text}</span>
+            </div>
+          ` : '';
+
+          rowsHtml += `
+            <tr>
+              <td>${colAHtml}</td>
+              <td>${colBHtml}</td>
+            </tr>
+          `;
+        }
+
+        matchContainer.innerHTML = `
+          <div class="match-table-wrapper">
+            <table class="match-table" aria-label="Match Column A with Column B">
+              <caption>Match items in Column A with corresponding items in Column B</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Column A</th>
+                  <th scope="col">Column B</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${rowsHtml}
+              </tbody>
+            </table>
+          </div>
+        `;
+
+        // Quick Match Helper
+        if (CONFIG.enableQuickMatchHelper && !State.isReviewMode) {
+          quickMatchHelper.style.display = "block";
+          const selects = q.columnA.map(a => `
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <span class="match-badge badge-col-a">${a.id}</span>
+              <i class="ph ph-arrow-right" style="color: var(--text-muted); font-size: 0.85rem;"></i>
+              <select class="select-dropdown quick-match-select" data-cola="${a.id}" onchange="handleQuickMatchChange()" style="width: 58px; padding: 4px 6px;">
+                <option value="">-</option>
+                ${q.columnB.map(b => `<option value="${b.id}">${b.id}</option>`).join('')}
+              </select>
+            </div>
+          `).join('');
+
+          quickMatchHelper.innerHTML = `
+            <div style="background: #F8FAFC; border: 1px dashed var(--border-color); border-radius: var(--radius-md); padding: 12px 16px; margin-bottom: 18px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <span style="font-size: 0.8125rem; font-weight: 700; color: var(--primary);"><i class="ph ph-lightning" style="margin-right: 4px;"></i>Quick Match Helper</span>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">Select Column B numbers to auto-check matching option:</span>
+              </div>
+              <div style="display: flex; gap: 14px; flex-wrap: wrap; align-items: center;">
+                ${selects}
+                <span id="quick-match-msg" style="font-size: 0.75rem; font-weight: 600; margin-left: 6px;"></span>
+              </div>
+            </div>
+          `;
+        } else {
+          quickMatchHelper.style.display = "none";
+        }
+
+      } else {
+        matchContainer.style.display = "none";
+        quickMatchHelper.style.display = "none";
+      }
+
+      // Populate Options Group
+      const container = document.getElementById("display-options-container");
+      container.innerHTML = "";
+      const currentAnswers = State.userAnswers[q.id] || [];
+
+      if (State.isReviewMode) {
+        // REVIEW MODE
+        let isCorrect = false;
+        let isAttempted = currentAnswers.length > 0;
+
+        if (isAttempted) {
+          if (q.type === 'multiple') {
+            const sortedUser = [...currentAnswers].sort();
+            const sortedCorrect = [...q.answer].sort();
+            isCorrect = sortedUser.length === sortedCorrect.length && sortedUser.every((v, i) => v === sortedCorrect[i]);
+          } else {
+            isCorrect = currentAnswers[0] === q.answer[0];
+          }
+        }
+
+        if (isCorrect) {
+          scoreBadge.innerHTML = `<span style="color: #15803D; font-weight: 700;"><i class="ph ph-check-circle" style="margin-right: 4px;"></i>Correct (+1.0)</span>`;
+          scoreBadge.style.background = "#DCFCE7";
+        } else if (isAttempted) {
+          scoreBadge.innerHTML = `<span style="color: #B91C1C; font-weight: 700;"><i class="ph ph-x-circle" style="margin-right: 4px;"></i>Incorrect (0.0)</span>`;
+          scoreBadge.style.background = "#FEE2E2";
+        } else {
+          scoreBadge.innerHTML = `<span style="color: #64748B; font-weight: 700;"><i class="ph ph-minus-circle" style="margin-right: 4px;"></i>Unattempted</span>`;
+          scoreBadge.style.background = "#F1F5F9";
+        }
+
+        // Detailed Explanation Card
+        const expCard = document.getElementById("display-explanation-card");
+        expCard.style.display = "block";
+        const expTextEl = document.getElementById("display-explanation-text");
+
+        if (q.type === 'match' && q.columnA && q.columnB) {
+          const correctOpt = q.options.find(o => o.id === q.answer[0]);
+          let spelledOut = "";
+          if (correctOpt) {
+            spelledOut = q.columnA.map(a => {
+              let targetB = "";
+              if (correctOpt.pairs) targetB = correctOpt.pairs[a.id];
+              else {
+                const m = correctOpt.text.match(new RegExp(a.id + '-(\\d+)'));
+                if (m) targetB = m[1];
+              }
+              const bItem = q.columnB.find(b => b.id === targetB);
+              return `<strong>${a.id}→${targetB}</strong> ${bItem ? bItem.text : ''}`;
+            }).join(' | ');
+          }
+
+          expTextEl.innerHTML = `
+            <div style="background: #ECFDF5; border: 1px solid #A7F3D0; border-radius: 6px; padding: 10px 14px; margin-bottom: 10px; color: #065F46;">
+              <span style="font-weight: 700;"><i class="ph ph-check-circle" style="margin-right: 4px;"></i>Correct Match Pairs:</span><br>
+              <span>${spelledOut}</span>
+            </div>
+            <span>${q.explanation || 'Refer to the curriculum assignment guidelines.'}</span>
+          `;
+        } else {
+          expTextEl.innerText = q.explanation || "Refer to the lecture and assignment solution notes.";
+        }
+
+        // Read-only options with badges
+        q.options.forEach(opt => {
+          const isUserSelected = currentAnswers.includes(opt.id);
+          const isActualCorrect = q.answer.includes(opt.id);
+
+          const label = document.createElement("div");
+          let extraClasses = "";
+          let badgeHtml = "";
+
+          if (isActualCorrect) {
+            extraClasses += " is-correct-answer";
+            badgeHtml = `<span class="badge" style="background: #10B981; color: #FFFFFF; margin-left: auto;"><i class="ph ph-check" style="margin-right: 4px;"></i>Correct Answer</span>`;
+          }
+          if (isUserSelected && !isActualCorrect) {
+            extraClasses += " is-wrong-selection";
+            badgeHtml = `<span class="badge" style="background: #EF4444; color: #FFFFFF; margin-left: auto;"><i class="ph ph-x" style="margin-right: 4px;"></i>Your Selection</span>`;
+          } else if (isUserSelected && isActualCorrect) {
+            badgeHtml = `<span class="badge" style="background: #10B981; color: #FFFFFF; margin-left: auto;"><i class="ph ph-check" style="margin-right: 4px;"></i>Your Answer (Correct)</span>`;
+          }
+
+          label.className = `option-label ${extraClasses}`;
+          label.style.cursor = "default";
+
+          let indicatorHtml = "";
+          if (q.type === 'multiple') {
+            indicatorHtml = `
+              <div class="custom-control-square" style="${isActualCorrect ? 'background: #10B981; border-color: #10B981;' : (isUserSelected ? 'background: #EF4444; border-color: #EF4444;' : '')}">
+                <svg viewBox="0 0 24 24" style="stroke-dashoffset: 0;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+            `;
+          } else {
+            indicatorHtml = `
+              <div class="custom-control-circle" style="${isActualCorrect ? 'border-color: #10B981;' : (isUserSelected ? 'border-color: #EF4444;' : '')}">
+                <div class="inner-dot" style="${isActualCorrect ? 'background: #10B981; transform: scale(1);' : (isUserSelected ? 'background: #EF4444; transform: scale(1);' : '')}"></div>
+              </div>
+            `;
+          }
+
+          const optionBadgeText = q.type === 'truefalse' ? '' : `<span class="option-id-badge">(${opt.id})</span>`;
+          const formattedOptionText = formatOptionText(q.type, opt);
+
+          label.innerHTML = `
+            ${indicatorHtml}
+            ${optionBadgeText}
+            <span class="option-text">${formattedOptionText}</span>
+            ${badgeHtml}
+          `;
+          container.appendChild(label);
+        });
+
+      } else {
+        // LIVE TEST MODE
+        document.getElementById("display-explanation-card").style.display = "none";
+        scoreBadge.innerText = "+1.0 / -0.0";
+        scoreBadge.style.background = "#F1F5F9";
+
+        q.options.forEach(opt => {
+          const isChecked = currentAnswers.includes(opt.id);
+          const label = document.createElement("label");
+          label.className = `option-label ${isChecked ? 'selected' : ''}`;
+          label.setAttribute("for", `opt-input-${opt.id}`);
+
+          const inputType = q.type === 'multiple' ? 'checkbox' : 'radio';
+          const inputName = `q_option_${q.id}`;
+
+          const input = document.createElement("input");
+          input.type = inputType;
+          input.name = inputName;
+          input.id = `opt-input-${opt.id}`;
+          input.value = opt.id;
+          input.checked = isChecked;
+          input.className = "sr-only";
+          input.setAttribute("aria-label", `Option ${opt.id}: ${opt.text || formatPairsText(opt.pairs)}`);
+          input.onchange = () => handleOptionSelection(q, opt.id, input.checked);
+
+          let indicatorHtml = "";
+          if (q.type === 'multiple') {
+            indicatorHtml = `
+              <div class="custom-control-square" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+            `;
+          } else {
+            indicatorHtml = `
+              <div class="custom-control-circle" aria-hidden="true">
+                <div class="inner-dot"></div>
+              </div>
+            `;
+          }
+
+          const optionBadgeText = q.type === 'truefalse' ? '' : `<span class="option-id-badge">(${opt.id})</span>`;
+          const formattedOptionText = formatOptionText(q.type, opt);
+
+          label.innerHTML = `
+            ${indicatorHtml}
+            ${optionBadgeText}
+            <span class="option-text">${formattedOptionText}</span>
+          `;
+          label.prepend(input);
+          container.appendChild(label);
+        });
+
+        document.getElementById("btn-previous-q").disabled = State.currentIndex === 0;
+        updateTopProgressBar();
+      }
+    }
+
+    function formatOptionText(type, opt) {
+      if (type === 'match') {
+        const text = opt.text || formatPairsText(opt.pairs);
+        // Format pairs bold: e.g. "P-2, Q-1, R-3, S-4" -> "<strong>P-2</strong>, <strong>Q-1</strong>..."
+        return text.split(',').map(p => `<strong>${p.trim()}</strong>`).join(', ');
+      }
+      return opt.text;
+    }
+
+    function handleQuickMatchChange() {
+      const q = State.questions[State.currentIndex];
+      if (!q || q.type !== 'match') return;
+
+      const selects = document.querySelectorAll(".quick-match-select");
+      const chosenPairs = {};
+      let complete = true;
+
+      selects.forEach(s => {
+        const cola = s.dataset.cola;
+        const val = s.value;
+        if (!val) complete = false;
+        chosenPairs[cola] = val;
+      });
+
+      const msgEl = document.getElementById("quick-match-msg");
+      if (!complete) {
+        msgEl.innerText = "";
+        return;
+      }
+
+      const matchStr = Object.entries(chosenPairs).map(([k, v]) => `${k}-${v}`).join(", ");
+      const matchingOpt = q.options.find(opt => {
+        if (opt.pairs) {
+          return Object.keys(chosenPairs).every(k => opt.pairs[k] === chosenPairs[k]);
+        }
+        return opt.text.replace(/\s+/g, '') === matchStr.replace(/\s+/g, '');
+      });
+
+      if (matchingOpt) {
+        msgEl.innerHTML = `<i class="ph ph-check-circle" style="margin-right: 4px;"></i>Matched (${matchingOpt.id})`;
+        msgEl.style.color = "#10B981";
+        handleOptionSelection(q, matchingOpt.id, true);
+      } else {
+        msgEl.innerHTML = `<i class="ph ph-warning-circle" style="margin-right: 4px;"></i>Combination not in options`;
+        msgEl.style.color = "#D97706";
+      }
+    }
+
+    function handleOptionSelection(question, optionId, isChecked) {
+      if (State.isReviewMode) return;
+
+      if (question.type === 'multiple') {
+        let current = State.userAnswers[question.id] || [];
+        if (isChecked) {
+          if (!current.includes(optionId)) current.push(optionId);
+        } else {
+          current = current.filter(id => id !== optionId);
+        }
+        State.userAnswers[question.id] = current;
+      } else {
+        // Single, True/False, or Match
+        State.userAnswers[question.id] = [optionId];
+      }
+
+      const hasAnswer = State.userAnswers[question.id] && State.userAnswers[question.id].length > 0;
+      const currentStat = State.questionStatus[question.id];
+
+      if (currentStat === 'marked' || currentStat === 'marked-answered') {
+        State.questionStatus[question.id] = hasAnswer ? 'marked-answered' : 'marked';
+      } else {
+        State.questionStatus[question.id] = hasAnswer ? 'answered' : 'not-answered';
+      }
+
+      saveSessionToStorage();
+      renderCurrentQuestion();
+      renderPaletteGrid();
+    }
+
+    function clearCurrentResponse() {
+      if (State.isReviewMode) return;
+      const q = State.questions[State.currentIndex];
+      if (!q) return;
+
+      delete State.userAnswers[q.id];
+      const currentStat = State.questionStatus[q.id];
+      if (currentStat === 'marked-answered') {
+        State.questionStatus[q.id] = 'marked';
+      } else {
+        State.questionStatus[q.id] = 'not-answered';
+      }
+
+      saveSessionToStorage();
+      renderCurrentQuestion();
+      renderPaletteGrid();
+      showToast("Response cleared for this question.", "info");
+    }
+
+    function saveAndNext() {
+      if (State.isReviewMode) {
+        navQuestion(1);
+        return;
+      }
+      const q = State.questions[State.currentIndex];
+      const hasAnswer = State.userAnswers[q.id] && State.userAnswers[q.id].length > 0;
+      const currentStat = State.questionStatus[q.id];
+
+      if (currentStat !== 'marked' && currentStat !== 'marked-answered') {
+        State.questionStatus[q.id] = hasAnswer ? 'answered' : 'not-answered';
+      }
+
+      navQuestion(1);
+    }
+
+    function markForReviewAndNext() {
+      if (State.isReviewMode) return;
+      const q = State.questions[State.currentIndex];
+      const hasAnswer = State.userAnswers[q.id] && State.userAnswers[q.id].length > 0;
+      State.questionStatus[q.id] = hasAnswer ? 'marked-answered' : 'marked';
+
+      navQuestion(1);
+    }
+
+    function navQuestion(direction) {
+      const nextIndex = State.currentIndex + direction;
+      if (nextIndex >= 0 && nextIndex < State.questions.length) {
+        jumpToQuestion(nextIndex);
+      }
+    }
+
+    function jumpToQuestion(index) {
+      if (index >= 0 && index < State.questions.length) {
+        State.currentIndex = index;
+        const targetQ = State.questions[index];
+        if (!State.isReviewMode && State.questionStatus[targetQ.id] === 'not-visited') {
+          State.questionStatus[targetQ.id] = 'not-answered';
+        }
+        if (!State.isReviewMode) saveSessionToStorage();
+        renderCurrentQuestion();
+        renderPaletteGrid();
+      }
+    }
+
+    function jumpToNextWrongQuestion() {
+      if (!window.LAST_RESULT) return;
+      const results = window.LAST_RESULT.questionResults;
+      const total = results.length;
+
+      for (let offset = 1; offset < total; offset++) {
+        const checkIdx = (State.currentIndex + offset) % total;
+        if (!results[checkIdx].isCorrect) {
+          jumpToQuestion(checkIdx);
+          showToast(`Jumped to missed Question ${checkIdx + 1}`, "info");
+          return;
+        }
+      }
+      showToast("No additional incorrect questions found!", "success");
+    }
+
+    /* ==========================================================================
+       6.9 PALETTE RENDERING & FILTERING
+       ========================================================================== */
+    function renderPaletteGrid() {
+      const filterVal = document.getElementById("palette-week-filter").value;
+      const grid = document.getElementById("palette-buttons-grid");
+      grid.innerHTML = "";
+
+      let countAns = 0;
+      let countNotAns = 0;
+      let countMarked = 0;
+      let countMarkedAns = 0;
+      let countNotVisited = 0;
+      let revCorrect = 0, revWrong = 0, revUnatt = 0;
+
+      State.questions.forEach((q, index) => {
+        const stat = State.questionStatus[q.id] || 'not-visited';
+
+        if (stat === 'answered') countAns++;
+        else if (stat === 'not-answered') countNotAns++;
+        else if (stat === 'marked') countMarked++;
+        else if (stat === 'marked-answered') countMarkedAns++;
+        else countNotVisited++;
+
+        let isCorrect = false;
+        let isAttempted = false;
+
+        if (State.isReviewMode && window.LAST_RESULT) {
+          const res = window.LAST_RESULT.questionResults[index];
+          if (res) {
+            isCorrect = res.isCorrect;
+            isAttempted = res.isAttempted;
+            if (isCorrect) revCorrect++;
+            else if (isAttempted) revWrong++;
+            else revUnatt++;
+          }
+        }
+
+        // Apply filters
+        if (filterVal === 'match_only' && q.type !== 'match') return;
+
+        if (State.isReviewMode) {
+          if (filterVal === 'wrong_only' && isCorrect) return;
+          if (filterVal === 'correct_only' && !isCorrect) return;
+          if (filterVal === 'unattempted_only' && isAttempted) return;
+        }
+
+        if (filterVal !== 'all' && filterVal !== 'match_only' && filterVal !== 'wrong_only' && filterVal !== 'correct_only' && filterVal !== 'unattempted_only') {
+          if (String(q.week) !== filterVal) return;
+        }
+
+        const btn = document.createElement("button");
+        let btnClasses = `palette-btn ${index === State.currentIndex ? 'current' : ''}`;
+
+        if (State.isReviewMode) {
+          if (isCorrect) btnClasses += " rev-correct";
+          else if (isAttempted) btnClasses += " rev-wrong";
+          else btnClasses += " rev-unattempted";
+        } else {
+          btnClasses += ` ${stat}`;
+        }
+
+        btn.className = btnClasses;
+        btn.innerText = String(index + 1).padStart(2, '0');
+        btn.onclick = () => jumpToQuestion(index);
+        grid.appendChild(btn);
+      });
+
+      if (State.isReviewMode) {
+        document.getElementById("label-stat-answered").innerText = "Correct";
+        document.getElementById("label-stat-unanswered").innerText = "Incorrect";
+        document.getElementById("count-answered").innerText = revCorrect;
+        document.getElementById("count-not-answered").innerText = revWrong;
+        document.getElementById("summary-card-marked").style.display = "none";
+        document.getElementById("summary-card-marked-ans").style.display = "none";
+        document.getElementById("summary-card-not-visited").style.display = "flex";
+        document.getElementById("summary-card-not-visited").querySelector("span:nth-child(2)").innerText = "Unattempted";
+        document.getElementById("count-not-visited").innerText = revUnatt;
+      } else {
+        document.getElementById("label-stat-answered").innerText = "Answered";
+        document.getElementById("label-stat-unanswered").innerText = "Not Answered";
+        document.getElementById("count-answered").innerText = countAns;
+        document.getElementById("count-not-answered").innerText = countNotAns;
+        document.getElementById("summary-card-marked").style.display = "flex";
+        document.getElementById("summary-card-marked-ans").style.display = "flex";
+        document.getElementById("summary-card-not-visited").style.display = "flex";
+        document.getElementById("summary-card-not-visited").querySelector("span:nth-child(2)").innerText = "Not Visited";
+        document.getElementById("count-marked").innerText = countMarked;
+        document.getElementById("count-marked-answered").innerText = countMarkedAns;
+        document.getElementById("count-not-visited").innerText = countNotVisited;
+      }
+      document.getElementById("palette-total-badge").innerText = `${State.questions.length} Qs`;
+    }
+
+    function updateTopProgressBar() {
+      let answeredCount = 0;
+      State.questions.forEach(q => {
+        const stat = State.questionStatus[q.id];
+        if (stat === 'answered' || stat === 'marked-answered') answeredCount++;
+      });
+      const pct = Math.round((answeredCount / State.questions.length) * 100);
+      document.getElementById("top-progress-fill").style.width = `${pct}%`;
+      document.getElementById("top-progress-text").innerText = `${pct}%`;
+    }
+
+    function toggleMobilePalette() {
+      const sidebar = document.getElementById("palette-sidebar");
+      State.isPaletteOpenMobile = !State.isPaletteOpenMobile;
+      sidebar.classList.toggle("open", State.isPaletteOpenMobile);
+    }
+
+    /* ==========================================================================
+       6.10 INTEGRITY & AUDITING
+       ========================================================================== */
+    function attachExamIntegrityListeners() {
+      document.addEventListener("fullscreenchange", updateFsBtnLabel);
+      document.addEventListener("webkitfullscreenchange", updateFsBtnLabel);
+
+      document.addEventListener("keydown", (e) => {
+        if (document.getElementById("test-interface").style.display !== "flex") return;
+
+        if (!e.ctrlKey && !e.metaKey && !e.altKey) {
+          const key = e.key.toLowerCase();
+          if (key === 'n') {
+            e.preventDefault();
+            saveAndNext();
+          } else if (key === 'p') {
+            e.preventDefault();
+            navQuestion(-1);
+          } else if (key === 'w' && State.isReviewMode) {
+            e.preventDefault();
+            jumpToNextWrongQuestion();
+          } else if (key === 'escape' && State.isReviewMode) {
+            e.preventDefault();
+            exitReviewMode();
+          } else if (!State.isReviewMode && key === 'm') {
+            e.preventDefault();
+            markForReviewAndNext();
+          } else if (!State.isReviewMode && ['1', '2', '3', '4', '5'].includes(key)) {
+            const optIndex = parseInt(key, 10) - 1;
+            const currentQ = State.questions[State.currentIndex];
+            if (currentQ && currentQ.options[optIndex]) {
+              e.preventDefault();
+              const optId = currentQ.options[optIndex].id;
+              const inputEl = document.getElementById(`opt-input-${optId}`);
+              if (inputEl) {
+                inputEl.checked = currentQ.type === 'multiple' ? !inputEl.checked : true;
+                handleOptionSelection(currentQ, optId, inputEl.checked);
+              }
+            }
+          }
+        }
+      });
+
+      window.addEventListener("beforeunload", (e) => {
+        if (!State.isSubmitting && !State.isReviewMode && document.getElementById("test-interface").style.display === "flex") {
+          e.preventDefault();
+          e.returnValue = "Examination in progress! Exiting will end your session.";
+        }
+      });
+
+      window.addEventListener("offline", () => {
+        document.getElementById("offline-banner").style.display = "block";
+      });
+      window.addEventListener("online", () => {
+        document.getElementById("offline-banner").style.display = "none";
+        showToast("Connection restored.", "success");
+      });
+    }
+
+    function showDuplicateTabWarning() {
+      document.getElementById("duplicate-tab-overlay").style.display = "flex";
+    }
+
+    /* ==========================================================================
+       6.11 SUBMISSION & COMPUTATION
+       ========================================================================== */
+    function promptSubmitModal() {
+      let ans = 0, unans = 0, marked = 0;
+      State.questions.forEach(q => {
+        const stat = State.questionStatus[q.id];
+        if (stat === 'answered' || stat === 'marked-answered') ans++;
+        else unans++;
+        if (stat === 'marked' || stat === 'marked-answered') marked++;
+      });
+
+      document.getElementById("modal-stat-total").innerText = State.questions.length;
+      document.getElementById("modal-stat-answered").innerText = ans;
+      document.getElementById("modal-stat-unanswered").innerText = unans;
+      document.getElementById("modal-stat-marked").innerText = marked;
+      document.getElementById("modal-stat-time").innerText = document.getElementById("exam-timer-display").innerText;
+
+      document.getElementById("submit-confirm-modal").style.display = "flex";
+    }
+
+    function closeSubmitModal() {
+      document.getElementById("submit-confirm-modal").style.display = "none";
+    }
+
+    function executeFinalSubmission(forced = false) {
+      if (State.isSubmitting) return;
+      State.isSubmitting = true;
+
+      closeSubmitModal();
+      clearInterval(State.timerInterval);
+      clearInterval(State.secondTrackingInterval);
+
+      exitExamFullscreen();
+
+      const resultData = computeResults();
+      window.LAST_RESULT = resultData;
+
+      saveAttemptToHistory(resultData);
+      localStorage.removeItem(CONFIG.storagePrefix + "SESSION");
+
+      document.getElementById("test-interface").style.display = "none";
+      document.getElementById("analysis-page").style.display = "block";
+
+      renderSimpleAnalysisDashboard(resultData);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function computeResults() {
+      let totalQuestions = State.questions.length;
+      let totalMarks = totalQuestions * CONFIG.marksPerCorrect;
+      let marksScored = 0;
+      let correctCount = 0;
+      let wrongCount = 0;
+      let unattemptedCount = 0;
+
+      const weekStats = {};
+      const typeStats = {
+        single: { total: 0, correct: 0, label: "Single Choice Questions" },
+        multiple: { total: 0, correct: 0, label: "Multiple Choice Questions" },
+        truefalse: { total: 0, correct: 0, label: "True / False Questions" },
+        match: { total: 0, correct: 0, label: "Match the Following Questions" }
+      };
+
+      const questionResults = [];
+      let totalTimeSpent = 0;
+
+      State.questions.forEach(q => {
+        const userChoice = State.userAnswers[q.id] || [];
+        const isAttempted = userChoice.length > 0;
+        const timeTaken = State.timeSpent[q.id] || 0;
+        totalTimeSpent += timeTaken;
+
+        if (!weekStats[q.week]) {
+          weekStats[q.week] = { week: q.week, total: 0, correct: 0, topic: q.topic };
+        }
+        weekStats[q.week].total++;
+
+        if (typeStats[q.type]) typeStats[q.type].total++;
+
+        let isCorrect = false;
+
+        if (isAttempted) {
+          if (q.type === 'multiple') {
+            const sortedUser = [...userChoice].sort();
+            const sortedCorrect = [...q.answer].sort();
+            isCorrect = sortedUser.length === sortedCorrect.length && sortedUser.every((v, i) => v === sortedCorrect[i]);
+          } else {
+            // single, truefalse, match (exact match on option ID)
+            isCorrect = userChoice[0] === q.answer[0];
+          }
+
+          if (isCorrect) {
+            marksScored += CONFIG.marksPerCorrect;
+            correctCount++;
+            weekStats[q.week].correct++;
+            if (typeStats[q.type]) typeStats[q.type].correct++;
+          } else {
+            marksScored -= CONFIG.negativeMarks;
+            wrongCount++;
+          }
+        } else {
+          unattemptedCount++;
+        }
+
+        questionResults.push({
+          question: q,
+          userAnswer: userChoice,
+          isCorrect: isCorrect,
+          isAttempted: isAttempted,
+          timeSpent: timeTaken,
+          wasMarked: State.questionStatus[q.id] === 'marked' || State.questionStatus[q.id] === 'marked-answered'
+        });
+      });
+
+      const percentage = Math.max(0, Math.round((marksScored / totalMarks) * 100));
+      const accuracy = (correctCount + wrongCount) > 0 ? Math.round((correctCount / (correctCount + wrongCount)) * 100) : 0;
+
+      return {
+        date: new Date().toLocaleString(),
+        marksScored: Math.max(0, marksScored),
+        totalMarks: totalMarks,
+        percentage: percentage,
+        accuracy: accuracy,
+        totalQuestions: totalQuestions,
+        correctCount: correctCount,
+        wrongCount: wrongCount,
+        unattemptedCount: unattemptedCount,
+        totalTimeSpent: totalTimeSpent,
+        weekStats: weekStats,
+        typeStats: typeStats,
+        questionResults: questionResults,
+        violations: State.violations
+      };
+    }
+
+    /* ==========================================================================
+       6.12 ANALYSIS DASHBOARD (CLEAN & QUICK)
+       ========================================================================== */
+    function renderSimpleAnalysisDashboard(res) {
+      document.getElementById("score-hero-marks").innerText = res.marksScored;
+      document.getElementById("score-hero-total").innerText = `/ ${res.totalMarks}`;
+      document.getElementById("score-hero-pct-badge").innerText = `${res.percentage}% Score`;
+
+      const statusPill = document.getElementById("hero-status-pill");
+      if (res.percentage >= 60) {
+        statusPill.innerHTML = '<i class="ph ph-seal-check" style="margin-right: 4px;"></i>Qualified / Distinction';
+        statusPill.style.background = "#DCFCE7";
+        statusPill.style.color = "#15803D";
+      } else if (res.percentage >= 40) {
+        statusPill.innerHTML = '<i class="ph ph-check-circle" style="margin-right: 4px;"></i>Pass';
+        statusPill.style.background = "#EFF6FF";
+        statusPill.style.color = "#1D4ED8";
+      } else {
+        statusPill.innerHTML = '<i class="ph ph-info" style="margin-right: 4px;"></i>Needs Additional Revision';
+        statusPill.style.background = "#FEF3C7";
+        statusPill.style.color = "#B45309";
+      }
+
+      document.getElementById("chip-correct").innerText = res.correctCount;
+      document.getElementById("chip-wrong").innerText = res.wrongCount;
+      document.getElementById("chip-unattempted").innerText = res.unattemptedCount;
+
+      const mins = Math.floor(res.totalTimeSpent / 60);
+      const secs = res.totalTimeSpent % 60;
+      document.getElementById("chip-time").innerText = `${mins}m ${secs}s`;
+
+      // Question Type Breakdown
+      const typeContainer = document.getElementById("type-breakdown-container");
+      typeContainer.innerHTML = "";
+      Object.entries(res.typeStats).forEach(([tKey, val]) => {
+        if (val.total === 0) return;
+        const pct = Math.round((val.correct / val.total) * 100);
+        const row = document.createElement("div");
+        row.style.display = "flex";
+        row.style.alignItems = "center";
+        row.style.justifyContent = "space-between";
+        row.style.marginBottom = "8px";
+        row.style.fontSize = "0.8125rem";
+        row.innerHTML = `
+          <span style="font-weight: 600; width: 220px;">${val.label}</span>
+          <div style="flex: 1; height: 8px; background: #E2E8F0; border-radius: 9999px; margin: 0 16px; overflow: hidden;">
+            <div style="width: ${pct}%; height: 100%; background: ${pct >= 70 ? '#10B981' : (pct >= 40 ? '#3B82F6' : '#EF4444')};"></div>
+          </div>
+          <span style="font-weight: 700; width: 100px; text-align: right;">${val.correct} / ${val.total} (${pct}%)</span>
+        `;
+        typeContainer.appendChild(row);
+      });
+
+      // Weekly Table
+      const tbody = document.getElementById("week-table-body");
+      tbody.innerHTML = "";
+
+      Object.values(res.weekStats).sort((a, b) => a.week - b.week).forEach(w => {
+        const pct = Math.round((w.correct / w.total) * 100);
+        const tr = document.createElement("tr");
+
+        let statusBadge = "";
+        if (pct >= 75) statusBadge = `<span class="badge" style="background: #DCFCE7; color: #15803D;">Strong</span>`;
+        else if (pct >= 50) statusBadge = `<span class="badge" style="background: #EFF6FF; color: #1D4ED8;">Average</span>`;
+        else statusBadge = `<span class="badge" style="background: #FEE2E2; color: #B91C1C;">Revise</span>`;
+
+        tr.innerHTML = `
+          <td><strong>Week ${w.week}:</strong> ${w.topic || 'Syllabus Topic'}</td>
+          <td>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div class="progress-bar-container" style="width: 80px; height: 6px;">
+                <div class="progress-bar-fill" style="width: ${pct}%; background: ${pct >= 75 ? '#10B981' : (pct >= 50 ? '#3B82F6' : '#EF4444')};"></div>
+              </div>
+              <span style="font-size: 0.75rem; font-weight: 700;">${pct}%</span>
+            </div>
+          </td>
+          <td style="text-align: right; font-weight: 700;">${w.correct} / ${w.total}</td>
+          <td style="text-align: center;">${statusBadge}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    /* ==========================================================================
+       6.13 REVIEW MODE IN EXACT TEST UI
+       ========================================================================== */
+    function enterReviewMode(onlyWrong = false) {
+      State.isReviewMode = true;
+      State.reviewOnlyWrong = onlyWrong;
+
+      document.getElementById("analysis-page").style.display = "none";
+      document.getElementById("test-interface").style.display = "flex";
+
+      document.getElementById("top-bar-exam-title").innerText = `Review Mode: ${State.selectedSet === 'set1' ? 'Set 1' : 'Set 2'} Solutions`;
+      document.getElementById("candidate-name-text").innerText = `Candidate: Rahul SP | Score: ${window.LAST_RESULT.marksScored}/${window.LAST_RESULT.totalMarks} (${window.LAST_RESULT.percentage}%)`;
+      document.getElementById("btn-back-to-summary").style.display = "inline-flex";
+      document.getElementById("top-progress-container").style.display = "none";
+      document.getElementById("exam-timer-box").style.display = "none";
+
+      document.getElementById("toolbar-test-mode").style.display = "none";
+      document.getElementById("toolbar-review-mode").style.display = "flex";
+
+      document.getElementById("palette-heading-text").innerText = "Review Palette";
+      document.getElementById("opt-filter-wrong").style.display = "block";
+      document.getElementById("opt-filter-correct").style.display = "block";
+      document.getElementById("opt-filter-unattempted").style.display = "block";
+
+      const filterDropdown = document.getElementById("palette-week-filter");
+      filterDropdown.value = onlyWrong ? "wrong_only" : "all";
+
+      let targetIndex = 0;
+      if (onlyWrong && window.LAST_RESULT) {
+        const firstWrongIdx = window.LAST_RESULT.questionResults.findIndex(r => !r.isCorrect);
+        if (firstWrongIdx !== -1) targetIndex = firstWrongIdx;
+      }
+
+      jumpToQuestion(targetIndex);
+      showToast(onlyWrong ? "Reviewing only incorrect questions." : "Reviewing full test solutions in exam UI.", "info");
+    }
+
+    function exitReviewMode() {
+      State.isReviewMode = false;
+      document.getElementById("test-interface").style.display = "none";
+      document.getElementById("analysis-page").style.display = "block";
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    /* ==========================================================================
+       6.14 RETAKE, EXPORT & PRINT
+       ========================================================================== */
+    function retakeExam(onlyWrong = false) {
+      if (onlyWrong && window.LAST_RESULT) {
+        const wrongQs = window.LAST_RESULT.questionResults
+          .filter(r => !r.isCorrect)
+          .map(r => r.question);
+
+        if (wrongQs.length === 0) {
+          alert("Outstanding! You answered every question correctly in this attempt.");
+          return;
+        }
+        window.CUSTOM_LOADED_QUESTIONS = wrongQs;
+        State.selectedSet = 'custom';
+        showToast(`Retaking ${wrongQs.length} missed questions with fresh shuffle.`, "info");
+      } else {
+        window.CUSTOM_LOADED_QUESTIONS = null;
+      }
+
+      localStorage.removeItem(CONFIG.storagePrefix + "SESSION");
+      document.getElementById("analysis-page").style.display = "none";
+      document.getElementById("test-interface").style.display = "none";
+      goToWelcome();
+    }
+
+    function exportAnalysisJSON() {
+      if (!window.LAST_RESULT) return;
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(window.LAST_RESULT, null, 2));
+      const downloadAnchor = document.createElement('a');
+      downloadAnchor.setAttribute("href", dataStr);
+      downloadAnchor.setAttribute("download", `CBT_Exam_Result_${Date.now()}.json`);
+      document.body.appendChild(downloadAnchor);
+      downloadAnchor.click();
+      downloadAnchor.remove();
+    }
+
+    function printAnalysisReport() {
+      window.print();
+    }
+
+    function saveAttemptToHistory(res) {
+      try {
+        const historyKey = CONFIG.storagePrefix + "HISTORY";
+        const history = JSON.parse(localStorage.getItem(historyKey) || "[]");
+        history.unshift({
+          date: res.date,
+          marks: res.marksScored,
+          total: res.totalMarks,
+          pct: res.percentage,
+          accuracy: res.accuracy,
+          time: res.totalTimeSpent
+        });
+        localStorage.setItem(historyKey, JSON.stringify(history.slice(0, 10)));
+      } catch (e) {}
+    }
+
+    function saveSessionToStorage() {
+      try {
+        const payload = {
+          questions: State.questions,
+          currentIndex: State.currentIndex,
+          userAnswers: State.userAnswers,
+          questionStatus: State.questionStatus,
+          timeSpent: State.timeSpent,
+          examStartTime: State.examStartTime,
+          examEndTime: State.examEndTime,
+          violations: State.violations,
+          sessionId: State.sessionId,
+          selectedSet: State.selectedSet
+        };
+        localStorage.setItem(CONFIG.storagePrefix + "SESSION", JSON.stringify(payload));
+      } catch(e) {}
+    }
+
+    function showToast(message, type = 'info') {
+      const container = document.getElementById("toast-container");
+      const toast = document.createElement("div");
+      toast.className = `toast ${type === 'warning' ? 'toast-warning' : (type === 'danger' ? 'toast-danger' : (type === 'success' ? 'toast-success' : ''))}`;
+      
+      let icon = '<i class="ph ph-info" style="margin-right: 6px;"></i>';
+      if (type === 'success') icon = '<i class="ph ph-check-circle" style="margin-right: 6px;"></i>';
+      else if (type === 'warning') icon = '<i class="ph ph-warning" style="margin-right: 6px;"></i>';
+      else if (type === 'danger') icon = '<i class="ph ph-warning-circle" style="margin-right: 6px;"></i>';
+
+      toast.innerHTML = icon + message;
+      container.appendChild(toast);
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateY(-10px)';
+        toast.style.transition = 'all 0.3s ease';
+        setTimeout(() => toast.remove(), 300);
+      }, 3500);
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      try {
+        localStorage.removeItem("portal_visitor_count");
+        localStorage.removeItem("cbt_portal_visit_count");
+        localStorage.removeItem("cbt_unique_visitor_count");
+      } catch(e) {}
+
+      const savedSession = localStorage.getItem(CONFIG.storagePrefix + "SESSION");
+      if (savedSession) {
+        try {
+          const session = JSON.parse(savedSession);
+          if (session.examEndTime > Date.now()) {
+            if (confirm("You have an active examination session in progress. Would you like to resume it?")) {
+              prepareExamPool(false).then(() => {
+                document.getElementById("screen-welcome").style.display = "none";
+                document.getElementById("test-interface").style.display = "flex";
+                renderCurrentQuestion();
+                renderPaletteGrid();
+                startTimers();
+                attachExamIntegrityListeners();
+                showToast("Resumed previous exam session.", "info");
+              });
+              return;
+            }
+          }
+        } catch(e) {}
+      }
+      goToWelcome();
+    });
+  </script>
+</body>
+</html>

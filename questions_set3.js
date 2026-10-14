@@ -1,0 +1,3904 @@
+﻿window.BANK_SET3 = [
+    {
+        "id":  1,
+        "week":  1,
+        "topic":  "Week 1 Concepts",
+        "type":  "single",
+        "text":  "Which of the following is a soft skill?",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Welding"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Teamwork"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Java programming"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Accounting software"
+                        }
+                    ],
+        "answer":  [
+                       "B"
+                   ],
+        "explanation":  "Correct answer is B."
+    },
+    {
+        "id":  2,
+        "week":  1,
+        "topic":  "Week 1 Concepts",
+        "type":  "single",
+        "text":  "The process of converting ideas into a message is:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Decoding"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Feedback"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Encoding"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Noise"
+                        }
+                    ],
+        "answer":  [
+                       "C"
+                   ],
+        "explanation":  "Correct answer is C."
+    },
+    {
+        "id":  3,
+        "week":  1,
+        "topic":  "Week 1 Concepts",
+        "type":  "single",
+        "text":  "Communication between people at the same level of an organisation is:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Downward"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Upward"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Diagonal"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Horizontal"
+                        }
+                    ],
+        "answer":  [
+                       "D"
+                   ],
+        "explanation":  "Correct answer is D."
+    },
+    {
+        "id":  4,
+        "week":  1,
+        "topic":  "Week 1 Concepts",
+        "type":  "single",
+        "text":  "Which is an example of non-verbal communication?",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Email"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Memo"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Facial expression"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Report"
+                        }
+                    ],
+        "answer":  [
+                       "C"
+                   ],
+        "explanation":  "Correct answer is C."
+    },
+    {
+        "id":  5,
+        "week":  1,
+        "topic":  "Week 1 Concepts",
+        "type":  "multiple",
+        "text":  "Which are components of the communication process?",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Sender"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Feedback"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Recipe"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Receiver"
+                        }
+                    ],
+        "answer":  [
+                       "A",
+                       "B",
+                       "D"
+                   ],
+        "explanation":  "Correct answer is A, B, D."
+    },
+    {
+        "id":  6,
+        "week":  1,
+        "topic":  "Week 1 Concepts",
+        "type":  "multiple",
+        "text":  "Which are barriers to communication?",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Active listening"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Noise"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "A clear message"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Language differences"
+                        }
+                    ],
+        "answer":  [
+                       "B",
+                       "D"
+                   ],
+        "explanation":  "Correct answer is B, D."
+    },
+    {
+        "id":  7,
+        "week":  1,
+        "topic":  "Week 1 Concepts",
+        "type":  "truefalse",
+        "text":  "Feedback completes the communication cycle.",
+        "options":  [
+                        {
+                            "id":  "True",
+                            "text":  "True"
+                        },
+                        {
+                            "id":  "False",
+                            "text":  "False"
+                        }
+                    ],
+        "answer":  [
+                       "True"
+                   ],
+        "explanation":  "The statement is T."
+    },
+    {
+        "id":  8,
+        "week":  1,
+        "topic":  "Week 1 Concepts",
+        "type":  "match",
+        "text":  "Match Column A with Column B.",
+        "columnA":  [
+                        {
+                            "id":  "P",
+                            "text":  "Encoding"
+                        },
+                        {
+                            "id":  "Q",
+                            "text":  "Feedback"
+                        },
+                        {
+                            "id":  "R",
+                            "text":  "Noise"
+                        },
+                        {
+                            "id":  "S",
+                            "text":  "Channel"
+                        }
+                    ],
+        "columnB":  [
+                        {
+                            "id":  "1",
+                            "text":  "Medium that carries the message"
+                        },
+                        {
+                            "id":  "2",
+                            "text":  "Anything that distorts the message"
+                        },
+                        {
+                            "id":  "3",
+                            "text":  "Receiver\u0027s response"
+                        },
+                        {
+                            "id":  "4",
+                            "text":  "Converting ideas into a message"
+                        }
+                    ],
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "P-3, Q-4, R-2, S-1",
+                            "pairs":  {
+                                          "P":  "3",
+                                          "Q":  "4",
+                                          "R":  "2",
+                                          "S":  "1"
+                                      }
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "P-4, Q-3, R-1, S-2",
+                            "pairs":  {
+                                          "P":  "4",
+                                          "Q":  "3",
+                                          "R":  "1",
+                                          "S":  "2"
+                                      }
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "P-4, Q-3, R-2, S-1",
+                            "pairs":  {
+                                          "P":  "4",
+                                          "Q":  "3",
+                                          "R":  "2",
+                                          "S":  "1"
+                                      }
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "P-1, Q-3, R-2, S-4",
+                            "pairs":  {
+                                          "P":  "1",
+                                          "Q":  "3",
+                                          "R":  "2",
+                                          "S":  "4"
+                                      }
+                        }
+                    ],
+        "answer":  [
+                       "C"
+                   ],
+        "explanation":  "Correct matching option is (C): P-4, Q-3, R-2, S-1."
+    },
+    {
+        "id":  9,
+        "week":  1,
+        "topic":  "Week 1 Concepts",
+        "type":  "match",
+        "text":  "Match the direction of communication.",
+        "columnA":  [
+                        {
+                            "id":  "P",
+                            "text":  "Downward"
+                        },
+                        {
+                            "id":  "Q",
+                            "text":  "Upward"
+                        },
+                        {
+                            "id":  "R",
+                            "text":  "Horizontal"
+                        },
+                        {
+                            "id":  "S",
+                            "text":  "Diagonal"
+                        }
+                    ],
+        "columnB":  [
+                        {
+                            "id":  "1",
+                            "text":  "Between peers"
+                        },
+                        {
+                            "id":  "2",
+                            "text":  "Superior to subordinate"
+                        },
+                        {
+                            "id":  "3",
+                            "text":  "Subordinate to superior"
+                        },
+                        {
+                            "id":  "4",
+                            "text":  "Across levels and departments"
+                        }
+                    ],
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "P-2, Q-3, R-1, S-4",
+                            "pairs":  {
+                                          "P":  "2",
+                                          "Q":  "3",
+                                          "R":  "1",
+                                          "S":  "4"
+                                      }
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "P-3, Q-2, R-1, S-4",
+                            "pairs":  {
+                                          "P":  "3",
+                                          "Q":  "2",
+                                          "R":  "1",
+                                          "S":  "4"
+                                      }
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "P-2, Q-3, R-4, S-1",
+                            "pairs":  {
+                                          "P":  "2",
+                                          "Q":  "3",
+                                          "R":  "4",
+                                          "S":  "1"
+                                      }
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "P-2, Q-1, R-3, S-4",
+                            "pairs":  {
+                                          "P":  "2",
+                                          "Q":  "1",
+                                          "R":  "3",
+                                          "S":  "4"
+                                      }
+                        }
+                    ],
+        "answer":  [
+                       "A"
+                   ],
+        "explanation":  "Correct matching option is (A): P-2, Q-3, R-1, S-4."
+    },
+    {
+        "id":  10,
+        "week":  2,
+        "topic":  "Week 2 Concepts",
+        "type":  "single",
+        "text":  "Positive thinking primarily helps a person to:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Ignore reality"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Avoid effort"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Focus on solutions and possibilities"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Blame others"
+                        }
+                    ],
+        "answer":  [
+                       "C"
+                   ],
+        "explanation":  "Correct answer is C."
+    },
+    {
+        "id":  11,
+        "week":  2,
+        "topic":  "Week 2 Concepts",
+        "type":  "single",
+        "text":  "Paralanguage refers to:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "The words used"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Vocal elements such as pitch, tone and pace apart from words"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Sign language only"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Dress and grooming"
+                        }
+                    ],
+        "answer":  [
+                       "B"
+                   ],
+        "explanation":  "Correct answer is B."
+    },
+    {
+        "id":  12,
+        "week":  2,
+        "topic":  "Week 2 Concepts",
+        "type":  "single",
+        "text":  "When answering a phone call, you should first:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Hang up"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Ask personal questions"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Put the caller on hold"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Greet and identify yourself"
+                        }
+                    ],
+        "answer":  [
+                       "D"
+                   ],
+        "explanation":  "Correct answer is D."
+    },
+    {
+        "id":  13,
+        "week":  2,
+        "topic":  "Week 2 Concepts",
+        "type":  "single",
+        "text":  "Rate of speech refers to:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Loudness"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Speed of speaking"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Pitch"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Accent"
+                        }
+                    ],
+        "answer":  [
+                       "B"
+                   ],
+        "explanation":  "Correct answer is B."
+    },
+    {
+        "id":  14,
+        "week":  2,
+        "topic":  "Week 2 Concepts",
+        "type":  "multiple",
+        "text":  "Which are good telephone etiquette?",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Speak clearly"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Eat while talking"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Be courteous"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Interrupt the caller"
+                        }
+                    ],
+        "answer":  [
+                       "A",
+                       "C"
+                   ],
+        "explanation":  "Correct answer is A, C."
+    },
+    {
+        "id":  15,
+        "week":  2,
+        "topic":  "Week 2 Concepts",
+        "type":  "multiple",
+        "text":  "Which are paralinguistic cues?",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Tone"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Pace"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Room size"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Pitch"
+                        }
+                    ],
+        "answer":  [
+                       "A",
+                       "B",
+                       "D"
+                   ],
+        "explanation":  "Correct answer is A, B, D."
+    },
+    {
+        "id":  16,
+        "week":  2,
+        "topic":  "Week 2 Concepts",
+        "type":  "truefalse",
+        "text":  "Eye contact is a part of non-verbal communication.",
+        "options":  [
+                        {
+                            "id":  "True",
+                            "text":  "True"
+                        },
+                        {
+                            "id":  "False",
+                            "text":  "False"
+                        }
+                    ],
+        "answer":  [
+                       "True"
+                   ],
+        "explanation":  "The statement is T."
+    },
+    {
+        "id":  17,
+        "week":  2,
+        "topic":  "Week 2 Concepts",
+        "type":  "match",
+        "text":  "Match the voice features.",
+        "columnA":  [
+                        {
+                            "id":  "P",
+                            "text":  "Pitch"
+                        },
+                        {
+                            "id":  "Q",
+                            "text":  "Volume"
+                        },
+                        {
+                            "id":  "R",
+                            "text":  "Rate"
+                        },
+                        {
+                            "id":  "S",
+                            "text":  "Pause"
+                        }
+                    ],
+        "columnB":  [
+                        {
+                            "id":  "1",
+                            "text":  "Speed of delivery"
+                        },
+                        {
+                            "id":  "2",
+                            "text":  "Loudness"
+                        },
+                        {
+                            "id":  "3",
+                            "text":  "Highness or lowness of voice"
+                        },
+                        {
+                            "id":  "4",
+                            "text":  "Brief silence for emphasis"
+                        }
+                    ],
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "P-2, Q-3, R-1, S-4",
+                            "pairs":  {
+                                          "P":  "2",
+                                          "Q":  "3",
+                                          "R":  "1",
+                                          "S":  "4"
+                                      }
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "P-3, Q-2, R-4, S-1",
+                            "pairs":  {
+                                          "P":  "3",
+                                          "Q":  "2",
+                                          "R":  "4",
+                                          "S":  "1"
+                                      }
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "P-1, Q-2, R-3, S-4",
+                            "pairs":  {
+                                          "P":  "1",
+                                          "Q":  "2",
+                                          "R":  "3",
+                                          "S":  "4"
+                                      }
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "P-3, Q-2, R-1, S-4",
+                            "pairs":  {
+                                          "P":  "3",
+                                          "Q":  "2",
+                                          "R":  "1",
+                                          "S":  "4"
+                                      }
+                        }
+                    ],
+        "answer":  [
+                       "D"
+                   ],
+        "explanation":  "Correct matching option is (D): P-3, Q-2, R-1, S-4."
+    },
+    {
+        "id":  18,
+        "week":  2,
+        "topic":  "Week 2 Concepts",
+        "type":  "match",
+        "text":  "Match the non-verbal cues.",
+        "columnA":  [
+                        {
+                            "id":  "P",
+                            "text":  "Posture"
+                        },
+                        {
+                            "id":  "Q",
+                            "text":  "Gesture"
+                        },
+                        {
+                            "id":  "R",
+                            "text":  "Eye contact"
+                        },
+                        {
+                            "id":  "S",
+                            "text":  "Facial expression"
+                        }
+                    ],
+        "columnB":  [
+                        {
+                            "id":  "1",
+                            "text":  "Hand or arm movement conveying meaning"
+                        },
+                        {
+                            "id":  "2",
+                            "text":  "Face showing emotion"
+                        },
+                        {
+                            "id":  "3",
+                            "text":  "Looking directly at the listener"
+                        },
+                        {
+                            "id":  "4",
+                            "text":  "How one sits or stands"
+                        }
+                    ],
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "P-1, Q-4, R-3, S-2",
+                            "pairs":  {
+                                          "P":  "1",
+                                          "Q":  "4",
+                                          "R":  "3",
+                                          "S":  "2"
+                                      }
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "P-4, Q-1, R-3, S-2",
+                            "pairs":  {
+                                          "P":  "4",
+                                          "Q":  "1",
+                                          "R":  "3",
+                                          "S":  "2"
+                                      }
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "P-4, Q-3, R-1, S-2",
+                            "pairs":  {
+                                          "P":  "4",
+                                          "Q":  "3",
+                                          "R":  "1",
+                                          "S":  "2"
+                                      }
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "P-4, Q-1, R-2, S-3",
+                            "pairs":  {
+                                          "P":  "4",
+                                          "Q":  "1",
+                                          "R":  "2",
+                                          "S":  "3"
+                                      }
+                        }
+                    ],
+        "answer":  [
+                       "B"
+                   ],
+        "explanation":  "Correct matching option is (B): P-4, Q-1, R-3, S-2."
+    },
+    {
+        "id":  19,
+        "week":  3,
+        "topic":  "Week 3 Concepts",
+        "type":  "single",
+        "text":  "Listening to understand the speaker\u0027s feelings is:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Appreciative"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Empathetic"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Combative"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Critical"
+                        }
+                    ],
+        "answer":  [
+                       "B"
+                   ],
+        "explanation":  "Correct answer is B."
+    },
+    {
+        "id":  20,
+        "week":  3,
+        "topic":  "Week 3 Concepts",
+        "type":  "single",
+        "text":  "Listening to judge the accuracy and logic of a message is \\_\\_\\_ listening.",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Critical"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Appreciative"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Combative"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Casual"
+                        }
+                    ],
+        "answer":  [
+                       "A"
+                   ],
+        "explanation":  "Correct answer is A."
+    },
+    {
+        "id":  21,
+        "week":  3,
+        "topic":  "Week 3 Concepts",
+        "type":  "single",
+        "text":  "The study of eye behaviour in communication is:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Chronemics"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Proxemics"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Oculesics"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Haptics"
+                        }
+                    ],
+        "answer":  [
+                       "C"
+                   ],
+        "explanation":  "Correct answer is C."
+    },
+    {
+        "id":  22,
+        "week":  3,
+        "topic":  "Week 3 Concepts",
+        "type":  "single",
+        "text":  "Meta-communication means:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Communication about communication"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Written communication only"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Telephone communication"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Mass communication"
+                        }
+                    ],
+        "answer":  [
+                       "A"
+                   ],
+        "explanation":  "Correct answer is A."
+    },
+    {
+        "id":  23,
+        "week":  3,
+        "topic":  "Week 3 Concepts",
+        "type":  "multiple",
+        "text":  "Which are traits of a good listener?",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Paying attention"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Interrupting often"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Giving feedback"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Prejudging"
+                        }
+                    ],
+        "answer":  [
+                       "A",
+                       "C"
+                   ],
+        "explanation":  "Correct answer is A, C."
+    },
+    {
+        "id":  24,
+        "week":  3,
+        "topic":  "Week 3 Concepts",
+        "type":  "multiple",
+        "text":  "Which are barriers to listening?",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Distractions"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Daydreaming"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Eye contact"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Note-taking"
+                        }
+                    ],
+        "answer":  [
+                       "A",
+                       "B"
+                   ],
+        "explanation":  "Correct answer is A, B."
+    },
+    {
+        "id":  25,
+        "week":  3,
+        "topic":  "Week 3 Concepts",
+        "type":  "truefalse",
+        "text":  "Norms about touching vary across cultures.",
+        "options":  [
+                        {
+                            "id":  "True",
+                            "text":  "True"
+                        },
+                        {
+                            "id":  "False",
+                            "text":  "False"
+                        }
+                    ],
+        "answer":  [
+                       "True"
+                   ],
+        "explanation":  "The statement is T."
+    },
+    {
+        "id":  26,
+        "week":  3,
+        "topic":  "Week 3 Concepts",
+        "type":  "match",
+        "text":  "Match the type of listening with its purpose.",
+        "columnA":  [
+                        {
+                            "id":  "P",
+                            "text":  "Appreciative"
+                        },
+                        {
+                            "id":  "Q",
+                            "text":  "Empathetic"
+                        },
+                        {
+                            "id":  "R",
+                            "text":  "Critical"
+                        },
+                        {
+                            "id":  "S",
+                            "text":  "Informational"
+                        }
+                    ],
+        "columnB":  [
+                        {
+                            "id":  "1",
+                            "text":  "Enjoying music or art"
+                        },
+                        {
+                            "id":  "2",
+                            "text":  "Understanding feelings"
+                        },
+                        {
+                            "id":  "3",
+                            "text":  "Gaining knowledge"
+                        },
+                        {
+                            "id":  "4",
+                            "text":  "Evaluating arguments"
+                        }
+                    ],
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "P-2, Q-1, R-4, S-3",
+                            "pairs":  {
+                                          "P":  "2",
+                                          "Q":  "1",
+                                          "R":  "4",
+                                          "S":  "3"
+                                      }
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "P-1, Q-2, R-3, S-4",
+                            "pairs":  {
+                                          "P":  "1",
+                                          "Q":  "2",
+                                          "R":  "3",
+                                          "S":  "4"
+                                      }
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "P-1, Q-2, R-4, S-3",
+                            "pairs":  {
+                                          "P":  "1",
+                                          "Q":  "2",
+                                          "R":  "4",
+                                          "S":  "3"
+                                      }
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "P-1, Q-4, R-2, S-3",
+                            "pairs":  {
+                                          "P":  "1",
+                                          "Q":  "4",
+                                          "R":  "2",
+                                          "S":  "3"
+                                      }
+                        }
+                    ],
+        "answer":  [
+                       "C"
+                   ],
+        "explanation":  "Correct matching option is (C): P-1, Q-2, R-4, S-3."
+    },
+    {
+        "id":  27,
+        "week":  3,
+        "topic":  "Week 3 Concepts",
+        "type":  "match",
+        "text":  "Match the thinker with the concept.",
+        "columnA":  [
+                        {
+                            "id":  "P",
+                            "text":  "Edward T. Hall"
+                        },
+                        {
+                            "id":  "Q",
+                            "text":  "Albert Mehrabian"
+                        },
+                        {
+                            "id":  "R",
+                            "text":  "Eric Berne"
+                        },
+                        {
+                            "id":  "S",
+                            "text":  "Luft and Ingham"
+                        }
+                    ],
+        "columnB":  [
+                        {
+                            "id":  "1",
+                            "text":  "Johari Window"
+                        },
+                        {
+                            "id":  "2",
+                            "text":  "Proxemics"
+                        },
+                        {
+                            "id":  "3",
+                            "text":  "7-38-55 rule"
+                        },
+                        {
+                            "id":  "4",
+                            "text":  "Transactional analysis"
+                        }
+                    ],
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "P-2, Q-3, R-4, S-1",
+                            "pairs":  {
+                                          "P":  "2",
+                                          "Q":  "3",
+                                          "R":  "4",
+                                          "S":  "1"
+                                      }
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "P-3, Q-2, R-4, S-1",
+                            "pairs":  {
+                                          "P":  "3",
+                                          "Q":  "2",
+                                          "R":  "4",
+                                          "S":  "1"
+                                      }
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "P-2, Q-3, R-1, S-4",
+                            "pairs":  {
+                                          "P":  "2",
+                                          "Q":  "3",
+                                          "R":  "1",
+                                          "S":  "4"
+                                      }
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "P-2, Q-4, R-3, S-1",
+                            "pairs":  {
+                                          "P":  "2",
+                                          "Q":  "4",
+                                          "R":  "3",
+                                          "S":  "1"
+                                      }
+                        }
+                    ],
+        "answer":  [
+                       "A"
+                   ],
+        "explanation":  "Correct matching option is (A): P-2, Q-3, R-4, S-1."
+    },
+    {
+        "id":  28,
+        "week":  4,
+        "topic":  "Week 4 Concepts",
+        "type":  "single",
+        "text":  "Negotiation is basically a process of:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Winning at any cost"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Avoiding all conflict"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Giving orders"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Reaching a mutually acceptable agreement"
+                        }
+                    ],
+        "answer":  [
+                       "D"
+                   ],
+        "explanation":  "Correct answer is D."
+    },
+    {
+        "id":  29,
+        "week":  4,
+        "topic":  "Week 4 Concepts",
+        "type":  "single",
+        "text":  "The first step in negotiation is:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Closure"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Bargaining"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Preparation"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Concession"
+                        }
+                    ],
+        "answer":  [
+                       "C"
+                   ],
+        "explanation":  "Correct answer is C."
+    },
+    {
+        "id":  30,
+        "week":  4,
+        "topic":  "Week 4 Concepts",
+        "type":  "single",
+        "text":  "A win-win negotiation aims to:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Let one side win"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Benefit both parties"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "End without agreement"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Delay the decision"
+                        }
+                    ],
+        "answer":  [
+                       "B"
+                   ],
+        "explanation":  "Correct answer is B."
+    },
+    {
+        "id":  31,
+        "week":  4,
+        "topic":  "Week 4 Concepts",
+        "type":  "single",
+        "text":  "Culture shock is:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Discomfort in an unfamiliar culture"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "A type of agreement"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "A negotiation tactic"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "A listening barrier"
+                        }
+                    ],
+        "answer":  [
+                       "A"
+                   ],
+        "explanation":  "Correct answer is A."
+    },
+    {
+        "id":  32,
+        "week":  4,
+        "topic":  "Week 4 Concepts",
+        "type":  "multiple",
+        "text":  "Which help cross-cultural communication?",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Cultural sensitivity"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Stereotyping"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Respect for differences"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Ethnocentrism"
+                        }
+                    ],
+        "answer":  [
+                       "A",
+                       "C"
+                   ],
+        "explanation":  "Correct answer is A, C."
+    },
+    {
+        "id":  33,
+        "week":  4,
+        "topic":  "Week 4 Concepts",
+        "type":  "multiple",
+        "text":  "Organisational communication channels are:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Formal"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Imaginary"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Informal"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Magical"
+                        }
+                    ],
+        "answer":  [
+                       "A",
+                       "C"
+                   ],
+        "explanation":  "Correct answer is A, C."
+    },
+    {
+        "id":  34,
+        "week":  4,
+        "topic":  "Week 4 Concepts",
+        "type":  "truefalse",
+        "text":  "Stereotyping helps in accurately understanding other cultures.",
+        "options":  [
+                        {
+                            "id":  "True",
+                            "text":  "True"
+                        },
+                        {
+                            "id":  "False",
+                            "text":  "False"
+                        }
+                    ],
+        "answer":  [
+                       "False"
+                   ],
+        "explanation":  "The statement is F."
+    },
+    {
+        "id":  35,
+        "week":  4,
+        "topic":  "Week 4 Concepts",
+        "type":  "match",
+        "text":  "Match the term with its meaning.",
+        "columnA":  [
+                        {
+                            "id":  "P",
+                            "text":  "Ethnocentrism"
+                        },
+                        {
+                            "id":  "Q",
+                            "text":  "Stereotyping"
+                        },
+                        {
+                            "id":  "R",
+                            "text":  "Culture shock"
+                        },
+                        {
+                            "id":  "S",
+                            "text":  "Cultural sensitivity"
+                        }
+                    ],
+        "columnB":  [
+                        {
+                            "id":  "1",
+                            "text":  "Awareness and respect of cultural differences"
+                        },
+                        {
+                            "id":  "2",
+                            "text":  "Discomfort in an unfamiliar culture"
+                        },
+                        {
+                            "id":  "3",
+                            "text":  "Oversimplified ideas about a group"
+                        },
+                        {
+                            "id":  "4",
+                            "text":  "Judging other cultures by one\u0027s own standards"
+                        }
+                    ],
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "P-3, Q-4, R-2, S-1",
+                            "pairs":  {
+                                          "P":  "3",
+                                          "Q":  "4",
+                                          "R":  "2",
+                                          "S":  "1"
+                                      }
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "P-4, Q-3, R-1, S-2",
+                            "pairs":  {
+                                          "P":  "4",
+                                          "Q":  "3",
+                                          "R":  "1",
+                                          "S":  "2"
+                                      }
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "P-4, Q-2, R-3, S-1",
+                            "pairs":  {
+                                          "P":  "4",
+                                          "Q":  "2",
+                                          "R":  "3",
+                                          "S":  "1"
+                                      }
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "P-4, Q-3, R-2, S-1",
+                            "pairs":  {
+                                          "P":  "4",
+                                          "Q":  "3",
+                                          "R":  "2",
+                                          "S":  "1"
+                                      }
+                        }
+                    ],
+        "answer":  [
+                       "D"
+                   ],
+        "explanation":  "Correct matching option is (D): P-4, Q-3, R-2, S-1."
+    },
+    {
+        "id":  36,
+        "week":  4,
+        "topic":  "Week 4 Concepts",
+        "type":  "match",
+        "text":  "Match the stage of negotiation.",
+        "columnA":  [
+                        {
+                            "id":  "P",
+                            "text":  "Preparation"
+                        },
+                        {
+                            "id":  "Q",
+                            "text":  "Discussion"
+                        },
+                        {
+                            "id":  "R",
+                            "text":  "Bargaining"
+                        },
+                        {
+                            "id":  "S",
+                            "text":  "Closure"
+                        }
+                    ],
+        "columnB":  [
+                        {
+                            "id":  "1",
+                            "text":  "Exchange of offers and concessions"
+                        },
+                        {
+                            "id":  "2",
+                            "text":  "Final agreement reached"
+                        },
+                        {
+                            "id":  "3",
+                            "text":  "Planning goals and limits beforehand"
+                        },
+                        {
+                            "id":  "4",
+                            "text":  "Presenting views and clarifying positions"
+                        }
+                    ],
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "P-3, Q-1, R-4, S-2",
+                            "pairs":  {
+                                          "P":  "3",
+                                          "Q":  "1",
+                                          "R":  "4",
+                                          "S":  "2"
+                                      }
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "P-3, Q-4, R-1, S-2",
+                            "pairs":  {
+                                          "P":  "3",
+                                          "Q":  "4",
+                                          "R":  "1",
+                                          "S":  "2"
+                                      }
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "P-4, Q-3, R-1, S-2",
+                            "pairs":  {
+                                          "P":  "4",
+                                          "Q":  "3",
+                                          "R":  "1",
+                                          "S":  "2"
+                                      }
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "P-3, Q-4, R-2, S-1",
+                            "pairs":  {
+                                          "P":  "3",
+                                          "Q":  "4",
+                                          "R":  "2",
+                                          "S":  "1"
+                                      }
+                        }
+                    ],
+        "answer":  [
+                       "B"
+                   ],
+        "explanation":  "Correct matching option is (B): P-3, Q-4, R-1, S-2."
+    },
+    {
+        "id":  37,
+        "week":  5,
+        "topic":  "Week 5 Concepts",
+        "type":  "single",
+        "text":  "The first stage of the writing process is:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Revising"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Proofreading"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Publishing"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Planning (prewriting)"
+                        }
+                    ],
+        "answer":  [
+                       "D"
+                   ],
+        "explanation":  "Correct answer is D."
+    },
+    {
+        "id":  38,
+        "week":  5,
+        "topic":  "Week 5 Concepts",
+        "type":  "single",
+        "text":  "Conciseness in business writing means:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Using more words to sound formal"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Saying it in the fewest words without losing meaning"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Avoiding all details"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Repeating key points"
+                        }
+                    ],
+        "answer":  [
+                       "B"
+                   ],
+        "explanation":  "Correct answer is B."
+    },
+    {
+        "id":  39,
+        "week":  5,
+        "topic":  "Week 5 Concepts",
+        "type":  "multiple",
+        "text":  "Which are principles of business writing?",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Clarity"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Correctness"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Ambiguity"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Wordiness"
+                        }
+                    ],
+        "answer":  [
+                       "A",
+                       "B"
+                   ],
+        "explanation":  "Correct answer is A, B."
+    },
+    {
+        "id":  40,
+        "week":  5,
+        "topic":  "Week 5 Concepts",
+        "type":  "multiple",
+        "text":  "Which are semantic barriers?",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Jargon"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Ambiguous words"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Fax machine failure"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Loud noise"
+                        }
+                    ],
+        "answer":  [
+                       "A",
+                       "B"
+                   ],
+        "explanation":  "Correct answer is A, B."
+    },
+    {
+        "id":  41,
+        "week":  5,
+        "topic":  "Week 5 Concepts",
+        "type":  "truefalse",
+        "text":  "A memorandum is generally used for internal communication.",
+        "options":  [
+                        {
+                            "id":  "True",
+                            "text":  "True"
+                        },
+                        {
+                            "id":  "False",
+                            "text":  "False"
+                        }
+                    ],
+        "answer":  [
+                       "True"
+                   ],
+        "explanation":  "The statement is T."
+    },
+    {
+        "id":  42,
+        "week":  5,
+        "topic":  "Week 5 Concepts",
+        "type":  "truefalse",
+        "text":  "Proofreading is done before the first draft.",
+        "options":  [
+                        {
+                            "id":  "True",
+                            "text":  "True"
+                        },
+                        {
+                            "id":  "False",
+                            "text":  "False"
+                        }
+                    ],
+        "answer":  [
+                       "False"
+                   ],
+        "explanation":  "The statement is F."
+    },
+    {
+        "id":  43,
+        "week":  5,
+        "topic":  "Week 5 Concepts",
+        "type":  "match",
+        "text":  "Match the business document with its use.",
+        "columnA":  [
+                        {
+                            "id":  "P",
+                            "text":  "Memorandum"
+                        },
+                        {
+                            "id":  "Q",
+                            "text":  "Agenda"
+                        },
+                        {
+                            "id":  "R",
+                            "text":  "Minutes"
+                        },
+                        {
+                            "id":  "S",
+                            "text":  "Notice"
+                        }
+                    ],
+        "columnB":  [
+                        {
+                            "id":  "1",
+                            "text":  "Record of a meeting"
+                        },
+                        {
+                            "id":  "2",
+                            "text":  "Public announcement of an event"
+                        },
+                        {
+                            "id":  "3",
+                            "text":  "Brief internal message"
+                        },
+                        {
+                            "id":  "4",
+                            "text":  "List of topics for a meeting"
+                        }
+                    ],
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "P-3, Q-4, R-1, S-2",
+                            "pairs":  {
+                                          "P":  "3",
+                                          "Q":  "4",
+                                          "R":  "1",
+                                          "S":  "2"
+                                      }
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "P-4, Q-3, R-1, S-2",
+                            "pairs":  {
+                                          "P":  "4",
+                                          "Q":  "3",
+                                          "R":  "1",
+                                          "S":  "2"
+                                      }
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "P-3, Q-1, R-4, S-2",
+                            "pairs":  {
+                                          "P":  "3",
+                                          "Q":  "1",
+                                          "R":  "4",
+                                          "S":  "2"
+                                      }
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "P-3, Q-4, R-2, S-1",
+                            "pairs":  {
+                                          "P":  "3",
+                                          "Q":  "4",
+                                          "R":  "2",
+                                          "S":  "1"
+                                      }
+                        }
+                    ],
+        "answer":  [
+                       "A"
+                   ],
+        "explanation":  "Correct matching option is (A): P-3, Q-4, R-1, S-2."
+    },
+    {
+        "id":  44,
+        "week":  5,
+        "topic":  "Week 5 Concepts",
+        "type":  "match",
+        "text":  "Match the stage of the writing process.",
+        "columnA":  [
+                        {
+                            "id":  "P",
+                            "text":  "Prewriting"
+                        },
+                        {
+                            "id":  "Q",
+                            "text":  "Drafting"
+                        },
+                        {
+                            "id":  "R",
+                            "text":  "Revising"
+                        },
+                        {
+                            "id":  "S",
+                            "text":  "Proofreading"
+                        }
+                    ],
+        "columnB":  [
+                        {
+                            "id":  "1",
+                            "text":  "Correcting errors"
+                        },
+                        {
+                            "id":  "2",
+                            "text":  "Planning ideas"
+                        },
+                        {
+                            "id":  "3",
+                            "text":  "Improving content and structure"
+                        },
+                        {
+                            "id":  "4",
+                            "text":  "Putting ideas into sentences"
+                        }
+                    ],
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "P-4, Q-2, R-3, S-1",
+                            "pairs":  {
+                                          "P":  "4",
+                                          "Q":  "2",
+                                          "R":  "3",
+                                          "S":  "1"
+                                      }
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "P-2, Q-4, R-1, S-3",
+                            "pairs":  {
+                                          "P":  "2",
+                                          "Q":  "4",
+                                          "R":  "1",
+                                          "S":  "3"
+                                      }
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "P-2, Q-3, R-4, S-1",
+                            "pairs":  {
+                                          "P":  "2",
+                                          "Q":  "3",
+                                          "R":  "4",
+                                          "S":  "1"
+                                      }
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "P-2, Q-4, R-3, S-1",
+                            "pairs":  {
+                                          "P":  "2",
+                                          "Q":  "4",
+                                          "R":  "3",
+                                          "S":  "1"
+                                      }
+                        }
+                    ],
+        "answer":  [
+                       "D"
+                   ],
+        "explanation":  "Correct matching option is (D): P-2, Q-4, R-3, S-1."
+    },
+    {
+        "id":  45,
+        "week":  6,
+        "topic":  "Week 6 Concepts",
+        "type":  "single",
+        "text":  "In block format, all lines of the letter begin at the:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Right margin"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Centre"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Left margin"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Indented position"
+                        }
+                    ],
+        "answer":  [
+                       "C"
+                   ],
+        "explanation":  "Correct answer is C."
+    },
+    {
+        "id":  46,
+        "week":  6,
+        "topic":  "Week 6 Concepts",
+        "type":  "single",
+        "text":  "The recipient\u0027s name and address in a letter form the:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Inside address"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Letterhead"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Enclosure line"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Signature block"
+                        }
+                    ],
+        "answer":  [
+                       "A"
+                   ],
+        "explanation":  "Correct answer is A."
+    },
+    {
+        "id":  47,
+        "week":  6,
+        "topic":  "Week 6 Concepts",
+        "type":  "single",
+        "text":  "\"Enc.\" at the bottom of a letter indicates:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "End of letter"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Enclosures attached"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Enquiry"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Encoded text"
+                        }
+                    ],
+        "answer":  [
+                       "B"
+                   ],
+        "explanation":  "Correct answer is B."
+    },
+    {
+        "id":  48,
+        "week":  6,
+        "topic":  "Week 6 Concepts",
+        "type":  "single",
+        "text":  "\"Dear Sir/Madam\" is used when:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Writing to close friends"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "The recipient\u0027s name is unknown"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Writing informally"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Never"
+                        }
+                    ],
+        "answer":  [
+                       "B"
+                   ],
+        "explanation":  "Correct answer is B."
+    },
+    {
+        "id":  49,
+        "week":  6,
+        "topic":  "Week 6 Concepts",
+        "type":  "multiple",
+        "text":  "Which are qualities of a good business letter?",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Clarity"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Courtesy"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Rudeness"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Vagueness"
+                        }
+                    ],
+        "answer":  [
+                       "A",
+                       "B"
+                   ],
+        "explanation":  "Correct answer is A, B."
+    },
+    {
+        "id":  50,
+        "week":  6,
+        "topic":  "Week 6 Concepts",
+        "type":  "multiple",
+        "text":  "Which are parts of a business letter?",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Letterhead"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Date line"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Chorus"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Stanza"
+                        }
+                    ],
+        "answer":  [
+                       "A",
+                       "B"
+                   ],
+        "explanation":  "Correct answer is A, B."
+    },
+    {
+        "id":  51,
+        "week":  6,
+        "topic":  "Week 6 Concepts",
+        "type":  "truefalse",
+        "text":  "A sales letter aims to persuade readers to buy a product.",
+        "options":  [
+                        {
+                            "id":  "True",
+                            "text":  "True"
+                        },
+                        {
+                            "id":  "False",
+                            "text":  "False"
+                        }
+                    ],
+        "answer":  [
+                       "True"
+                   ],
+        "explanation":  "The statement is T."
+    },
+    {
+        "id":  52,
+        "week":  6,
+        "topic":  "Week 6 Concepts",
+        "type":  "match",
+        "text":  "Match the part of a letter.",
+        "columnA":  [
+                        {
+                            "id":  "P",
+                            "text":  "Letterhead"
+                        },
+                        {
+                            "id":  "Q",
+                            "text":  "Salutation"
+                        },
+                        {
+                            "id":  "R",
+                            "text":  "Subject line"
+                        },
+                        {
+                            "id":  "S",
+                            "text":  "Complimentary close"
+                        }
+                    ],
+        "columnB":  [
+                        {
+                            "id":  "1",
+                            "text":  "\"Yours faithfully\""
+                        },
+                        {
+                            "id":  "2",
+                            "text":  "\"Dear Sir\""
+                        },
+                        {
+                            "id":  "3",
+                            "text":  "Organisation name and address at the top"
+                        },
+                        {
+                            "id":  "4",
+                            "text":  "Brief statement of the letter\u0027s topic"
+                        }
+                    ],
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "P-2, Q-3, R-4, S-1",
+                            "pairs":  {
+                                          "P":  "2",
+                                          "Q":  "3",
+                                          "R":  "4",
+                                          "S":  "1"
+                                      }
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "P-3, Q-2, R-1, S-4",
+                            "pairs":  {
+                                          "P":  "3",
+                                          "Q":  "2",
+                                          "R":  "1",
+                                          "S":  "4"
+                                      }
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "P-3, Q-4, R-2, S-1",
+                            "pairs":  {
+                                          "P":  "3",
+                                          "Q":  "4",
+                                          "R":  "2",
+                                          "S":  "1"
+                                      }
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "P-3, Q-2, R-4, S-1",
+                            "pairs":  {
+                                          "P":  "3",
+                                          "Q":  "2",
+                                          "R":  "4",
+                                          "S":  "1"
+                                      }
+                        }
+                    ],
+        "answer":  [
+                       "D"
+                   ],
+        "explanation":  "Correct matching option is (D): P-3, Q-2, R-4, S-1."
+    },
+    {
+        "id":  53,
+        "week":  6,
+        "topic":  "Week 6 Concepts",
+        "type":  "match",
+        "text":  "Match the letter with its purpose.",
+        "columnA":  [
+                        {
+                            "id":  "P",
+                            "text":  "Enquiry letter"
+                        },
+                        {
+                            "id":  "Q",
+                            "text":  "Order letter"
+                        },
+                        {
+                            "id":  "R",
+                            "text":  "Complaint letter"
+                        },
+                        {
+                            "id":  "S",
+                            "text":  "Sales letter"
+                        }
+                    ],
+        "columnB":  [
+                        {
+                            "id":  "1",
+                            "text":  "Promotes a product"
+                        },
+                        {
+                            "id":  "2",
+                            "text":  "Asks for information"
+                        },
+                        {
+                            "id":  "3",
+                            "text":  "Seeks remedy for dissatisfaction"
+                        },
+                        {
+                            "id":  "4",
+                            "text":  "Places a request to buy goods"
+                        }
+                    ],
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "P-2, Q-4, R-3, S-1",
+                            "pairs":  {
+                                          "P":  "2",
+                                          "Q":  "4",
+                                          "R":  "3",
+                                          "S":  "1"
+                                      }
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "P-2, Q-3, R-4, S-1",
+                            "pairs":  {
+                                          "P":  "2",
+                                          "Q":  "3",
+                                          "R":  "4",
+                                          "S":  "1"
+                                      }
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "P-4, Q-2, R-3, S-1",
+                            "pairs":  {
+                                          "P":  "4",
+                                          "Q":  "2",
+                                          "R":  "3",
+                                          "S":  "1"
+                                      }
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "P-2, Q-4, R-1, S-3",
+                            "pairs":  {
+                                          "P":  "2",
+                                          "Q":  "4",
+                                          "R":  "1",
+                                          "S":  "3"
+                                      }
+                        }
+                    ],
+        "answer":  [
+                       "A"
+                   ],
+        "explanation":  "Correct matching option is (A): P-2, Q-4, R-3, S-1."
+    },
+    {
+        "id":  54,
+        "week":  7,
+        "topic":  "Week 7 Concepts",
+        "type":  "single",
+        "text":  "The main purpose of a report is to:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Entertain readers"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Present facts and findings for decision-making"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Persuade emotionally"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Advertise a product"
+                        }
+                    ],
+        "answer":  [
+                       "B"
+                   ],
+        "explanation":  "Correct answer is B."
+    },
+    {
+        "id":  55,
+        "week":  7,
+        "topic":  "Week 7 Concepts",
+        "type":  "single",
+        "text":  "Data collected firsthand by the researcher is:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Secondary data"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Historical data"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Primary data"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Mixed data"
+                        }
+                    ],
+        "answer":  [
+                       "C"
+                   ],
+        "explanation":  "Correct answer is C."
+    },
+    {
+        "id":  56,
+        "week":  7,
+        "topic":  "Week 7 Concepts",
+        "type":  "single",
+        "text":  "An informal report is typically:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Short and simple"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Long with extensive front matter"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Written in verse"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Always printed in colour"
+                        }
+                    ],
+        "answer":  [
+                       "A"
+                   ],
+        "explanation":  "Correct answer is A."
+    },
+    {
+        "id":  57,
+        "week":  7,
+        "topic":  "Week 7 Concepts",
+        "type":  "single",
+        "text":  "A small group selected from a larger population for study is a:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Census"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Sample"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Survey"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Hypothesis"
+                        }
+                    ],
+        "answer":  [
+                       "B"
+                   ],
+        "explanation":  "Correct answer is B."
+    },
+    {
+        "id":  58,
+        "week":  7,
+        "topic":  "Week 7 Concepts",
+        "type":  "multiple",
+        "text":  "Which are characteristics of a good report?",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Accuracy"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Bias"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Clarity"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Irrelevance"
+                        }
+                    ],
+        "answer":  [
+                       "A",
+                       "C"
+                   ],
+        "explanation":  "Correct answer is A, C."
+    },
+    {
+        "id":  59,
+        "week":  7,
+        "topic":  "Week 7 Concepts",
+        "type":  "multiple",
+        "text":  "Which are methods of primary data collection?",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Interview"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Library book"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Questionnaire"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Newspaper archive"
+                        }
+                    ],
+        "answer":  [
+                       "A",
+                       "C"
+                   ],
+        "explanation":  "Correct answer is A, C."
+    },
+    {
+        "id":  60,
+        "week":  7,
+        "topic":  "Week 7 Concepts",
+        "type":  "truefalse",
+        "text":  "A formal report follows a prescribed structure.",
+        "options":  [
+                        {
+                            "id":  "True",
+                            "text":  "True"
+                        },
+                        {
+                            "id":  "False",
+                            "text":  "False"
+                        }
+                    ],
+        "answer":  [
+                       "True"
+                   ],
+        "explanation":  "The statement is T."
+    },
+    {
+        "id":  61,
+        "week":  7,
+        "topic":  "Week 7 Concepts",
+        "type":  "match",
+        "text":  "Match the term with its meaning.",
+        "columnA":  [
+                        {
+                            "id":  "P",
+                            "text":  "Primary data"
+                        },
+                        {
+                            "id":  "Q",
+                            "text":  "Secondary data"
+                        },
+                        {
+                            "id":  "R",
+                            "text":  "Population"
+                        },
+                        {
+                            "id":  "S",
+                            "text":  "Sample"
+                        }
+                    ],
+        "columnB":  [
+                        {
+                            "id":  "1",
+                            "text":  "Entire group under study"
+                        },
+                        {
+                            "id":  "2",
+                            "text":  "Subset of the group"
+                        },
+                        {
+                            "id":  "3",
+                            "text":  "Collected firsthand by the researcher"
+                        },
+                        {
+                            "id":  "4",
+                            "text":  "Collected earlier by others"
+                        }
+                    ],
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "P-4, Q-3, R-1, S-2",
+                            "pairs":  {
+                                          "P":  "4",
+                                          "Q":  "3",
+                                          "R":  "1",
+                                          "S":  "2"
+                                      }
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "P-3, Q-4, R-2, S-1",
+                            "pairs":  {
+                                          "P":  "3",
+                                          "Q":  "4",
+                                          "R":  "2",
+                                          "S":  "1"
+                                      }
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "P-3, Q-1, R-4, S-2",
+                            "pairs":  {
+                                          "P":  "3",
+                                          "Q":  "1",
+                                          "R":  "4",
+                                          "S":  "2"
+                                      }
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "P-3, Q-4, R-1, S-2",
+                            "pairs":  {
+                                          "P":  "3",
+                                          "Q":  "4",
+                                          "R":  "1",
+                                          "S":  "2"
+                                      }
+                        }
+                    ],
+        "answer":  [
+                       "D"
+                   ],
+        "explanation":  "Correct matching option is (D): P-3, Q-4, R-1, S-2."
+    },
+    {
+        "id":  62,
+        "week":  8,
+        "topic":  "Week 8 Concepts",
+        "type":  "single",
+        "text":  "A title page contains:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Findings"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Title, author and date"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Methodology"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "An index only"
+                        }
+                    ],
+        "answer":  [
+                       "B"
+                   ],
+        "explanation":  "Correct answer is B."
+    },
+    {
+        "id":  63,
+        "week":  8,
+        "topic":  "Week 8 Concepts",
+        "type":  "single",
+        "text":  "The part of a report listing headings with page numbers is the:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Abstract"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Glossary"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Preface"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Table of contents"
+                        }
+                    ],
+        "answer":  [
+                       "D"
+                   ],
+        "explanation":  "Correct answer is D."
+    },
+    {
+        "id":  64,
+        "week":  8,
+        "topic":  "Week 8 Concepts",
+        "type":  "single",
+        "text":  "Which is a style rule for reports?",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Use slang"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Use emotional language"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Use short, clear sentences"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Always use the first person"
+                        }
+                    ],
+        "answer":  [
+                       "C"
+                   ],
+        "explanation":  "Correct answer is C."
+    },
+    {
+        "id":  65,
+        "week":  8,
+        "topic":  "Week 8 Concepts",
+        "type":  "single",
+        "text":  "The recommendations section of a report suggests:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Actions to be taken"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Raw data"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "References"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "The title"
+                        }
+                    ],
+        "answer":  [
+                       "A"
+                   ],
+        "explanation":  "Correct answer is A."
+    },
+    {
+        "id":  66,
+        "week":  8,
+        "topic":  "Week 8 Concepts",
+        "type":  "multiple",
+        "text":  "Which are qualities of good report style?",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Objectivity"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Conciseness"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Ambiguity"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Exaggeration"
+                        }
+                    ],
+        "answer":  [
+                       "A",
+                       "B"
+                   ],
+        "explanation":  "Correct answer is A, B."
+    },
+    {
+        "id":  67,
+        "week":  8,
+        "topic":  "Week 8 Concepts",
+        "type":  "multiple",
+        "text":  "Which are advantages of group communication?",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Diverse perspectives"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Shared workload"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Guaranteed agreement"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Always slower decisions"
+                        }
+                    ],
+        "answer":  [
+                       "A",
+                       "B"
+                   ],
+        "explanation":  "Correct answer is A, B."
+    },
+    {
+        "id":  68,
+        "week":  8,
+        "topic":  "Week 8 Concepts",
+        "type":  "truefalse",
+        "text":  "Groupthink can lead to poor decisions.",
+        "options":  [
+                        {
+                            "id":  "True",
+                            "text":  "True"
+                        },
+                        {
+                            "id":  "False",
+                            "text":  "False"
+                        }
+                    ],
+        "answer":  [
+                       "True"
+                   ],
+        "explanation":  "The statement is T."
+    },
+    {
+        "id":  69,
+        "week":  8,
+        "topic":  "Week 8 Concepts",
+        "type":  "match",
+        "text":  "Match the report element with its role.",
+        "columnA":  [
+                        {
+                            "id":  "P",
+                            "text":  "Abstract"
+                        },
+                        {
+                            "id":  "Q",
+                            "text":  "Table of contents"
+                        },
+                        {
+                            "id":  "R",
+                            "text":  "Glossary"
+                        },
+                        {
+                            "id":  "S",
+                            "text":  "References"
+                        }
+                    ],
+        "columnB":  [
+                        {
+                            "id":  "1",
+                            "text":  "Sources cited"
+                        },
+                        {
+                            "id":  "2",
+                            "text":  "Explains technical terms"
+                        },
+                        {
+                            "id":  "3",
+                            "text":  "Short summary of the report"
+                        },
+                        {
+                            "id":  "4",
+                            "text":  "Lists headings with page numbers"
+                        }
+                    ],
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "P-3, Q-2, R-4, S-1",
+                            "pairs":  {
+                                          "P":  "3",
+                                          "Q":  "2",
+                                          "R":  "4",
+                                          "S":  "1"
+                                      }
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "P-3, Q-4, R-2, S-1",
+                            "pairs":  {
+                                          "P":  "3",
+                                          "Q":  "4",
+                                          "R":  "2",
+                                          "S":  "1"
+                                      }
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "P-4, Q-3, R-2, S-1",
+                            "pairs":  {
+                                          "P":  "4",
+                                          "Q":  "3",
+                                          "R":  "2",
+                                          "S":  "1"
+                                      }
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "P-3, Q-4, R-1, S-2",
+                            "pairs":  {
+                                          "P":  "3",
+                                          "Q":  "4",
+                                          "R":  "1",
+                                          "S":  "2"
+                                      }
+                        }
+                    ],
+        "answer":  [
+                       "B"
+                   ],
+        "explanation":  "Correct matching option is (B): P-3, Q-4, R-2, S-1."
+    },
+    {
+        "id":  70,
+        "week":  9,
+        "topic":  "Week 9 Concepts",
+        "type":  "single",
+        "text":  "A leader who inspires through personal charm and vision is:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Autocratic"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Charismatic"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Laissez-faire"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Bureaucratic"
+                        }
+                    ],
+        "answer":  [
+                       "B"
+                   ],
+        "explanation":  "Correct answer is B."
+    },
+    {
+        "id":  71,
+        "week":  9,
+        "topic":  "Week 9 Concepts",
+        "type":  "single",
+        "text":  "A group discussion usually begins with:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Introducing the topic"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "The final conclusion"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "A vote"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Silence"
+                        }
+                    ],
+        "answer":  [
+                       "A"
+                   ],
+        "explanation":  "Correct answer is A."
+    },
+    {
+        "id":  72,
+        "week":  9,
+        "topic":  "Week 9 Concepts",
+        "type":  "single",
+        "text":  "The minutes of a meeting are usually recorded by the:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Auditor"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Chairperson only"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Secretary"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Security guard"
+                        }
+                    ],
+        "answer":  [
+                       "C"
+                   ],
+        "explanation":  "Correct answer is C."
+    },
+    {
+        "id":  73,
+        "week":  9,
+        "topic":  "Week 9 Concepts",
+        "type":  "single",
+        "text":  "Work ethics include:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Gossip"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Laziness"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Cheating"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Punctuality and integrity"
+                        }
+                    ],
+        "answer":  [
+                       "D"
+                   ],
+        "explanation":  "Correct answer is D."
+    },
+    {
+        "id":  74,
+        "week":  9,
+        "topic":  "Week 9 Concepts",
+        "type":  "multiple",
+        "text":  "Responsibilities of a meeting chairperson include:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Maintaining order"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Ensuring the agenda is followed"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Dominating all discussion"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Leaving early"
+                        }
+                    ],
+        "answer":  [
+                       "A",
+                       "B"
+                   ],
+        "explanation":  "Correct answer is A, B."
+    },
+    {
+        "id":  75,
+        "week":  9,
+        "topic":  "Week 9 Concepts",
+        "type":  "multiple",
+        "text":  "Which are good practices in a group discussion?",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Listening carefully"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Shouting"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Supporting points with examples"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Ignoring others"
+                        }
+                    ],
+        "answer":  [
+                       "A",
+                       "C"
+                   ],
+        "explanation":  "Correct answer is A, C."
+    },
+    {
+        "id":  76,
+        "week":  9,
+        "topic":  "Week 9 Concepts",
+        "type":  "truefalse",
+        "text":  "In a group discussion, speaking many times matters more than the quality of your points.",
+        "options":  [
+                        {
+                            "id":  "True",
+                            "text":  "True"
+                        },
+                        {
+                            "id":  "False",
+                            "text":  "False"
+                        }
+                    ],
+        "answer":  [
+                       "False"
+                   ],
+        "explanation":  "The statement is F."
+    },
+    {
+        "id":  77,
+        "week":  9,
+        "topic":  "Week 9 Concepts",
+        "type":  "match",
+        "text":  "Match the meeting term.",
+        "columnA":  [
+                        {
+                            "id":  "P",
+                            "text":  "Chairperson"
+                        },
+                        {
+                            "id":  "Q",
+                            "text":  "Secretary"
+                        },
+                        {
+                            "id":  "R",
+                            "text":  "Motion"
+                        },
+                        {
+                            "id":  "S",
+                            "text":  "Quorum"
+                        }
+                    ],
+        "columnB":  [
+                        {
+                            "id":  "1",
+                            "text":  "Minimum members needed to hold the meeting"
+                        },
+                        {
+                            "id":  "2",
+                            "text":  "Presides over the meeting"
+                        },
+                        {
+                            "id":  "3",
+                            "text":  "Records the minutes"
+                        },
+                        {
+                            "id":  "4",
+                            "text":  "A proposal put forward for discussion"
+                        }
+                    ],
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "P-2, Q-3, R-1, S-4",
+                            "pairs":  {
+                                          "P":  "2",
+                                          "Q":  "3",
+                                          "R":  "1",
+                                          "S":  "4"
+                                      }
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "P-3, Q-2, R-4, S-1",
+                            "pairs":  {
+                                          "P":  "3",
+                                          "Q":  "2",
+                                          "R":  "4",
+                                          "S":  "1"
+                                      }
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "P-2, Q-3, R-4, S-1",
+                            "pairs":  {
+                                          "P":  "2",
+                                          "Q":  "3",
+                                          "R":  "4",
+                                          "S":  "1"
+                                      }
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "P-2, Q-4, R-3, S-1",
+                            "pairs":  {
+                                          "P":  "2",
+                                          "Q":  "4",
+                                          "R":  "3",
+                                          "S":  "1"
+                                      }
+                        }
+                    ],
+        "answer":  [
+                       "C"
+                   ],
+        "explanation":  "Correct matching option is (C): P-2, Q-3, R-4, S-1."
+    },
+    {
+        "id":  78,
+        "week":  10,
+        "topic":  "Week 10 Concepts",
+        "type":  "single",
+        "text":  "A good speech introduction should:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Grab the audience\u0027s attention"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Be long and detailed"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Include every point"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Apologise"
+                        }
+                    ],
+        "answer":  [
+                       "A"
+                   ],
+        "explanation":  "Correct answer is A."
+    },
+    {
+        "id":  79,
+        "week":  10,
+        "topic":  "Week 10 Concepts",
+        "type":  "single",
+        "text":  "Speaking from memory without notes is the \\_\\_\\_ method.",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Impromptu"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Manuscript"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Memorised"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Extemporaneous"
+                        }
+                    ],
+        "answer":  [
+                       "C"
+                   ],
+        "explanation":  "Correct answer is C."
+    },
+    {
+        "id":  80,
+        "week":  10,
+        "topic":  "Week 10 Concepts",
+        "type":  "single",
+        "text":  "An impromptu speech is delivered:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "From a written script"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "After word-for-word memorising"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "From a recording"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "With little or no preparation"
+                        }
+                    ],
+        "answer":  [
+                       "D"
+                   ],
+        "explanation":  "Correct answer is D."
+    },
+    {
+        "id":  81,
+        "week":  10,
+        "topic":  "Week 10 Concepts",
+        "type":  "single",
+        "text":  "Visual aids should be:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Crowded with text"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Simple and readable"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "In a tiny font"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Always animated"
+                        }
+                    ],
+        "answer":  [
+                       "B"
+                   ],
+        "explanation":  "Correct answer is B."
+    },
+    {
+        "id":  82,
+        "week":  10,
+        "topic":  "Week 10 Concepts",
+        "type":  "multiple",
+        "text":  "Good ways to open a speech:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "A relevant question"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "An apt quotation"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "A long definition"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "An apology"
+                        }
+                    ],
+        "answer":  [
+                       "A",
+                       "B"
+                   ],
+        "explanation":  "Correct answer is A, B."
+    },
+    {
+        "id":  83,
+        "week":  10,
+        "topic":  "Week 10 Concepts",
+        "type":  "multiple",
+        "text":  "Physical symptoms of nervousness include:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Sweating"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Calmness"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Trembling"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "A steady voice"
+                        }
+                    ],
+        "answer":  [
+                       "A",
+                       "C"
+                   ],
+        "explanation":  "Correct answer is A, C."
+    },
+    {
+        "id":  84,
+        "week":  10,
+        "topic":  "Week 10 Concepts",
+        "type":  "truefalse",
+        "text":  "A conclusion should summarise the key points.",
+        "options":  [
+                        {
+                            "id":  "True",
+                            "text":  "True"
+                        },
+                        {
+                            "id":  "False",
+                            "text":  "False"
+                        }
+                    ],
+        "answer":  [
+                       "True"
+                   ],
+        "explanation":  "The statement is T."
+    },
+    {
+        "id":  85,
+        "week":  10,
+        "topic":  "Week 10 Concepts",
+        "type":  "match",
+        "text":  "Match the method of delivery.",
+        "columnA":  [
+                        {
+                            "id":  "P",
+                            "text":  "Impromptu"
+                        },
+                        {
+                            "id":  "Q",
+                            "text":  "Manuscript"
+                        },
+                        {
+                            "id":  "R",
+                            "text":  "Memorised"
+                        },
+                        {
+                            "id":  "S",
+                            "text":  "Extemporaneous"
+                        }
+                    ],
+        "columnB":  [
+                        {
+                            "id":  "1",
+                            "text":  "Read from a written text"
+                        },
+                        {
+                            "id":  "2",
+                            "text":  "Spoken with little or no preparation"
+                        },
+                        {
+                            "id":  "3",
+                            "text":  "Delivered from key points after preparation"
+                        },
+                        {
+                            "id":  "4",
+                            "text":  "Learned word for word"
+                        }
+                    ],
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "P-1, Q-2, R-4, S-3",
+                            "pairs":  {
+                                          "P":  "1",
+                                          "Q":  "2",
+                                          "R":  "4",
+                                          "S":  "3"
+                                      }
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "P-2, Q-1, R-3, S-4",
+                            "pairs":  {
+                                          "P":  "2",
+                                          "Q":  "1",
+                                          "R":  "3",
+                                          "S":  "4"
+                                      }
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "P-2, Q-1, R-4, S-3",
+                            "pairs":  {
+                                          "P":  "2",
+                                          "Q":  "1",
+                                          "R":  "4",
+                                          "S":  "3"
+                                      }
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "P-2, Q-4, R-1, S-3",
+                            "pairs":  {
+                                          "P":  "2",
+                                          "Q":  "4",
+                                          "R":  "1",
+                                          "S":  "3"
+                                      }
+                        }
+                    ],
+        "answer":  [
+                       "C"
+                   ],
+        "explanation":  "Correct matching option is (C): P-2, Q-1, R-4, S-3."
+    },
+    {
+        "id":  86,
+        "week":  11,
+        "topic":  "Week 11 Concepts",
+        "type":  "single",
+        "text":  "A speech of introduction is used to:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Introduce a speaker to the audience"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Thank the guests"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Bid farewell"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Criticise the speaker"
+                        }
+                    ],
+        "answer":  [
+                       "A"
+                   ],
+        "explanation":  "Correct answer is A."
+    },
+    {
+        "id":  87,
+        "week":  11,
+        "topic":  "Week 11 Concepts",
+        "type":  "single",
+        "text":  "An interview before a board of several interviewers is a:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Exit interview"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Telephonic interview"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Panel interview"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Stress interview"
+                        }
+                    ],
+        "answer":  [
+                       "C"
+                   ],
+        "explanation":  "Correct answer is C."
+    },
+    {
+        "id":  88,
+        "week":  11,
+        "topic":  "Week 11 Concepts",
+        "type":  "single",
+        "text":  "An interview that deliberately puts a candidate under pressure is a:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Panel interview"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Stress interview"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Exit interview"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Telephonic interview"
+                        }
+                    ],
+        "answer":  [
+                       "B"
+                   ],
+        "explanation":  "Correct answer is B."
+    },
+    {
+        "id":  89,
+        "week":  11,
+        "topic":  "Week 11 Concepts",
+        "type":  "single",
+        "text":  "Researching the organisation before an interview helps because it:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Is required by law"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Lowers the salary"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Avoids all questions"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Shows interest and preparation"
+                        }
+                    ],
+        "answer":  [
+                       "D"
+                   ],
+        "explanation":  "Correct answer is D."
+    },
+    {
+        "id":  90,
+        "week":  11,
+        "topic":  "Week 11 Concepts",
+        "type":  "multiple",
+        "text":  "Which should be avoided in an interview?",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Arriving late"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Interrupting the interviewer"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Maintaining eye contact"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Being honest"
+                        }
+                    ],
+        "answer":  [
+                       "A",
+                       "B"
+                   ],
+        "explanation":  "Correct answer is A, B."
+    },
+    {
+        "id":  91,
+        "week":  11,
+        "topic":  "Week 11 Concepts",
+        "type":  "multiple",
+        "text":  "Which are types of interviews?",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Panel"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Musical"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Telephonic"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Sleeping"
+                        }
+                    ],
+        "answer":  [
+                       "A",
+                       "C"
+                   ],
+        "explanation":  "Correct answer is A, C."
+    },
+    {
+        "id":  92,
+        "week":  11,
+        "topic":  "Week 11 Concepts",
+        "type":  "truefalse",
+        "text":  "First impressions matter in an interview.",
+        "options":  [
+                        {
+                            "id":  "True",
+                            "text":  "True"
+                        },
+                        {
+                            "id":  "False",
+                            "text":  "False"
+                        }
+                    ],
+        "answer":  [
+                       "True"
+                   ],
+        "explanation":  "The statement is T."
+    },
+    {
+        "id":  93,
+        "week":  11,
+        "topic":  "Week 11 Concepts",
+        "type":  "match",
+        "text":  "Match the type of interview.",
+        "columnA":  [
+                        {
+                            "id":  "P",
+                            "text":  "Panel interview"
+                        },
+                        {
+                            "id":  "Q",
+                            "text":  "Telephonic interview"
+                        },
+                        {
+                            "id":  "R",
+                            "text":  "Stress interview"
+                        },
+                        {
+                            "id":  "S",
+                            "text":  "Group interview"
+                        }
+                    ],
+        "columnB":  [
+                        {
+                            "id":  "1",
+                            "text":  "Candidate tested under pressure"
+                        },
+                        {
+                            "id":  "2",
+                            "text":  "Several candidates interviewed together"
+                        },
+                        {
+                            "id":  "3",
+                            "text":  "Conducted by a board of interviewers"
+                        },
+                        {
+                            "id":  "4",
+                            "text":  "Conducted over a phone call"
+                        }
+                    ],
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "P-3, Q-4, R-2, S-1",
+                            "pairs":  {
+                                          "P":  "3",
+                                          "Q":  "4",
+                                          "R":  "2",
+                                          "S":  "1"
+                                      }
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "P-4, Q-3, R-1, S-2",
+                            "pairs":  {
+                                          "P":  "4",
+                                          "Q":  "3",
+                                          "R":  "1",
+                                          "S":  "2"
+                                      }
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "P-3, Q-4, R-1, S-2",
+                            "pairs":  {
+                                          "P":  "3",
+                                          "Q":  "4",
+                                          "R":  "1",
+                                          "S":  "2"
+                                      }
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "P-3, Q-1, R-4, S-2",
+                            "pairs":  {
+                                          "P":  "3",
+                                          "Q":  "1",
+                                          "R":  "4",
+                                          "S":  "2"
+                                      }
+                        }
+                    ],
+        "answer":  [
+                       "C"
+                   ],
+        "explanation":  "Correct matching option is (C): P-3, Q-4, R-1, S-2."
+    },
+    {
+        "id":  94,
+        "week":  12,
+        "topic":  "Week 12 Concepts",
+        "type":  "single",
+        "text":  "A good resume should be:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Full of exaggerations"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Without contact details"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Ten pages long"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Error-free and tailored to the job"
+                        }
+                    ],
+        "answer":  [
+                       "D"
+                   ],
+        "explanation":  "Correct answer is D."
+    },
+    {
+        "id":  95,
+        "week":  12,
+        "topic":  "Week 12 Concepts",
+        "type":  "single",
+        "text":  "Emotional intelligence was popularised by:",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Sigmund Freud"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Daniel Goleman"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Abraham Maslow"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Eric Berne"
+                        }
+                    ],
+        "answer":  [
+                       "B"
+                   ],
+        "explanation":  "Correct answer is B."
+    },
+    {
+        "id":  96,
+        "week":  12,
+        "topic":  "Week 12 Concepts",
+        "type":  "single",
+        "text":  "Choose the correct sentence.",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Neither of the answers are correct."
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Neither of the answers were correct."
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Neither of the answers is correct."
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Neither of the answers have been correct."
+                        }
+                    ],
+        "answer":  [
+                       "C"
+                   ],
+        "explanation":  "Correct answer is C."
+    },
+    {
+        "id":  97,
+        "week":  12,
+        "topic":  "Week 12 Concepts",
+        "type":  "multiple",
+        "text":  "Which are critical thinking skills?",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "Analysis"
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "Evaluation"
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "Guessing"
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "Assuming"
+                        }
+                    ],
+        "answer":  [
+                       "A",
+                       "B"
+                   ],
+        "explanation":  "Correct answer is A, B."
+    },
+    {
+        "id":  98,
+        "week":  12,
+        "topic":  "Week 12 Concepts",
+        "type":  "multiple",
+        "text":  "Which sentences are in the active voice?",
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "She wrote a letter."
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "A letter was written by her."
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "The team won the match."
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "The match was won by the team."
+                        }
+                    ],
+        "answer":  [
+                       "A",
+                       "C"
+                   ],
+        "explanation":  "Correct answer is A, C."
+    },
+    {
+        "id":  99,
+        "week":  12,
+        "topic":  "Week 12 Concepts",
+        "type":  "truefalse",
+        "text":  "In an interview, one should speak negatively about a previous employer.",
+        "options":  [
+                        {
+                            "id":  "True",
+                            "text":  "True"
+                        },
+                        {
+                            "id":  "False",
+                            "text":  "False"
+                        }
+                    ],
+        "answer":  [
+                       "False"
+                   ],
+        "explanation":  "The statement is F."
+    },
+    {
+        "id":  100,
+        "week":  12,
+        "topic":  "Week 12 Concepts",
+        "type":  "match",
+        "text":  "Match the component of emotional intelligence.",
+        "columnA":  [
+                        {
+                            "id":  "P",
+                            "text":  "Self-awareness"
+                        },
+                        {
+                            "id":  "Q",
+                            "text":  "Self-regulation"
+                        },
+                        {
+                            "id":  "R",
+                            "text":  "Empathy"
+                        },
+                        {
+                            "id":  "S",
+                            "text":  "Motivation"
+                        }
+                    ],
+        "columnB":  [
+                        {
+                            "id":  "1",
+                            "text":  "Understanding others\u0027 feelings"
+                        },
+                        {
+                            "id":  "2",
+                            "text":  "Knowing one\u0027s own emotions"
+                        },
+                        {
+                            "id":  "3",
+                            "text":  "Managing one\u0027s impulses"
+                        },
+                        {
+                            "id":  "4",
+                            "text":  "Inner drive to achieve"
+                        }
+                    ],
+        "options":  [
+                        {
+                            "id":  "A",
+                            "text":  "P-2, Q-3, R-1, S-4",
+                            "pairs":  {
+                                          "P":  "2",
+                                          "Q":  "3",
+                                          "R":  "1",
+                                          "S":  "4"
+                                      }
+                        },
+                        {
+                            "id":  "B",
+                            "text":  "P-3, Q-2, R-1, S-4",
+                            "pairs":  {
+                                          "P":  "3",
+                                          "Q":  "2",
+                                          "R":  "1",
+                                          "S":  "4"
+                                      }
+                        },
+                        {
+                            "id":  "C",
+                            "text":  "P-2, Q-1, R-3, S-4",
+                            "pairs":  {
+                                          "P":  "2",
+                                          "Q":  "1",
+                                          "R":  "3",
+                                          "S":  "4"
+                                      }
+                        },
+                        {
+                            "id":  "D",
+                            "text":  "P-2, Q-3, R-4, S-1",
+                            "pairs":  {
+                                          "P":  "2",
+                                          "Q":  "3",
+                                          "R":  "4",
+                                          "S":  "1"
+                                      }
+                        }
+                    ],
+        "answer":  [
+                       "A"
+                   ],
+        "explanation":  "Correct matching option is (A): P-2, Q-3, R-1, S-4."
+    }
+];

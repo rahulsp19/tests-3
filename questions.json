@@ -1,0 +1,1465 @@
+[
+  {
+    "id": 1,
+    "week": 1,
+    "topic": "Communication Basics",
+    "type": "single",
+    "text": "\"Communication\" comes from the Latin communicare, meaning:",
+    "options": [
+      { "id": "A", "text": "To speak" },
+      { "id": "B", "text": "To listen" },
+      { "id": "C", "text": "To write" },
+      { "id": "D", "text": "To share" }
+    ],
+    "answer": ["D"],
+    "explanation": "Communicare in Latin means to share or to make common."
+  },
+  {
+    "id": 2,
+    "week": 1,
+    "topic": "Listening vs Hearing",
+    "type": "single",
+    "text": "Hearing is a ___ activity, while listening is a ___ one.",
+    "options": [
+      { "id": "A", "text": "mental, physiological" },
+      { "id": "B", "text": "physiological, mental" },
+      { "id": "C", "text": "emotional, social" },
+      { "id": "D", "text": "social, mental" }
+    ],
+    "answer": ["B"],
+    "explanation": "Hearing is the physical, physiological reception of sound waves, whereas listening is an active, conscious mental process of interpreting meaning."
+  },
+  {
+    "id": 3,
+    "week": 1,
+    "topic": "Personality Theories",
+    "type": "single",
+    "text": "Which part of Freud's personality follows the pleasure principle?",
+    "options": [
+      { "id": "A", "text": "Id" },
+      { "id": "B", "text": "Ego" },
+      { "id": "C", "text": "Superego" },
+      { "id": "D", "text": "Persona" }
+    ],
+    "answer": ["A"],
+    "explanation": "The Id operates strictly on the pleasure principle, seeking immediate gratification of instincts and impulses."
+  },
+  {
+    "id": 4,
+    "week": 1,
+    "topic": "Communication Models",
+    "type": "single",
+    "text": "The shared background of experience between sender and receiver is the:",
+    "options": [
+      { "id": "A", "text": "Feedback" },
+      { "id": "B", "text": "Noise" },
+      { "id": "C", "text": "Channel" },
+      { "id": "D", "text": "Common frame of reference" }
+    ],
+    "answer": ["D"],
+    "explanation": "A common frame of reference allows the sender and receiver to encode and decode messages with shared meaning."
+  },
+  {
+    "id": 5,
+    "week": 1,
+    "topic": "Thinking Hats",
+    "type": "single",
+    "text": "In De Bono's Six Hats, the hat for generating new ideas is the:",
+    "options": [
+      { "id": "A", "text": "White hat" },
+      { "id": "B", "text": "Blue hat" },
+      { "id": "C", "text": "Green hat" },
+      { "id": "D", "text": "Black hat" }
+    ],
+    "answer": ["C"],
+    "explanation": "The Green Hat represents creativity, possibilities, alternatives, and new ideas."
+  },
+  {
+    "id": 6,
+    "week": 1,
+    "topic": "7 Cs of Communication",
+    "type": "multiple",
+    "text": "Which are among the Seven Cs of communication?",
+    "options": [
+      { "id": "A", "text": "Competition" },
+      { "id": "B", "text": "Conciseness" },
+      { "id": "C", "text": "Courtesy" },
+      { "id": "D", "text": "Conflict" },
+      { "id": "E", "text": "Completeness" }
+    ],
+    "answer": ["B", "C", "E"],
+    "explanation": "The 7 Cs are Completeness, Conciseness, Consideration, Clarity, Concreteness, Courtesy, and Correctness."
+  },
+  {
+    "id": 7,
+    "week": 1,
+    "topic": "Soft Skills Taxonomy",
+    "type": "multiple",
+    "text": "Which are behavioural soft skills?",
+    "options": [
+      { "id": "A", "text": "Persistence" },
+      { "id": "B", "text": "Typing speed" },
+      { "id": "C", "text": "Self-awareness" },
+      { "id": "D", "text": "Machine operation" }
+    ],
+    "answer": ["A", "C"],
+    "explanation": "Persistence and self-awareness are behavioural psychological soft skills, while typing speed and machine operation are technical/hard skills."
+  },
+  {
+    "id": 8,
+    "week": 1,
+    "topic": "Etymology",
+    "type": "truefalse",
+    "text": "\"Personality\" comes from the Latin persona, meaning mask.",
+    "options": [
+      { "id": "True", "text": "True" },
+      { "id": "False", "text": "False" }
+    ],
+    "answer": ["True"],
+    "explanation": "The term personality originates from the Latin word 'persona', which referred to theatrical masks worn by performers in Greek dramas."
+  },
+  {
+    "id": 9,
+    "week": 1,
+    "topic": "Informal Channels",
+    "type": "truefalse",
+    "text": "The grapevine is a formal channel that is always accurate.",
+    "options": [
+      { "id": "True", "text": "True" },
+      { "id": "False", "text": "False" }
+    ],
+    "answer": ["False"],
+    "explanation": "The grapevine is an informal, unofficial communication network within an organisation and is prone to rumours and distortions."
+  },
+  {
+    "id": 10,
+    "week": 2,
+    "topic": "Mehrabian Rule",
+    "type": "single",
+    "text": "According to Mehrabian, the verbal part of a message is:",
+    "options": [
+      { "id": "A", "text": "55%" },
+      { "id": "B", "text": "7%" },
+      { "id": "C", "text": "93%" },
+      { "id": "D", "text": "38%" }
+    ],
+    "answer": ["B"],
+    "explanation": "Albert Mehrabian's 7-38-55 rule states that communication of feelings consists of 7% verbal words, 38% vocal tone, and 55% body language."
+  },
+  {
+    "id": 11,
+    "week": 2,
+    "topic": "Transactional Analysis",
+    "type": "single",
+    "text": "In Eric Berne's model, \"I'm okay, you're okay\" describes a person who is:",
+    "options": [
+      { "id": "A", "text": "Submissive" },
+      { "id": "B", "text": "Hopeless" },
+      { "id": "C", "text": "Imposing" },
+      { "id": "D", "text": "Positive and cooperative" }
+    ],
+    "answer": ["D"],
+    "explanation": "'I'm OK, You're OK' represents the healthiest life position characterised by self-esteem, mutual trust, and collaborative problem-solving."
+  },
+  {
+    "id": 12,
+    "week": 2,
+    "topic": "Johari Window",
+    "type": "single",
+    "text": "In the Johari Window, information unknown to you but known to others is the:",
+    "options": [
+      { "id": "A", "text": "Open area" },
+      { "id": "B", "text": "Hidden area" },
+      { "id": "C", "text": "Unknown area" },
+      { "id": "D", "text": "Blind area" }
+    ],
+    "answer": ["D"],
+    "explanation": "The Blind spot contains information about yourself that others perceive but you are unaware of."
+  },
+  {
+    "id": 13,
+    "week": 2,
+    "topic": "Voice Characteristics",
+    "type": "single",
+    "text": "The change in pitch produced by vocal cord vibration is:",
+    "options": [
+      { "id": "A", "text": "Inflection" },
+      { "id": "B", "text": "Volume" },
+      { "id": "C", "text": "Articulation" },
+      { "id": "D", "text": "Pause" }
+    ],
+    "answer": ["A"],
+    "explanation": "Inflection is the variation or modulation of the pitch of the musical tone of the voice."
+  },
+  {
+    "id": 14,
+    "week": 2,
+    "topic": "Vocal Pathology",
+    "type": "single",
+    "text": "A voice fault caused by inflammation of the larynx is:",
+    "options": [
+      { "id": "A", "text": "Stammering" },
+      { "id": "B", "text": "Lisp" },
+      { "id": "C", "text": "Hoarseness" },
+      { "id": "D", "text": "Nasality" }
+    ],
+    "answer": ["C"],
+    "explanation": "Hoarseness (dysphonia) results from swelling or inflammation of the vocal folds in the larynx (laryngitis)."
+  },
+  {
+    "id": 15,
+    "week": 2,
+    "topic": "Teleconferencing",
+    "type": "single",
+    "text": "Teleconferencing is generally ineffective for:",
+    "options": [
+      { "id": "A", "text": "Announcements" },
+      { "id": "B", "text": "Routine updates" },
+      { "id": "C", "text": "Information sharing" },
+      { "id": "D", "text": "Negotiations" }
+    ],
+    "answer": ["D"],
+    "explanation": "Complex negotiations require subtle non-verbal cues, trust building, and body language that are frequently hindered in teleconferencing."
+  },
+  {
+    "id": 16,
+    "week": 2,
+    "topic": "Paralanguage",
+    "type": "multiple",
+    "text": "Which are characteristics of voice?",
+    "options": [
+      { "id": "A", "text": "Colour" },
+      { "id": "B", "text": "Volume" },
+      { "id": "C", "text": "Weight" },
+      { "id": "D", "text": "Pitch" }
+    ],
+    "answer": ["B", "D"],
+    "explanation": "The fundamental acoustic dimensions of voice include volume (loudness), pitch (frequency), tempo/rate, and timbre."
+  },
+  {
+    "id": 17,
+    "week": 2,
+    "topic": "Telephone Etiquette",
+    "type": "multiple",
+    "text": "Which statements about telephonic communication are correct?",
+    "options": [
+      { "id": "A", "text": "It bridges time and distance gaps" },
+      { "id": "B", "text": "It needs no planning" },
+      { "id": "C", "text": "It entails low cost" },
+      { "id": "D", "text": "It always replaces face-to-face meetings" }
+    ],
+    "answer": ["A", "C"],
+    "explanation": "Telephonic communication bridges geographical distance affordably, but professional business calls definitely require planning."
+  },
+  {
+    "id": 18,
+    "week": 2,
+    "topic": "Asynchronous Channels",
+    "type": "truefalse",
+    "text": "Voice mail helps overcome time-zone difficulties.",
+    "options": [
+      { "id": "True", "text": "True" },
+      { "id": "False", "text": "False" }
+    ],
+    "answer": ["True"],
+    "explanation": "Voice mail is asynchronous, enabling parties across conflicting time zones to communicate without requiring simultaneous availability."
+  },
+  {
+    "id": 19,
+    "week": 3,
+    "topic": "Proxemics",
+    "type": "single",
+    "text": "\"Proxemics\" is derived from:",
+    "options": [
+      { "id": "A", "text": "Proximity" },
+      { "id": "B", "text": "Proxy" },
+      { "id": "C", "text": "Process" },
+      { "id": "D", "text": "Promise" }
+    ],
+    "answer": ["A"],
+    "explanation": "Coined by Edward T. Hall, proxemics comes from 'proximity' (nearness in space)."
+  },
+  {
+    "id": 20,
+    "week": 3,
+    "topic": "Haptics",
+    "type": "single",
+    "text": "\"Haptics\" comes from a Greek word meaning:",
+    "options": [
+      { "id": "A", "text": "I see" },
+      { "id": "B", "text": "I touch" },
+      { "id": "C", "text": "I hear" },
+      { "id": "D", "text": "I move" }
+    ],
+    "answer": ["B"],
+    "explanation": "Haptics comes from the Greek 'haptikos' / 'haptesthai', meaning pertaining to the sense of touch or 'I touch'."
+  },
+  {
+    "id": 21,
+    "week": 3,
+    "topic": "Chronemics",
+    "type": "single",
+    "text": "The study of time in communication is:",
+    "options": [
+      { "id": "A", "text": "Proxemics" },
+      { "id": "B", "text": "Kinesics" },
+      { "id": "C", "text": "Haptics" },
+      { "id": "D", "text": "Chronemics" }
+    ],
+    "answer": ["D"],
+    "explanation": "Chronemics investigates how time perception, structure, and punctuality communicate meaning across cultures."
+  },
+  {
+    "id": 22,
+    "week": 3,
+    "topic": "Hall's Spatial Zones",
+    "type": "single",
+    "text": "The social zone in proxemics is:",
+    "options": [
+      { "id": "A", "text": "4 to 12 feet" },
+      { "id": "B", "text": "0 to 1.5 feet" },
+      { "id": "C", "text": "1.5 to 4 feet" },
+      { "id": "D", "text": "More than 12 feet" }
+    ],
+    "answer": ["A"],
+    "explanation": "Hall's zones: Intimate (0-1.5 ft), Personal (1.5-4 ft), Social (4-12 ft), and Public (12+ ft)."
+  },
+  {
+    "id": 23,
+    "week": 3,
+    "topic": "Listening Styles",
+    "type": "single",
+    "text": "A listener who mentally protests instead of taking in the message practises:",
+    "options": [
+      { "id": "A", "text": "Combative listening" },
+      { "id": "B", "text": "Appreciative listening" },
+      { "id": "C", "text": "Empathetic listening" },
+      { "id": "D", "text": "Informational listening" }
+    ],
+    "answer": ["A"],
+    "explanation": "Combative (or argumentative) listening occurs when the listener is waiting to counter or refute the speaker rather than understand."
+  },
+  {
+    "id": 24,
+    "week": 3,
+    "topic": "Cross-Cultural Communication",
+    "type": "multiple",
+    "text": "Which are high-context cultures?",
+    "options": [
+      { "id": "A", "text": "Germans" },
+      { "id": "B", "text": "Japan" },
+      { "id": "C", "text": "North Americans" },
+      { "id": "D", "text": "Arab countries" }
+    ],
+    "answer": ["B", "D"],
+    "explanation": "In high-context cultures (such as Japan and Arab nations), communication relies heavily on implicit messaging, relationships, and context."
+  },
+  {
+    "id": 25,
+    "week": 3,
+    "topic": "Barriers to Listening",
+    "type": "multiple",
+    "text": "Which factors block proper listening?",
+    "options": [
+      { "id": "A", "text": "Note-taking" },
+      { "id": "B", "text": "Ambiguity" },
+      { "id": "C", "text": "Eye contact" },
+      { "id": "D", "text": "Prejudging" }
+    ],
+    "answer": ["B", "D"],
+    "explanation": "Ambiguity of language and prejudging the speaker or content are major psychological and semantic barriers to effective listening."
+  },
+  {
+    "id": 26,
+    "week": 3,
+    "topic": "Power of Silence",
+    "type": "multiple",
+    "text": "Which are advantages of silence in a speech?",
+    "options": [
+      { "id": "A", "text": "It irritates the audience" },
+      { "id": "B", "text": "It relieves the audience" },
+      { "id": "C", "text": "It shows lack of knowledge" },
+      { "id": "D", "text": "It gives the speaker thinking time" }
+    ],
+    "answer": ["B", "D"],
+    "explanation": "Pausing gives listeners time to digest heavy information and allows the speaker to collect thoughts and control pace."
+  },
+  {
+    "id": 27,
+    "week": 3,
+    "topic": "Cultural Taboos",
+    "type": "truefalse",
+    "text": "In Thailand and Laos, touching a child's head is rude because the head is considered the home of the soul.",
+    "options": [
+      { "id": "True", "text": "True" },
+      { "id": "False", "text": "False" }
+    ],
+    "answer": ["True"],
+    "explanation": "In Buddhist tradition in Southeast Asia, the head is sacred as the seat of intellect and spiritual purity."
+  },
+  {
+    "id": 28,
+    "week": 4,
+    "topic": "Negotiation Terminology",
+    "type": "single",
+    "text": "WATNA stands for:",
+    "options": [
+      { "id": "A", "text": "Wise Alternative to No Agreement" },
+      { "id": "B", "text": "Worst Alternative to a Negotiated Agreement" },
+      { "id": "C", "text": "Worst Approach to Negotiating Arguments" },
+      { "id": "D", "text": "Wisest Approach to Negotiation and Agreement" }
+    ],
+    "answer": ["B"],
+    "explanation": "WATNA stands for Worst Alternative to a Negotiated Agreement (paired with BATNA, Best Alternative)."
+  },
+  {
+    "id": 29,
+    "week": 4,
+    "topic": "Negotiation Terminology",
+    "type": "single",
+    "text": "ZOPA stands for:",
+    "options": [
+      { "id": "A", "text": "Zone of Personal Agreement" },
+      { "id": "B", "text": "Zone of Prior Agreement" },
+      { "id": "C", "text": "Zone of Possible Agreement" },
+      { "id": "D", "text": "Zone of Peaceful Alternatives" }
+    ],
+    "answer": ["C"],
+    "explanation": "ZOPA is the bargaining range where the reservation prices of the buyer and seller overlap."
+  },
+  {
+    "id": 30,
+    "week": 4,
+    "topic": "Principles of Negotiation",
+    "type": "single",
+    "text": "A real negotiation proceeds through:",
+    "options": [
+      { "id": "A", "text": "Authority and imposition" },
+      { "id": "B", "text": "Threats" },
+      { "id": "C", "text": "Silence" },
+      { "id": "D", "text": "Instruction and persuasion" }
+    ],
+    "answer": ["D"],
+    "explanation": "Principled negotiation relies on reasoned persuasion, information exchange, and mutual problem solving."
+  },
+  {
+    "id": 31,
+    "week": 4,
+    "topic": "Culture Definitions",
+    "type": "single",
+    "text": "Who defined culture as \"a code we learn and share\"?",
+    "options": [
+      { "id": "A", "text": "Edward Hall" },
+      { "id": "B", "text": "Maslow" },
+      { "id": "C", "text": "McGregor" },
+      { "id": "D", "text": "Alfred G. Smith" }
+    ],
+    "answer": ["D"],
+    "explanation": "Communication scholar Alfred G. Smith defined culture as 'a code we learn and share'."
+  },
+  {
+    "id": 32,
+    "week": 4,
+    "topic": "Cultural Semantics",
+    "type": "single",
+    "text": "Hong Kong hospitals avoid the number four because its sound is close to the word for:",
+    "options": [
+      { "id": "A", "text": "Death" },
+      { "id": "B", "text": "Luck" },
+      { "id": "C", "text": "Money" },
+      { "id": "D", "text": "Sickness" }
+    ],
+    "answer": ["A"],
+    "explanation": "In Cantonese and Mandarin, the pronunciation of 4 (sei/si) sounds nearly identical to the word for death (tetraphobia)."
+  },
+  {
+    "id": 33,
+    "week": 4,
+    "topic": "Negotiator Traits",
+    "type": "multiple",
+    "text": "Which are qualities of a good negotiator?",
+    "options": [
+      { "id": "A", "text": "Aggression" },
+      { "id": "B", "text": "Confidence" },
+      { "id": "C", "text": "Dishonesty" },
+      { "id": "D", "text": "Honesty" }
+    ],
+    "answer": ["B", "D"],
+    "explanation": "Effective negotiators possess confidence, integrity, active listening skills, and patience."
+  },
+  {
+    "id": 34,
+    "week": 4,
+    "topic": "Formal Negotiation",
+    "type": "multiple",
+    "text": "Which are announced beforehand to both parties in a formal negotiation?",
+    "options": [
+      { "id": "A", "text": "Final offer" },
+      { "id": "B", "text": "Agenda" },
+      { "id": "C", "text": "Secret limits" },
+      { "id": "D", "text": "Venue, date and time" }
+    ],
+    "answer": ["B", "D"],
+    "explanation": "Logistics including agenda, venue, date, and schedule are agreed upon beforehand, while BATNAs and reservation values remain confidential."
+  },
+  {
+    "id": 35,
+    "week": 4,
+    "topic": "Hall's Context Model",
+    "type": "multiple",
+    "text": "Which are low-context cultures?",
+    "options": [
+      { "id": "A", "text": "Japanese" },
+      { "id": "B", "text": "Arabs" },
+      { "id": "C", "text": "North Americans" },
+      { "id": "D", "text": "Germans" }
+    ],
+    "answer": ["C", "D"],
+    "explanation": "Germany and North America are low-context cultures that prize direct, explicit, rule-governed verbal communication."
+  },
+  {
+    "id": 36,
+    "week": 4,
+    "topic": "Maslow Hierarchy",
+    "type": "truefalse",
+    "text": "In Maslow's hierarchy, food and shelter are physiological needs.",
+    "options": [
+      { "id": "True", "text": "True" },
+      { "id": "False", "text": "False" }
+    ],
+    "answer": ["True"],
+    "explanation": "Physiological needs form the base tier of Maslow's hierarchy, encompassing biological essentials like oxygen, food, water, and shelter."
+  },
+  {
+    "id": 37,
+    "week": 5,
+    "topic": "Communication Breakdown",
+    "type": "single",
+    "text": "A difference in status can cause ___ communication breakdown.",
+    "options": [
+      { "id": "A", "text": "ethical" },
+      { "id": "B", "text": "semantic" },
+      { "id": "C", "text": "physical" },
+      { "id": "D", "text": "organisational" }
+    ],
+    "answer": ["D"],
+    "explanation": "Hierarchical distance, status differentials, and rigid reporting structures are classic organisational barriers."
+  },
+  {
+    "id": 38,
+    "week": 5,
+    "topic": "Ethical Communication",
+    "type": "single",
+    "text": "Plagiarism comes under which form of communication breakdown?",
+    "options": [
+      { "id": "A", "text": "Ethical" },
+      { "id": "B", "text": "Semantic" },
+      { "id": "C", "text": "Physical" },
+      { "id": "D", "text": "Mechanical" }
+    ],
+    "answer": ["A"],
+    "explanation": "Passing off someone else's work or ideas as your own without citation is a major ethical breach."
+  },
+  {
+    "id": 39,
+    "week": 5,
+    "topic": "Semantic Barriers",
+    "type": "single",
+    "text": "A semantic gap occurs because meanings are:",
+    "options": [
+      { "id": "A", "text": "universal" },
+      { "id": "B", "text": "fixed" },
+      { "id": "C", "text": "identical" },
+      { "id": "D", "text": "contextualised" }
+    ],
+    "answer": ["D"],
+    "explanation": "Meanings are not in words themselves; words are arbitrary symbols interpreted according to individual contexts and frames of reference."
+  },
+  {
+    "id": 40,
+    "week": 5,
+    "topic": "Communication Barriers",
+    "type": "single",
+    "text": "Communication breakdown is best defined as:",
+    "options": [
+      { "id": "A", "text": "Only noise" },
+      { "id": "B", "text": "Any step that blocks or interferes with message flow" },
+      { "id": "C", "text": "Only a wrong channel" },
+      { "id": "D", "text": "Silence" }
+    ],
+    "answer": ["B"],
+    "explanation": "Any impediment that distorts, interrupts, or prevents the intended transmission and comprehension of a message causes breakdown."
+  },
+  {
+    "id": 41,
+    "week": 5,
+    "topic": "Message Strategies",
+    "type": "single",
+    "text": "A neutral tone is maintained in which plan?",
+    "options": [
+      { "id": "A", "text": "A direct plan" },
+      { "id": "B", "text": "An indirect plan" },
+      { "id": "C", "text": "A persuasive plan" },
+      { "id": "D", "text": "None of these" }
+    ],
+    "answer": ["A"],
+    "explanation": "A direct organizational plan delivers routine or positive information directly and maintains an objective, neutral tone."
+  },
+  {
+    "id": 42,
+    "week": 5,
+    "topic": "Internal Channels",
+    "type": "multiple",
+    "text": "Which are circulated within an organisation?",
+    "options": [
+      { "id": "A", "text": "Advertisement" },
+      { "id": "B", "text": "Circular" },
+      { "id": "C", "text": "Memorandum" },
+      { "id": "D", "text": "Press release" }
+    ],
+    "answer": ["B", "C"],
+    "explanation": "Circulars and memos are internal organizational documents, whereas advertisements and press releases target external audiences."
+  },
+  {
+    "id": 43,
+    "week": 5,
+    "topic": "Ethics in Business",
+    "type": "multiple",
+    "text": "Which are ethical considerations in communication?",
+    "options": [
+      { "id": "A", "text": "Brevity" },
+      { "id": "B", "text": "Plagiarism" },
+      { "id": "C", "text": "Courtesy" },
+      { "id": "D", "text": "Misquoting" }
+    ],
+    "answer": ["B", "D"],
+    "explanation": "Plagiarism and misquoting represent significant ethical questions and violations in communication."
+  },
+  {
+    "id": 44,
+    "week": 5,
+    "topic": "Business Writing",
+    "type": "truefalse",
+    "text": "The goal of business writing is to impress clients with professional language.",
+    "options": [
+      { "id": "True", "text": "True" },
+      { "id": "False", "text": "False" }
+    ],
+    "answer": ["True"],
+    "explanation": "As noted in the course lecture notes, business communication aims to establish professional credibility and convey competence."
+  },
+  {
+    "id": 45,
+    "week": 6,
+    "topic": "Letter Formats",
+    "type": "single",
+    "text": "The simplified letter format is used when the writer is ___ of the receiver's status or gender.",
+    "options": [
+      { "id": "A", "text": "aware" },
+      { "id": "B", "text": "certain" },
+      { "id": "C", "text": "proud" },
+      { "id": "D", "text": "not aware" }
+    ],
+    "answer": ["D"],
+    "explanation": "The AMS simplified format omits salutations and complimentary closes, making it ideal when the recipient's identity or gender is uncertain."
+  },
+  {
+    "id": 46,
+    "week": 6,
+    "topic": "Business Correspondence",
+    "type": "single",
+    "text": "A business letter should end with:",
+    "options": [
+      { "id": "A", "text": "A hopeful statement" },
+      { "id": "B", "text": "An apology" },
+      { "id": "C", "text": "A threat" },
+      { "id": "D", "text": "A complaint" }
+    ],
+    "answer": ["A"],
+    "explanation": "A business letter closes courteously with a positive, forward-looking statement fostering goodwill."
+  },
+  {
+    "id": 47,
+    "week": 6,
+    "topic": "Collection Letters",
+    "type": "single",
+    "text": "A collection letter usually starts with a ___ tone.",
+    "options": [
+      { "id": "A", "text": "harsh" },
+      { "id": "B", "text": "angry" },
+      { "id": "C", "text": "gentle" },
+      { "id": "D", "text": "humorous" }
+    ],
+    "answer": ["C"],
+    "explanation": "The first reminder in a collection series is polite and assumes an oversight or accidental delay."
+  },
+  {
+    "id": 48,
+    "week": 6,
+    "topic": "Bad News Messages",
+    "type": "single",
+    "text": "Which is NOT a feature of a refusal letter?",
+    "options": [
+      { "id": "A", "text": "Polite tone" },
+      { "id": "B", "text": "It ignores the applicant's request" },
+      { "id": "C", "text": "It gives reasons" },
+      { "id": "D", "text": "Courteous closing" }
+    ],
+    "answer": ["B"],
+    "explanation": "A refusal letter never ignores the request; it acknowledges it and explains the rejection diplomatically."
+  },
+  {
+    "id": 49,
+    "week": 6,
+    "topic": "Meeting Minutes",
+    "type": "single",
+    "text": "A key feature of minutes of a meeting is:",
+    "options": [
+      { "id": "A", "text": "Personal opinion" },
+      { "id": "B", "text": "Logical sequencing of events" },
+      { "id": "C", "text": "Humour" },
+      { "id": "D", "text": "Gossip" }
+    ],
+    "answer": ["B"],
+    "explanation": "Minutes must provide an objective, logically sequenced, and chronological official record of decisions."
+  },
+  {
+    "id": 50,
+    "week": 6,
+    "topic": "Adjustment Letters",
+    "type": "multiple",
+    "text": "What are the goals of an adjustment letter?",
+    "options": [
+      { "id": "A", "text": "Blame the customer" },
+      { "id": "B", "text": "Rectify the earlier mistake" },
+      { "id": "C", "text": "Reject all complaints" },
+      { "id": "D", "text": "Regain the customer's confidence" }
+    ],
+    "answer": ["B", "D"],
+    "explanation": "An adjustment letter remedies the issue and rebuilds goodwill with the customer."
+  },
+  {
+    "id": 51,
+    "week": 6,
+    "topic": "Recommendation Letters",
+    "type": "multiple",
+    "text": "Which are guidelines for recommendation letters?",
+    "options": [
+      { "id": "A", "text": "Exaggeration" },
+      { "id": "B", "text": "Vagueness" },
+      { "id": "C", "text": "Honesty" },
+      { "id": "D", "text": "Confidentiality" }
+    ],
+    "answer": ["C", "D"],
+    "explanation": "A professional letter of recommendation must be truthful, honest, specific, and kept confidential."
+  },
+  {
+    "id": 52,
+    "week": 6,
+    "topic": "Email Etiquette",
+    "type": "multiple",
+    "text": "Which should be avoided in professional email?",
+    "options": [
+      { "id": "A", "text": "A clear subject line" },
+      { "id": "B", "text": "Capital letters" },
+      { "id": "C", "text": "A polite greeting" },
+      { "id": "D", "text": "Sarcasm" }
+    ],
+    "answer": ["B", "D"],
+    "explanation": "Typing in all caps equates to shouting, and sarcasm is easily misinterpreted in written correspondence."
+  },
+  {
+    "id": 53,
+    "week": 6,
+    "topic": "Enquiry Letters",
+    "type": "truefalse",
+    "text": "When replying to letters of enquiry, the subject line should be a complete sentence.",
+    "options": [
+      { "id": "True", "text": "True" },
+      { "id": "False", "text": "False" }
+    ],
+    "answer": ["False"],
+    "explanation": "Subject lines should be concise phrases specifying reference numbers or topics, not full grammatically complete sentences."
+  },
+  {
+    "id": 54,
+    "week": 7,
+    "topic": "Research Methodology",
+    "type": "single",
+    "text": "Which sampling method is based on probability?",
+    "options": [
+      { "id": "A", "text": "Random sampling" },
+      { "id": "B", "text": "Convenience sampling" },
+      { "id": "C", "text": "Judgement sampling" },
+      { "id": "D", "text": "Quota sampling" }
+    ],
+    "answer": ["A"],
+    "explanation": "Simple random sampling gives every element in the target population an equal probability of selection."
+  },
+  {
+    "id": 55,
+    "week": 7,
+    "topic": "Report Classifications",
+    "type": "single",
+    "text": "Reports written at regular, fixed intervals are:",
+    "options": [
+      { "id": "A", "text": "Special reports" },
+      { "id": "B", "text": "Informal reports" },
+      { "id": "C", "text": "Routine reports" },
+      { "id": "D", "text": "Research reports" }
+    ],
+    "answer": ["C"],
+    "explanation": "Routine or periodic reports (weekly, monthly, quarterly) are scheduled standard business updates."
+  },
+  {
+    "id": 56,
+    "week": 7,
+    "topic": "Writing Mechanics",
+    "type": "single",
+    "text": "\"Circumlocution\" in report writing means:",
+    "options": [
+      { "id": "A", "text": "Short sentences" },
+      { "id": "B", "text": "Pompously wordy expressions" },
+      { "id": "C", "text": "Technical terms" },
+      { "id": "D", "text": "Quotations" }
+    ],
+    "answer": ["B"],
+    "explanation": "Circumlocution is the use of unnecessarily round-about, long-winded language where fewer words would suffice."
+  },
+  {
+    "id": 57,
+    "week": 7,
+    "topic": "Data Types",
+    "type": "single",
+    "text": "Data collected from internet sources is:",
+    "options": [
+      { "id": "A", "text": "Secondary data" },
+      { "id": "B", "text": "Primary data" },
+      { "id": "C", "text": "Raw data" },
+      { "id": "D", "text": "Personal data" }
+    ],
+    "answer": ["A"],
+    "explanation": "Data already collected, compiled, and published by third parties online is secondary data."
+  },
+  {
+    "id": 58,
+    "week": 7,
+    "topic": "Report Preparation",
+    "type": "multiple",
+    "text": "Which are preparatory steps for report writing?",
+    "options": [
+      { "id": "A", "text": "Print copies" },
+      { "id": "B", "text": "Identify purpose and scope" },
+      { "id": "C", "text": "Add appendix" },
+      { "id": "D", "text": "Make an outline" }
+    ],
+    "answer": ["B", "D"],
+    "explanation": "Preliminary steps involve defining objectives and scope, followed by preparing a structured topical outline."
+  },
+  {
+    "id": 59,
+    "week": 7,
+    "topic": "Survey Instruments",
+    "type": "multiple",
+    "text": "Which are advantages of questionnaires?",
+    "options": [
+      { "id": "A", "text": "Always costly" },
+      { "id": "B", "text": "Convenient for the respondent" },
+      { "id": "C", "text": "Eliminates interviewer bias" },
+      { "id": "D", "text": "Guarantees 100% response" }
+    ],
+    "answer": ["B", "C"],
+    "explanation": "Questionnaires allow respondents to answer at their own leisure and remove personal bias introduced by interviewers."
+  },
+  {
+    "id": 60,
+    "week": 7,
+    "topic": "Observational Research",
+    "type": "truefalse",
+    "text": "Personal observation reports behaviour instead of interpreting it.",
+    "options": [
+      { "id": "True", "text": "True" },
+      { "id": "False", "text": "False" }
+    ],
+    "answer": ["True"],
+    "explanation": "In scientific reporting, observation directly records factual phenomena rather than subjective speculation."
+  },
+  {
+    "id": 61,
+    "week": 7,
+    "topic": "Interview Dynamics",
+    "type": "truefalse",
+    "text": "Interviewer bias cannot interfere in a telephonic interview.",
+    "options": [
+      { "id": "True", "text": "True" },
+      { "id": "False", "text": "False" }
+    ],
+    "answer": ["False"],
+    "explanation": "Interviewer tone of voice, pacing, and phrasing of follow-up questions can heavily introduce bias in phone interviews."
+  },
+  {
+    "id": 62,
+    "week": 8,
+    "topic": "Executive Summaries",
+    "type": "single",
+    "text": "Which is NOT typically included in an executive summary?",
+    "options": [
+      { "id": "A", "text": "References" },
+      { "id": "B", "text": "Findings" },
+      { "id": "C", "text": "Purpose" },
+      { "id": "D", "text": "Recommendations" }
+    ],
+    "answer": ["A"],
+    "explanation": "An executive summary provides an overview of purpose, findings, and recommendations; citation references belong in the back matter."
+  },
+  {
+    "id": 63,
+    "week": 8,
+    "topic": "Academic Documentation",
+    "type": "single",
+    "text": "How does a bibliography differ from a list of references?",
+    "options": [
+      { "id": "A", "text": "They are identical" },
+      { "id": "B", "text": "A bibliography covers all reading, including background; references cover only works cited" },
+      { "id": "C", "text": "A bibliography appears on the title page" },
+      { "id": "D", "text": "References are optional" }
+    ],
+    "answer": ["B"],
+    "explanation": "References list materials directly cited in the body text; bibliographies encompass all consulted materials including background reading."
+  },
+  {
+    "id": 64,
+    "week": 8,
+    "topic": "Clarity & Concreteness",
+    "type": "single",
+    "text": "\"Return back\" and \"past history\" are examples of:",
+    "options": [
+      { "id": "A", "text": "Jargon" },
+      { "id": "B", "text": "Cliche" },
+      { "id": "C", "text": "Slang" },
+      { "id": "D", "text": "Redundancy" }
+    ],
+    "answer": ["D"],
+    "explanation": "Redundancy (tautology) repeats identical concepts unnecessarily ('return' already implies back, 'history' already implies past)."
+  },
+  {
+    "id": 65,
+    "week": 8,
+    "topic": "Group Roles",
+    "type": "single",
+    "text": "Which is a maintenance role in group communication?",
+    "options": [
+      { "id": "A", "text": "Initiating" },
+      { "id": "B", "text": "Co-ordinating" },
+      { "id": "C", "text": "Harmonising" },
+      { "id": "D", "text": "Information seeking" }
+    ],
+    "answer": ["C"],
+    "explanation": "Harmonizing reconciles interpersonal differences and reduces tension, which maintains social cohesion in groups."
+  },
+  {
+    "id": 66,
+    "week": 8,
+    "topic": "Group Roles",
+    "type": "multiple",
+    "text": "Which are task-facilitating roles?",
+    "options": [
+      { "id": "A", "text": "Initiating" },
+      { "id": "B", "text": "Harmonising" },
+      { "id": "C", "text": "Co-ordinating" },
+      { "id": "D", "text": "Encouraging" }
+    ],
+    "answer": ["A", "C"],
+    "explanation": "Initiating ideas and coordinating activities directly advance task execution, whereas harmonizing and encouraging maintain social morale."
+  },
+  {
+    "id": 67,
+    "week": 8,
+    "topic": "Report Introductions",
+    "type": "multiple",
+    "text": "Which belong in a report's introduction?",
+    "options": [
+      { "id": "A", "text": "Index of tables" },
+      { "id": "B", "text": "Statement of the problem" },
+      { "id": "C", "text": "Signatures" },
+      { "id": "D", "text": "Scope of the problem" }
+    ],
+    "answer": ["B", "D"],
+    "explanation": "The introduction defines the problem statement, objectives, background, and scope boundaries of the study."
+  },
+  {
+    "id": 68,
+    "week": 8,
+    "topic": "Voice in Technical Writing",
+    "type": "truefalse",
+    "text": "Active voice is generally preferred in report writing.",
+    "options": [
+      { "id": "True", "text": "True" },
+      { "id": "False", "text": "False" }
+    ],
+    "answer": ["True"],
+    "explanation": "Modern business and professional style guides encourage active voice for greater directness, clarity, and conciseness."
+  },
+  {
+    "id": 69,
+    "week": 8,
+    "topic": "Abbreviations",
+    "type": "truefalse",
+    "text": "Using unfamiliar abbreviations makes a report more professional.",
+    "options": [
+      { "id": "True", "text": "True" },
+      { "id": "False", "text": "False" }
+    ],
+    "answer": ["False"],
+    "explanation": "Obscure acronyms confuse readers and create semantic barriers; abbreviations should be spelled out upon first use."
+  },
+  {
+    "id": 70,
+    "week": 9,
+    "topic": "Leadership Styles",
+    "type": "single",
+    "text": "Which would NOT be a good leader's approach?",
+    "options": [
+      { "id": "A", "text": "Motivating the team" },
+      { "id": "B", "text": "Setting a vision" },
+      { "id": "C", "text": "Autocratic style" },
+      { "id": "D", "text": "Listening to members" }
+    ],
+    "answer": ["C"],
+    "explanation": "An autocratic or authoritarian style stifles creativity and damages team morale."
+  },
+  {
+    "id": 71,
+    "week": 9,
+    "topic": "Group Discussions",
+    "type": "single",
+    "text": "A group discussion is:",
+    "options": [
+      { "id": "A", "text": "A casual chat" },
+      { "id": "B", "text": "A written exchange" },
+      { "id": "C", "text": "A monologue" },
+      { "id": "D", "text": "A formal and systematic face-to-face communication" }
+    ],
+    "answer": ["D"],
+    "explanation": "A group discussion (GD) is a structured, purposeful oral evaluation method used in campus recruitments."
+  },
+  {
+    "id": 72,
+    "week": 9,
+    "topic": "GD Protocol",
+    "type": "single",
+    "text": "Which should be avoided in a group discussion?",
+    "options": [
+      { "id": "A", "text": "Taking an extreme stance" },
+      { "id": "B", "text": "Listening" },
+      { "id": "C", "text": "Clarity" },
+      { "id": "D", "text": "Initiating" }
+    ],
+    "answer": ["A"],
+    "explanation": "Taking rigid, polarized dogmatic stands impedes consensus and shows poor adaptability."
+  },
+  {
+    "id": 73,
+    "week": 9,
+    "topic": "GD Evaluation",
+    "type": "single",
+    "text": "Which is NOT evaluated in a group discussion?",
+    "options": [
+      { "id": "A", "text": "Leadership" },
+      { "id": "B", "text": "Communication" },
+      { "id": "C", "text": "Hypocrisy" },
+      { "id": "D", "text": "Listening" }
+    ],
+    "answer": ["C"],
+    "explanation": "Evaluators score positive competencies: leadership, analytical thinking, listening, and teamwork."
+  },
+  {
+    "id": 74,
+    "week": 9,
+    "topic": "GD Best Practices",
+    "type": "multiple",
+    "text": "Which behaviours help a group discussion participant?",
+    "options": [
+      { "id": "A", "text": "Aggression" },
+      { "id": "B", "text": "Listening" },
+      { "id": "C", "text": "Dominating" },
+      { "id": "D", "text": "Clarity" }
+    ],
+    "answer": ["B", "D"],
+    "explanation": "Attentive listening and clear, succinct articulation showcase emotional maturity and communication competence."
+  },
+  {
+    "id": 75,
+    "week": 9,
+    "topic": "GD Purpose",
+    "type": "truefalse",
+    "text": "The sole purpose of a group discussion is to check the candidate's fluency.",
+    "options": [
+      { "id": "True", "text": "True" },
+      { "id": "False", "text": "False" }
+    ],
+    "answer": ["False"],
+    "explanation": "A GD evaluates interpersonal dynamics, problem-solving, emotional control, and reasoning skills—not just language fluency."
+  },
+  {
+    "id": 76,
+    "week": 9,
+    "topic": "Meeting Preparation",
+    "type": "truefalse",
+    "text": "A meeting without an agenda is like a journey without a destination.",
+    "options": [
+      { "id": "True", "text": "True" },
+      { "id": "False", "text": "False" }
+    ],
+    "answer": ["True"],
+    "explanation": "An agenda sets direction, manages time, and keeps attendees focused on concrete deliverables."
+  },
+  {
+    "id": 77,
+    "week": 9,
+    "topic": "GD Closure",
+    "type": "truefalse",
+    "text": "Every group discussion should aim at a logical conclusion.",
+    "options": [
+      { "id": "True", "text": "True" },
+      { "id": "False", "text": "False" }
+    ],
+    "answer": ["True"],
+    "explanation": "Aiming for a reasoned synthesis or summary of views reflects goal orientation and collaborative maturity."
+  },
+  {
+    "id": 78,
+    "week": 10,
+    "topic": "Oral Communication",
+    "type": "single",
+    "text": "Speaking skills are verbal communication coupled with ___ cues.",
+    "options": [
+      { "id": "A", "text": "written" },
+      { "id": "B", "text": "visual only" },
+      { "id": "C", "text": "digital" },
+      { "id": "D", "text": "non-verbal" }
+    ],
+    "answer": ["D"],
+    "explanation": "Speaking combines explicit verbal language with paralinguistic and non-verbal cues."
+  },
+  {
+    "id": 79,
+    "week": 10,
+    "topic": "Effective Speaking",
+    "type": "single",
+    "text": "The key components of effective speaking are:",
+    "options": [
+      { "id": "A", "text": "Time, Money, Place, Rent" },
+      { "id": "B", "text": "Voice, Vocabulary, Audience, Style" },
+      { "id": "C", "text": "Colour, Font, Size, Margin" },
+      { "id": "D", "text": "Pen, Paper, Ink, Desk" }
+    ],
+    "answer": ["B"],
+    "explanation": "Voice modulation, appropriate vocabulary, audience awareness, and delivery style are core speaking components."
+  },
+  {
+    "id": 80,
+    "week": 10,
+    "topic": "Debating",
+    "type": "single",
+    "text": "A debate tests:",
+    "options": [
+      { "id": "A", "text": "Casual chat" },
+      { "id": "B", "text": "Reading aloud" },
+      { "id": "C", "text": "Argumentative ability and logical opinion" },
+      { "id": "D", "text": "Silent reading" }
+    ],
+    "answer": ["C"],
+    "explanation": "Debates test rhetorical logic, structured argumentation, and rebuttal abilities under timed constraints."
+  },
+  {
+    "id": 81,
+    "week": 10,
+    "topic": "Stage Fright",
+    "type": "single",
+    "text": "One common reason for nervousness is:",
+    "options": [
+      { "id": "A", "text": "Good preparation" },
+      { "id": "B", "text": "Practice" },
+      { "id": "C", "text": "Confidence" },
+      { "id": "D", "text": "Unfamiliarity with the topic or crowd" }
+    ],
+    "answer": ["D"],
+    "explanation": "Lack of subject familiarity and facing an unknown audience trigger public speaking anxiety (glossophobia)."
+  },
+  {
+    "id": 82,
+    "week": 10,
+    "topic": "Speech Delivery",
+    "type": "single",
+    "text": "Which delivery method requires thorough understanding of the subject?",
+    "options": [
+      { "id": "A", "text": "Memorised" },
+      { "id": "B", "text": "Extemporaneous" },
+      { "id": "C", "text": "Manuscript" },
+      { "id": "D", "text": "Silent" }
+    ],
+    "answer": ["B"],
+    "explanation": "Extemporaneous speaking relies on deep content mastery delivered naturally from brief topical cues."
+  },
+  {
+    "id": 83,
+    "week": 10,
+    "topic": "Presentation Formats",
+    "type": "multiple",
+    "text": "Which are examples of presentations?",
+    "options": [
+      { "id": "A", "text": "Letter" },
+      { "id": "B", "text": "Press briefing" },
+      { "id": "C", "text": "Memo" },
+      { "id": "D", "text": "Orientation" }
+    ],
+    "answer": ["B", "D"],
+    "explanation": "Press conferences and company orientations are oral presentations, whereas letters and memos are written documents."
+  },
+  {
+    "id": 84,
+    "week": 10,
+    "topic": "Psychology of Performance",
+    "type": "truefalse",
+    "text": "Anxiety is a psychological and physiological state.",
+    "options": [
+      { "id": "True", "text": "True" },
+      { "id": "False", "text": "False" }
+    ],
+    "answer": ["True"],
+    "explanation": "Anxiety involves mental apprehension as well as somatic symptoms like elevated pulse and adrenaline surge."
+  },
+  {
+    "id": 85,
+    "week": 10,
+    "topic": "Audience Adaptation",
+    "type": "truefalse",
+    "text": "An oral presentation should be audience specific.",
+    "options": [
+      { "id": "True", "text": "True" },
+      { "id": "False", "text": "False" }
+    ],
+    "answer": ["True"],
+    "explanation": "Content depth, terminology, and tone must always be tailored to the audience's knowledge and expectations."
+  },
+  {
+    "id": 86,
+    "week": 11,
+    "topic": "Interview Types",
+    "type": "single",
+    "text": "An interview with an employee who is leaving to learn why is a(n):",
+    "options": [
+      { "id": "A", "text": "Screening interview" },
+      { "id": "B", "text": "Exit interview" },
+      { "id": "C", "text": "Panel interview" },
+      { "id": "D", "text": "Stress interview" }
+    ],
+    "answer": ["B"],
+    "explanation": "Exit interviews gather candid feedback regarding workplace culture and reasons for departure."
+  },
+  {
+    "id": 87,
+    "week": 11,
+    "topic": "Resume Objective",
+    "type": "single",
+    "text": "The primary purpose of a resume is to:",
+    "options": [
+      { "id": "A", "text": "List every job held" },
+      { "id": "B", "text": "Replace the cover letter" },
+      { "id": "C", "text": "Guarantee a job" },
+      { "id": "D", "text": "Create employer interest and generate an interview" }
+    ],
+    "answer": ["D"],
+    "explanation": "A resume is a promotional self-marketing tool designed to win an interview invitation."
+  },
+  {
+    "id": 88,
+    "week": 11,
+    "topic": "Formal Protocols",
+    "type": "single",
+    "text": "A welcome speech differs from a vote of thanks because:",
+    "options": [
+      { "id": "A", "text": "A welcome speech welcomes participants; a vote of thanks expresses gratitude" },
+      { "id": "B", "text": "They are the same" },
+      { "id": "C", "text": "A welcome speech thanks the speakers" },
+      { "id": "D", "text": "A vote of thanks opens the event" }
+    ],
+    "answer": ["A"],
+    "explanation": "A welcome address opens an event, whereas a vote of thanks concludes it with formal expressions of appreciation."
+  },
+  {
+    "id": 89,
+    "week": 11,
+    "topic": "Resume Design",
+    "type": "single",
+    "text": "Appropriate resume guidelines include:",
+    "options": [
+      { "id": "A", "text": "20-pt font, long, coloured paper" },
+      { "id": "B", "text": "Tiny font, dense text" },
+      { "id": "C", "text": "10-12 pt font, concise content, good-quality paper" },
+      { "id": "D", "text": "Handwritten, decorative" }
+    ],
+    "answer": ["C"],
+    "explanation": "Standard resume typography specifies 10-12 pt legible font, clean margins, and concise formatting."
+  },
+  {
+    "id": 90,
+    "week": 11,
+    "topic": "Presentation Delivery",
+    "type": "multiple",
+    "text": "During a presentation, a speaker should:",
+    "options": [
+      { "id": "A", "text": "Read slides only" },
+      { "id": "B", "text": "Maintain eye contact" },
+      { "id": "C", "text": "Avoid the audience" },
+      { "id": "D", "text": "Move naturally" }
+    ],
+    "answer": ["B", "D"],
+    "explanation": "Dynamic presenters maintain genuine eye contact with all sections of the audience and utilize purposeful movement."
+  },
+  {
+    "id": 91,
+    "week": 11,
+    "topic": "Job Analysis",
+    "type": "multiple",
+    "text": "Which are factors when analysing a job position?",
+    "options": [
+      { "id": "A", "text": "Colour of the office" },
+      { "id": "B", "text": "Responsibilities" },
+      { "id": "C", "text": "Special duties" },
+      { "id": "D", "text": "Founder's name" }
+    ],
+    "answer": ["B", "C"],
+    "explanation": "Evaluating job descriptions requires scrutinizing key performance areas, responsibilities, and special technical requirements."
+  },
+  {
+    "id": 92,
+    "week": 11,
+    "topic": "Interview Assessment",
+    "type": "truefalse",
+    "text": "Recruiters are concerned only with whether a candidate gives correct answers.",
+    "options": [
+      { "id": "True", "text": "True" },
+      { "id": "False", "text": "False" }
+    ],
+    "answer": ["False"],
+    "explanation": "Recruiters assess cultural fit, problem-solving thought processes, communication composure, and attitude."
+  },
+  {
+    "id": 93,
+    "week": 11,
+    "topic": "Resume Length",
+    "type": "truefalse",
+    "text": "According to the lecture, an entry-level resume should be about one and a half typed pages.",
+    "options": [
+      { "id": "True", "text": "True" },
+      { "id": "False", "text": "False" }
+    ],
+    "answer": ["True"],
+    "explanation": "As specifically stated in the NPTEL Soft Skills course lecture, entry-level resumes can span about one to one and a half pages."
+  },
+  {
+    "id": 94,
+    "week": 12,
+    "topic": "Career Objectives",
+    "type": "single",
+    "text": "A good resume objective should be:",
+    "options": [
+      { "id": "A", "text": "Vague" },
+      { "id": "B", "text": "Long" },
+      { "id": "C", "text": "Specific and targeted" },
+      { "id": "D", "text": "Personal" }
+    ],
+    "answer": ["C"],
+    "explanation": "A career objective must be sharp, specific, and closely aligned with the employer's operational requirements."
+  },
+  {
+    "id": 95,
+    "week": 12,
+    "topic": "Action Verbs",
+    "type": "single",
+    "text": "Action phrases in the experience section are useful because they:",
+    "options": [
+      { "id": "A", "text": "Show achievements and responsibilities clearly" },
+      { "id": "B", "text": "Are filler" },
+      { "id": "C", "text": "Replace dates" },
+      { "id": "D", "text": "Hide gaps" }
+    ],
+    "answer": ["A"],
+    "explanation": "Dynamic action verbs (e.g., spearheaded, engineered, optimized) spotlight tangible accomplishments."
+  },
+  {
+    "id": 96,
+    "week": 12,
+    "topic": "Grammar & Concord",
+    "type": "single",
+    "text": "Which sentence uses an indefinite pronoun correctly?",
+    "options": [
+      { "id": "A", "text": "Everyone are present." },
+      { "id": "B", "text": "Everyone is present." },
+      { "id": "C", "text": "Everyone were present." },
+      { "id": "D", "text": "Everyone am present." }
+    ],
+    "answer": ["B"],
+    "explanation": "'Everyone' is grammatically singular and requires the singular verb 'is'."
+  },
+  {
+    "id": 97,
+    "week": 12,
+    "topic": "Voice & Syntax",
+    "type": "single",
+    "text": "Which sentence is in the passive voice?",
+    "options": [
+      { "id": "A", "text": "The manager approved the report." },
+      { "id": "B", "text": "The manager will approve it." },
+      { "id": "C", "text": "The report was approved by the manager." },
+      { "id": "D", "text": "The manager is approving it." }
+    ],
+    "answer": ["C"],
+    "explanation": "In 'The report was approved by the manager', the grammatical subject receives the action."
+  },
+  {
+    "id": 98,
+    "week": 12,
+    "topic": "Emotional Intelligence",
+    "type": "multiple",
+    "text": "Which are components of emotional intelligence?",
+    "options": [
+      { "id": "A", "text": "Self-awareness" },
+      { "id": "B", "text": "Forgetfulness" },
+      { "id": "C", "text": "Empathy" },
+      { "id": "D", "text": "Social skills" }
+    ],
+    "answer": ["A", "C", "D"],
+    "explanation": "Goleman's EQ framework consists of Self-awareness, Self-regulation, Motivation, Empathy, and Social skills."
+  },
+  {
+    "id": 99,
+    "week": 12,
+    "topic": "Interview Preparation",
+    "type": "multiple",
+    "text": "Which help build confidence in an interview?",
+    "options": [
+      { "id": "A", "text": "Arriving late" },
+      { "id": "B", "text": "Thorough preparation" },
+      { "id": "C", "text": "Memorising lies" },
+      { "id": "D", "text": "Positive body language" }
+    ],
+    "answer": ["B", "D"],
+    "explanation": "Rigorous domain preparation and open, confident posture significantly decrease interview anxiety."
+  },
+  {
+    "id": 100,
+    "week": 12,
+    "topic": "Subject-Verb Agreement",
+    "type": "truefalse",
+    "text": "Words ending in -s, such as politics and physics, always require plural verbs.",
+    "options": [
+      { "id": "True", "text": "True" },
+      { "id": "False", "text": "False" }
+    ],
+    "answer": ["False"],
+    "explanation": "Disciplines like physics, mathematics, and politics ending in -s are grammatically singular when referring to the field of study."
+  }
+]
