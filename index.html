@@ -1876,8 +1876,8 @@
       <div class="test-title-area">
         <h2 id="top-bar-exam-title">CBT Portal: Soft Skills Exam</h2>
         <div class="candidate-pill" id="candidate-badge-pill">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <span id="candidate-name-text">Candidate: Rahul SP (Roll: CBT26SS100)</span>
+          <i class="ph ph-user" style="font-size: 0.85rem; margin-right: 4px;"></i>
+          <span id="candidate-name-text">Candidate (Roll: CBT26SS100)</span>
         </div>
       </div>
 
@@ -2586,6 +2586,7 @@
       document.getElementById("display-explanation-card").style.display = "none";
       document.getElementById("palette-heading-text").innerText = "Question Palette";
       document.getElementById("top-bar-exam-title").innerText = `CBT Exam: ${State.selectedSet === 'set3' ? 'Set 3' : (State.selectedSet === 'set1' ? 'Set 1' : 'Set 2')}`;
+      document.getElementById("candidate-name-text").innerText = "Candidate (Roll: CBT26SS100)";
       document.getElementById("shortcut-num-hint").style.display = "inline";
       document.getElementById("shortcut-m-hint").style.display = "inline";
 
@@ -3506,8 +3507,8 @@
       document.getElementById("analysis-page").style.display = "none";
       document.getElementById("test-interface").style.display = "flex";
 
-      document.getElementById("top-bar-exam-title").innerText = `Review Mode: ${State.selectedSet === 'set1' ? 'Set 1' : 'Set 2'} Solutions`;
-      document.getElementById("candidate-name-text").innerText = `Candidate: Rahul SP | Score: ${window.LAST_RESULT.marksScored}/${window.LAST_RESULT.totalMarks} (${window.LAST_RESULT.percentage}%)`;
+      document.getElementById("top-bar-exam-title").innerText = `Review Mode: ${State.selectedSet === 'set3' ? 'Set 3' : (State.selectedSet === 'set1' ? 'Set 1' : 'Set 2')} Solutions`;
+      document.getElementById("candidate-name-text").innerText = `Candidate | Score: ${window.LAST_RESULT.marksScored}/${window.LAST_RESULT.totalMarks} (${window.LAST_RESULT.percentage}%)`;
       document.getElementById("btn-back-to-summary").style.display = "inline-flex";
       document.getElementById("top-progress-container").style.display = "none";
       document.getElementById("exam-timer-box").style.display = "none";
